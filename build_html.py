@@ -4,11 +4,11 @@ Rebuild the const RAW = {...} data block embedded in index.html.
 
 Adds to every performance record:
   - age_factor  (WMA age factor, 0–1, lower = older runner slower)
-  - hdcp_sec    (actual_time - age_graded_mark = time "given" by age grading)
+  - hdcp_sec    (actual_time - age_graded_mark = time "given" by WMA age grading)
 
-Also adds a top-level 'age_factors' key for the Handicap by Age reference card:
-  { gender: { distance_label: { age: factor, ... }, ... }, ... }
-  covering ages 5–99 for each distance/gender available.
+Top-level keys:
+  age_factors       { gender: { dist: { age: wma_factor } } }  — WMA table
+  vdot_age_factors  { gender: { age: factor } }                — empirical from dataset
 """
 
 import json
@@ -137,6 +137,48 @@ def build_age_factors(ag_calc):
     return result
 
 
+# ── Build VDOT-derived age factors ──────────────────────────────────────────
+
+def build_vdot_age_factors(df):
+    """
+    Derives empirical age factors from the dataset's own VDOT distribution.
+
+    For each gender, computes median VDOT at each age (across all distances,
+    since VDOT is distance-agnostic), normalises to the peak, and smooths
+    with a centred rolling window to reduce noise from sparse age groups.
+
+    Returns { gender: { age (str): factor } }
+    Factor = median_vdot(age) / peak_median_vdot.  Capped at 1.0.
+    """
+    result = {}
+    for gender, gdf in df.groupby("gender"):
+        counts  = gdf.groupby("age")["vdot"].count()
+        medians = gdf.groupby("age")["vdot"].median()
+
+        # Drop ages with fewer than 3 data points
+        medians = medians[counts >= 3]
+        if medians.empty:
+            continue
+
+        age_range = range(int(medians.index.min()), int(medians.index.max()) + 1)
+        series    = medians.reindex(age_range).interpolate("linear")
+        smoothed  = series.rolling(window=9, center=True, min_periods=1).mean()
+
+        # Peak = max within typical prime-age window; fall back to overall max
+        prime_mask = smoothed.index.isin(range(18, 45))
+        peak = float(smoothed.loc[prime_mask].max()) if prime_mask.any() else float(smoothed.max())
+        if peak <= 0:
+            continue
+
+        result[gender] = {
+            str(int(age)): round(min(1.0, float(v / peak)), 4)
+            for age, v in smoothed.items()
+            if not pd.isna(v)
+        }
+
+    return result
+
+
 # ── Build summary stats (mirrors analyze_vdot_vs_ag logic) ──────────────────
 
 def build_summary(df):
@@ -259,20 +301,29 @@ def main():
     print("Adding percentile ranks …")
     df = add_percentile_ranks(df)
 
-    print("Building age factor lookup tables …")
+    print("Building WMA age factor lookup tables …")
     age_factors = build_age_factors(ag_calc)
 
+    print("Building VDOT-derived age factors …")
+    vdot_age_factors = build_vdot_age_factors(df)
+    for g, facs in vdot_age_factors.items():
+        ages = sorted(int(a) for a in facs)
+        print(f"  {g}: ages {ages[0]}–{ages[-1]}, peak age "
+              f"{max(facs, key=lambda a: facs[a])}, "
+              f"factor at 70 = {facs.get('70','?')}")
+
     raw = {
-        "summary":     build_summary(df),
-        "by_gender":   build_by_gender(df),
-        "by_distance": build_by_distance(df),
-        "by_age_band": build_by_age_band(df),
-        "age_factors": age_factors,
-        "performances": build_performances(df),
+        "summary":          build_summary(df),
+        "by_gender":        build_by_gender(df),
+        "by_distance":      build_by_distance(df),
+        "by_age_band":      build_by_age_band(df),
+        "age_factors":      age_factors,
+        "vdot_age_factors": vdot_age_factors,
+        "performances":     build_performances(df),
     }
 
     print(f"  summary: {raw['summary']}")
-    print(f"  age_factors distances (M): {sorted(raw['age_factors']['M'].keys())}")
+    print(f"  WMA age_factors distances (M): {sorted(raw['age_factors']['M'].keys())}")
     inject_into_html(raw)
     print("Done.")
 
