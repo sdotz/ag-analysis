@@ -1,0 +1,87 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,VDOT
+8 km,F,6,35:47,2147,Ava,Johnson ,USA,8/22/10,,Belmar NJ USA,7/8/17,5 mile,44.9
+8 km,F,7,34:31,2071,Summer,Wilson ,USA,7/9/08,Brea Classic 8K,Brea CA USA,2/28/16,,46.9
+8 km,F,8,31:04,1864,Megan,Crum ,USA,8/27/07,,Olympia WA USA,7/16/16,,53.0
+8 km,F,9,31:06,1866,Megan,Crum ,USA,8/27/07,,Glendale AZ USA,3/18/17,,53.0
+8 km,F,10,35:43,2143,Hannah,Reed ,USA,3/26/04,,Bishop GA USA,12/20/14,,45.0
+8 km,F,11,29:21,1761,Lindsey,Scherf ,USA,9/18/86,,Spring Lake NJ USA,5/23/98,,56.7
+8 km,F,12,29:55,1795,Tess,vanRandtwijk ,NED,10/4/04,,Apeldoorn NED,2/5/17,,55.4
+8 km,F,13,29:53,1793,Camille,Napier ,USA,7/23/03,,Bishop GA USA,12/17/16,,55.5
+8 km,F,14,27:40,1660,Laura,Craven ,USA,12/9/64,,Columbus OH USA,5/6/79,,60.8
+8 km,F,15,26:10,1570,Lydia,Cheromei Kogo,KEN,5/11/77,,Portland OR USA,4/25/93,,64.9
+8 km,F,16,26:16,1576,Sally,Barsosio Chepkemboi,KEN,3/21/78,,Toronto ON CAN,4/9/94,,64.6
+8 km,F,17,25:29,1529,Gladys,Ondeyo ,KEN,5/10/75,,Portland OR USA,4/25/93,,67.0
+8 km,F,18,25:52,1552,Ogla,Kimaiyo Cherono,KEN,7/24/88,,Kingsport TN USA,7/14/07,,65.8
+8 km,F,19,25:50,1550,Hawa,Hussein Hamis,TAN,12/5/82,,Balmoral SCO,3/30/02,,65.9
+8 km,F,20,25:29,1529,Emily,Muge Chebet,KEN,2/18/86,,Richmond VA USA,11/11/06,,67.0
+8 km,F,21,24:58,1498,Buze,Diriba Kejela,ETH,2/9/94,,New Orleans LA USA,3/15/15,,68.6
+8 km,F,22,25:36,1536,Elizabeth,Chemweno Cheruiyot,KEN,7/13/78,,Cartaxo POR,4/24/01,,66.6
+8 km,F,23,25:09,1509,Lornah,Kiplagat ,NED,5/1/74,,Tilburg NED,6/1/97,,68.0
+8 km,F,24,24:45,1485,Paula,Radcliffe ,ENG,12/17/73,,Balmoral SCO,4/11/98,,69.3
+8 km,F,25,24:28,1468,Asmae,Leghzaoui ,MAR,8/30/76,,Kingsport TN USA,7/13/02,WB,70.2
+8 km,F,26,25:00,1500,Betsy,Saina ,KEN,6/30/88,,New Orleans LA USA,3/15/15,,68.5
+8 km,F,27,24:48,1488,Liz,McColgan ,SCO,5/24/64,,Washington DC USA,5/10/92,,69.1
+8 km,F,28,25:07,1507,Lynn,Jennings ,USA,7/1/60,,Washington DC USA,5/14/89,,68.1
+8 km,F,29,25:00,1500,Grete,Waitz ,NOR,10/1/53,,Wellington NZL,11/20/82,,68.5
+8 km,F,30,24:43,1483,Sonia,O'Sullivan ,IRL,11/28/69,,Balmoral SCO,4/22/00,,69.4
+8 km,F,31,25:03,1503,Jemima,Sumgong Chelegat,KEN,12/21/84,,New York NY USA,6/11/16,,68.3
+8 km,F,32,24:36,1476,Deena,Kastor ,USA,2/14/73,Shamrock Shuffle 8K,Chicago IL USA,4/3/05,,69.8
+8 km,F,33,25:23,1523,Judi,St Hilaire,USA,9/5/59,,New York NY USA,12/31/92,,67.3
+8 km,F,34,24:45,1485,Shalane,Flanagan ,USA,7/8/81,,Boston MA USA,6/26/16,,69.3
+8 km,F,35,25:43,1543,Lyudmila,Matveyeva ,RUS,2/1/57,,Bielefeld GER,9/4/92,,66.2
+8 km,F,36,24:46,1486,Edna,Kiplagat Ngeringwony,KEN,9/15/79,BAA 10k (8K split),Boston MA USA,6/26/16,,69.2
+8 km,F,37,26:17,1577,Elena,Vyazova ,UKR,4/18/60,,Attleboro MA USA,10/5/97,,64.6
+8 km,F,38,26:10,1570,Lynn,Jennings ,USA,7/1/60,,Columbia SC USA,2/6/99,,64.9
+8 km,F,39,25:25,1525,Gloria,Marconi ,ITA,3/31/68,,Cantagrillo ITA,7/11/07,,67.2
+8 km,F,40,26:19,1579,Ruth,Wysocki ,USA,3/8/57,,Newport Beach CA USA,7/12/97,,64.5
+8 km,F,41,26:15,1575,Lyubov,Kremlyova ,RUS,12/21/61,Shamrock 8K,Virginia Beach VA USA,3/15/03,,64.7
+8 km,F,42,25:40,1540,Edna,Kiplagat ,KEN,11/15/1979,"BAA 10K, 8K split","Boston, MA",6/26/22,,66.4
+8 km,F,43,26:37,1597,Firiya,Sultanova ,RUS,4/29/61,Philadelphia Marathon 8K,Philadelphia PA USA,11/21/04,,63.6
+8 km,F,44,26:26,1586,Priscilla,Welch ,USA,11/22/44,,Washington DC USA,5/14/89,,64.1
+8 km,F,45,26:56,1616,Priscilla,Welch ,USA,11/22/44,,Washington DC USA,5/13/90,,62.7
+8 km,F,46,28:19,1699,Marilyn,Arsenault ,CAN,2/14/68,,Saanichton BC CAN,1/11/15,,59.1
+8 km,F,47,26:58,1618,Tatyana,Pozdniakova ,UKR,3/4/55,Shamrock 8K,Virginia Beach VA USA,3/16/02,,62.6
+8 km,F,48,25:56,1556,Tatyana,Pozdniakova ,UKR,3/4/55,Shamrock 8K,Virginia Beach VA USA,3/15/03,,65.6
+8 km,F,49,26:04,1564,Tatyana,Pozdniakova ,UKR,3/4/55,Shamrock 8K,Virginia Beach VA USA,3/20/04,,65.2
+8 km,F,50,26:41,1601,Tatyana,Pozdniakova ,UKR,3/4/55,Shamrock 8K,Virginia Beach VA USA,3/19/05,,63.4
+8 km,F,51,29:08,1748,Fiona,Matheson ,SCO,4/25/61,,Edinburgh SCO,6/6/12,,57.2
+8 km,F,52,28:24,1704,Fiona,Matheson ,SCO,4/25/61,,Bridge of Earn SCO,7/3/13,,58.9
+8 km,F,53,29:47,1787,Houria,Frechou ,FRA,1/19/60,,Auch FRA,12/29/13,,55.7
+8 km,F,54,29:32,1772,Janette,Stevenson ,SCO,5/3/49,,Bridge of Earn SCO,7/8/03,,56.3
+8 km,F,55,30:42,1842,Rae,Baymiller ,USA,7/27/43,,Red Bank NJ USA,8/8/98,,53.8
+8 km,F,56,30:09,1809,Leslie,Black ,CAN,1/26/60,,Toronto ON CAN,4/9/16,,54.9
+8 km,F,57,30:42,1842,Shirley,Matson ,USA,11/7/40,Fifty-Plus 8K ,Palo Alto CA USA,3/29/98,,53.8
+8 km,F,58,31:36,1896,Kathryn,Martin ,USA,9/30/51,Poland Spring Marathon Kickoff 5 Mile,New York NY USA,10/25/09,5 mile time,52.0
+8 km,F,59,31:10,1870,Christine,Kennedy ,USA,12/29/54,USATF Masters 8 km Championships,"Brea, CA",2/23/14,,52.8
+8 km,F,59,31:32,1892,Daphne,Ellmore ,ENG,5/22/50,,Swinhope ENG,6/25/09,,52.1
+8 km,F,60,31:28,1888,Christine,Kennedy ,USA,12/29/54,USATF Masters 8 km Championships,Brea CA USA,2/22/15,,52.3
+8 km,F,61,32:18,1938,Angela,Copson ,ENG,4/20/47,,Harborough ENG,6/17/08,,50.7
+8 km,F,62,31:39,1899,Angela,Copson ,ENG,4/20/47,,Wellingborough ENG,8/2/09,,51.9
+8 km,F,63,32:20,1940,Kathryn,Martin ,USA,9/30/51,"Philidelphia Marathon, 8K","Philadelphia, PA",11/22/14,,50.6
+8 km,F,64,34:00,2040,Kathryn,Martin ,USA,9/30/51,France Run 8K,New York NY USA,8/21/16,,47.7
+8 km,F,65,33:48,2028,Sabra,Harvey ,USA,3/2/49,Law Week 8k,Houston TX USA,3/22/14,,48.0
+8 km,F,66,35:29,2129,June,Machala ,USA,1/1/31,,Newport Beach CA USA,7/12/97,,45.4
+8 km,F,67,35:27,2127,Edie,Stevenson ,USA,7/27/49,USATF Masters 8 km Championships,Virginia Beach VA USA,3/18/17,,45.4
+8 km,F,68,34:00,2040,Sabra,Harvey ,USA,3/2/49,,Houston TX USA,3/11/17,,47.7
+8 km,F,69,37:02,2222,Nancy,Rollins,USA,10/31/46,Shamrock Shuffle 8K,"Chicago, IL",4/3/16,,43.2
+8 km,F,70,36:01,2161,Angela,Copson ,ENG,4/20/47,,Blisworth ENG,5/12/17,5 mile time,44.6
+8 km,F,71,36:37,2197,Jan,Holmquist,USA,5/18/44,Bobby Doyle 5 Mile,Narragansett RI,8/9/15,,43.7
+8 km,F,72,39:28,2368,Louise,Gilchrist ,ENG,3/7/33,,Leeds ENG,11/20/05,,40.0
+8 km,F,73,37:57,2277,Louise,Gilchrist ,ENG,3/7/33,,Manchester ENG,5/29/06,,41.9
+8 km,F,74,38:46,2326,Hedy,Marque,USA,5/27/17,Shamrock 8K,"Alexandria, VA",5/10/92,,40.9
+8 km,F,75,41:41,2501,Karin,Vickars ,CAN,7/10/38,,Victoria BC CAN,10/13/13,,37.5
+8 km,F,76,40:23,2423,Louise,Gilchrist ,ENG,3/7/33,,Sale ENG,5/25/09,,39.0
+8 km,F,77,43:00,2580,Betty Jean,McHugh,CAN,11/7/27,,Vancouver BC CAN,5/29/05,,36.2
+8 km,F,78,45:45,2745,Lenore,Montgomery ,CAN,5/28/30,,Richmond BC CAN,8/31/08,,33.6
+8 km,F,79,44:54,2694,Sandra,Folzer,USA,5/10/39,Moorestown Rotary 8k,"Moorestown, NJ",6/3/18,,34.4
+8 km,F,80,43:49,2629,Betty Jean,McHugh,CAN,11/7/27,,Richmond BC CAN,8/31/08,,35.4
+8 km,F,81,42:34,2554,Libby,James,USA,7/12/36,USATF Masters 8K Championships,"Virginia Beach, VA",03/17/2018,,36.6
+8 km,F,82,48:46,2926,Betty Jean,McHugh,CAN,11/7/27,,Vancouver BC CAN,3/7/10,,31.2
+8 km,F,83,50:55,3055,Lenore,Montgomery ,CAN,5/28/30,,Victoria BC CAN,10/13/13,,29.6
+8 km,F,84,57:11,2554,Lois Ann,Gilmore,USA,10/11/30,Shamrock Shuffle 8K,"Chicago, IL",4/2/15,,36.6
+8 km,F,85,55:25,3325,Lenore,Montgomery ,CAN,5/28/30,,Victoria BC CAN,10/11/15,,26.7
+8 km,F,86,1:20:51,4851,Ruth,Rothfarb,USA,6/18/01,Jungle Jog 8K,"Miami, FL",1/17/88,,16.7
+8 km,F,87,1:08:50,4130,Ethel,Furne,USA,6/8/09,St. Patrick's Day 8K,"Saint Paul, MN",3/16/97,,20.5
+8 km,F,88,1:20:49,4849,Ethel,Furne,USA,6/8/09,Fools Five,"Lewiston, MN",4/5/98,,16.7
+8 km,F,89,1:09:12,4152,Harriette,Thompson,USA,3/27/23,Elizabeth Festival 8K,"Charlotte, NC",4/21/12,,20.3
+8 km,F,91,1:15:29,4529,Harriette,Thompson,USA,3/27/23,Elizabeth Festival 8K,"Charlotte, NC",3/21/15,,18.2

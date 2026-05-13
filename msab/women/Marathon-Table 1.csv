@@ -1,0 +1,87 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,Unnamed: 13,Unnamed: 14,Unnamed: 15,VDOT
+Marathon,F,6,4:27:32,16052,Mary,Etta Boitano,USA,3/4/1963,,Petaluma CA USA,12/14/1969,,,,,33.2
+Marathon,F,7,3:57:42,14262,Mary,Etta Boitano,USA,3/4/1963,,Petaluma CA USA,12/13/1970,,,,,38.4
+Marathon,F,8,3:13:24,11604,Tabitha,Francks ,USA,11/24/1974,,Asbury Park NJ USA,11/13/1983,,,,,49.2
+Marathon,F,9,3:11:01,11461,Julie,Mullin ,USA,8/30/1966,,Seaside OR USA,2/28/1976,,,,,49.9
+Marathon,F,10,2:58:01,10681,Julie,Mullin ,USA,8/30/1966,,Seaside OR USA,2/26/1977,,,,,54.2
+Marathon,F,11,2:49:21,10161,Carrie,Garritson ,USA,11/11/1976,Los Angeles Marathon,Los Angeles CA USA,3/6/1988,,,,,57.5
+Marathon,F,12,2:54:03,10443,Manuela,Zipse ,GER,5/11/1974,,Echternach LUX,10/19/1986,,,,,55.7
+Marathon,F,13,2:44:03,9843,Kyung-Hee,Lim ,KOR,5/15/1973,,Seoul KOR,3/15/1987,,,,,59.7
+Marathon,F,14,2:33:08,9188,Xin,Wei ,CHN,7/7/1988,,Beijing CHN,10/20/2002,,,,,64.7
+Marathon,F,15,2:29:41,8981,Mei-yu,Shen ,CHN,3/21/1987,,Beijing CHN,10/20/2002,,,,,66.5
+Marathon,F,16,2:31:51,9111,Li-nan,Wang ,CHN,11/26/1985,,Beijing CHN,10/20/2002,,,,,65.4
+Marathon,F,17,2:23:37,8617,Min,Liu ,CHN,11/29/1983,,Beijing CHN,10/14/2001,,,,,69.8
+Marathon,F,18,2:22:38,8558,Ying-ying,Zhang ,CHN,1/4/1990,,Xiamen CHN,1/5/2008,,,,,70.3
+Marathon,F,19,2:20:59,8459,Demise,Shure Ware,ETH,1/21/1996,Dubai Marathon,Dubai UAE,1/23/2015,,,,,71.3
+Marathon,F,20,2:19:17,8357,Roza,Dereje Bekele,ETH,5/6/1997,Dubai Marathon,Dubai UAE,1/26/2018,,,,,72.3
+Marathon,F,21,2:20:51,8451,Roza,Dereje Bekele,ETH,5/6/1997,London Marathon,London ENG,4/28/2019,,,,,71.4
+Marathon,F,22,2:19:52,8392,Mare,Dibaba Hurssa,ETH,10/20/1989,Dubai Marathon,Dubai UAE,1/27/2012,,,,,72.0
+Marathon,F,23,2:20:13,8413,Haftamnesh,Tesfaye Haylu,ETH,4/28/1994,Dubai Marathon,Dubai UAE,1/26/2018,,,,,71.7
+Marathon,F,24,2:17:08,8228,Ruth,Chepngetich ,KEN,8/8/1994,Dubai Marathon,Dubai UAE,1/25/2019,,,,,73.6
+Marathon,F,25,2:14:04,8044,Brigid,Kosgei ,KEN,2/20/1994,Chicago Marathon,"Chicago, IL",10/13/2019,,,,,75.6
+Marathon,F,26,2:09:56,7913,Ruth,Chepgnetich,KEN,8/4/1994,Chicago Marathon,"Chicago, IL",10/12/2024,WR,,,,77.1
+Marathon,F,27,2:19:12,8352,Mizuki,Noguchi ,JPN,7/3/1978,Berlin Marathon,Berlin GER,9/25/2005,,,,,72.4
+Marathon,F,28,2:17:18,8238,Paula,Radcliffe ,ENG,12/17/1973,Chicago Marathon,Chicago IL USA,10/13/2002,,,,,73.5
+Marathon,F,29,2:15:25,8125,Paula,Radcliffe ,ENG,12/17/1973,London Marathon,London ENG,4/13/2003,,,,,74.7
+Marathon,F,30,2:13:44,8024,Suffan,Hassan,NED,1/1/93,Chicago Marathon,"Chicago, IL",10/8/2023,,,,,75.8
+Marathon,F,31,2:17:42,8262,Paula,Radcliffe ,ENG,12/17/1973,London Marathon,London ENG,4/17/2005,,,,,73.3
+Marathon,F,32,2:18:31,8311,Tirunesh,Dibaba ,ETH,6/1/1985,Chicago Marathon,Chicago IL USA,10/8/2017,,,,,72.8
+Marathon,F,33,2:18:35,8315,Tirunesh,Dibaba ,ETH,6/1/1985,Berlin Marathon,Berlin GER,9/16/2018,,,,,72.7
+Marathon,F,34,2:18:31,8311,Vivian,Cheruiyot ,KEN,9/11/1983,London Marathon,London ENG,4/22/2018,,,,,72.8
+Marathon,F,35,2:17:01,8221,Mary,Keitany Chepkosgei,KEN,1/18/1982,London Marathon,London ENG,4/23/2017,,,,,73.7
+Marathon,F,36,2:19:19,8359,Irina,Mikitenko ,GER,8/23/1972,Berlin Marathon,Berlin GER,9/28/2008,,,,,72.3
+Marathon,F,37,2:19:12,8352,Keira,D’Amato,USA,10/21/1984,Houston Marathon,"Houston, TX",1/16/2022,,,,,72.4
+Marathon,F,38,2:21:18,8478,Edna,Kiplagat Ngeringwony,KEN,11/15/1979,Berlin Marathon,Berlin GER,9/16/2018,,,,,71.1
+Marathon,F,39,2:22:12,8532,Nancy,Jepkosgei Kiprop,KEN,7/7/1979,,Vienna AUT,4/7/2019,,,,,70.6
+Marathon,F,40,2:23:31,8611,Lydia,Cheromei Kogo,KEN,5/11/1977,,Shanghai CHN,11/12/2017,,,,,69.8
+Marathon,F,41,2:22:11,8531,Lydia,Cheromei Kogo,KEN,5/11/1977,Valencia Marathon Trinidad Alfonso,Valencia ESP,12/2/2018,,,,,70.6
+Marathon,F,42,2:24:11,8651,Sinead,Diver ,AUS,2/17/1977,London Marathon,London ENG,4/28/2019,,,,,69.4
+Marathon,F,43,2:29:25,8965,Tatyana,Pozdniakova ,UKR,3/4/1955,Chicago Marathon,Chicago IL USA,10/11/1998,,,,,66.6
+Marathon,F,44,2:29:43,8983,Joyce,Smith ,ENG,10/26/1937,London Marathon,London ENG,5/9/1982,,,,,66.5
+Marathon,F,45,2:21:34,8494,Sinead,Diver ,AUS,2/17/1977,Valencia Marathon Trinidad Alfonso,Valencia,12/4/2022,,,,,71.0
+Marathon,F,46,2:30:26,9026,Tatyana,Pozdniakova ,UKR,3/4/1955,Los Angeles Marathon,Los Angeles CA USA,3/3/2002,,,,,66.1
+Marathon,F,47,2:28:60,8940,Tatyana,Pozdniakova ,UKR,3/4/1955,,Providence RI USA,10/13/2002,,,,,66.8
+Marathon,F,48,2:37:46,9466,Ramilya,Burangulova ,RUS,7/11/1961,,Jacksonville Beach FL USA,2/21/2010,,,,,62.5
+Marathon,F,49,2:30:17,9017,Tatyana,Pozdniakova ,UKR,3/4/1955,Los Angeles Marathon,Los Angeles CA USA,3/7/2004,,,,,66.2
+Marathon,F,50,2:31:05,9065,Tatyana,Pozdniakova ,UKR,3/4/1955,Los Angeles Marathon,Los Angeles CA USA,3/6/2005,,,,,65.8
+Marathon,F,51,2:35:46,9346,Tatyana,Pozdniakova ,UKR,3/4/1955,Los Angeles Marathon,Los Angeles CA USA,3/19/2006,,,,,63.5
+Marathon,F,52,2:48:47,10127,Edeltraud,Pohl ,GER,7/14/1936,,Frankfurt GER,10/30/1988,,,,,57.7
+Marathon,F,53,2:47:50,10070,Joan,Samuelson ,USA,5/16/1957,Chicago Marathon,Chicago IL USA,10/10/2010,,,,,58.1
+Marathon,F,54,2:53:49,10429,Sally,Gibbs ,NZL,6/5/1963,,Wellington NZL,6/18/2017,,,,,55.8
+Marathon,F,55,2:52:14,10334,Rae,Baymiller ,USA,7/27/1943,Chicago Marathon,Chicago IL USA,10/11/1998,,,,,56.4
+Marathon,F,56,2:48:06,10086,Krisha,Stanton,AUS,,,"London, GBR",5/18/2022,,,,,58.0
+Marathon,F,57,2:54:29,10469,Jung-Ok,Kim ,KOR,7/14/1956,,Seoul KOR,11/3/2013,,,,,55.5
+Marathon,F,58,2:58:15,10695,Mariko,Yugeta,JPN,May-1958,Tokyo Marathon,"Tokyo, Marathon",2/28/2017,,,,,54.1
+Marathon,F,59,2:45:27,9927,Jenny,Hitchings,USA,7/1/1963,London Marathon,London ENG,4/23/2023,,,,,59.1
+Marathon,F,60,2:49:43,10183,Jenny,Hitchings,USA,7/1/1963,Chicago Marathon,"Chicago, IL",10/8/2023,,,,,57.4
+Marathon,F,61,2:56:54,10614,Mariko,Yugeta,JPN,May-1958,Saitama International Marathon,"Shimonkai, JPN",11/3/2019,,,,,54.6
+Marathon,F,62,2:52:15,10335,Mariko,Yugeta,JPN,May-1958,Osaka International Women’s Marathon,"Osaka, JPN",1/31/2021,,,,,56.4
+Marathon,F,63,3:07:48,11268,Emmi,Luthi ,SUI,3/1/1944,,Lucerne SUI,10/28/2007,,,,,50.9
+Marathon,F,64,3:19:18,11958,Yuriko,Tanaka ,JPN,7/31/1944,,Oiso JPN,11/16/2008,,,,,47.4
+Marathon,F,65,3:12:57,11577,Emmi,Luthi ,SUI,3/1/1944,,Zurich SUI,4/26/2009,,,,,49.3
+Marathon,F,66,3:19:05,11945,Angela,Copson ,ENG,4/20/1947,Berlin Marathon,Berlin GER,9/29/2013,,,,,47.5
+Marathon,F,67,3:25:51,12351,Jane,Davies ,ENG,9/7/1948,London Marathon,London ENG,4/24/2016,,,,,45.6
+Marathon,F,68,3:24:54,12294,Angela,Copson ,ENG,4/20/1947,,Manchester ENG,4/10/2016,,,,,45.9
+Marathon,F,69,3:29:41,12581,Jeannie,Rice ,USA,4/14/1948,Columbus Marathon,"Columbus, OH",10/15/17,,,,,44.6
+Marathon,F,70,3:27:50,12470,Jeannie,Rice ,USA,4/14/1948,Chicago Marathon,Chicago IL USA,10/7/2018,,,,,45.1
+Marathon,F,71,3:24:48,12288,Jeannie,Rice ,USA,4/14/1948,Berlin Marathon,Berlin GER,9/29/2019,,,,,45.9
+Marathon,F,72,3:35:29,12929,Helga,Miketta ,GER,3/23/1941,,Essen GER,10/13/2013,,,,,43.2
+Marathon,F,73,3:42:19,13339,Vera,Nystad ,NOR,12/18/1945,Berlin Marathon,Berlin GER,9/29/2019,,,,,41.6
+Marathon,F,74,3:31:51,12711,Jeannie,Rice ,USA,4/14/1948,Tokyo Marathon,Tokyo JPN,3/4/2023,,,,,44.1
+Marathon,F,75,3:34:32,12872,Jeannie,Rice ,USA,4/14/1948,Chicago Marathon,"Chicago, IL",10/8/2023,,,,,43.4
+Marathon,F,76,3:33:27,12807,Jeannie,Rice ,USA,4/14/1948,London Marathon,London ENG,4/21/2024,,,,,43.7
+Marathon,F,77,4:24:28,15868,Sylvia,Quinn ,USA,10/23/1936,Coeur D'Alene Marathon,Coeur d'Alene ID USA,5/25/2014,,,,,33.6
+Marathon,F,78,4:19:52,15592,Sylvia,Quinn ,USA,10/23/1936,Coeur D'Alene Marathon,Coeur d'Alene ID USA,5/31/2015,,,,,34.4
+Marathon,F,79,4:11:50,15110,Yoko,Nakano ,JPN,1/12/1936,,Yokohama JPN,3/15/2015,,,,,35.7
+Marathon,F,80,4:12:44,15164,Gwen,McFarlan ,CAN,4/4/1934,,Ottawa ON CAN,5/25/2014,,,,,35.6
+Marathon,F,81,4:07:31,14851,Yoko,Nakano ,JPN,1/12/1936,Tokyo Marathon,Tokyo JPN,2/26/2017,,,,,36.5
+Marathon,F,82,4:34:04,16444,Yoko,Nakano ,JPN,1/12/1936,Tokyo Marathon,Tokyo JPN,2/25/2018,,,,,32.2
+Marathon,F,83,4:51:24,17484,Yoko,Nakano ,JPN,1/12/1936,Tokyo Marathon,Tokyo JPN,3/6/2019,,,,,29.8
+Marathon,F,84,5:44:22,20662,Helga-Maria,Kundig ,SUI,6/28/1928,Berlin Marathon,Berlin GER,9/30/2012,,,,,24.0
+Marathon,F,85,5:12:03,18723,Betty Jean,McHugh ,CAN,11/7/1927,Honolulu Marathon,Honolulu HI USA,12/9/2012,,,,,27.3
+Marathon,F,86,6:31:42,23502,Margaret,Davis ,USA,8/13/1922,,Los Angeles CA USA,5/25/2009,,,,,20.3
+Marathon,F,87,7:06:48,25608,Mavis,Lindgren ,USA,4/2/1907,Portland Marathon,Portland OR USA,10/2/1994,,,,,18.0
+Marathon,F,88,6:31:32,23492,Betty Jean,McHugh ,CAN,11/7/1927,Honolulu Marathon,Honolulu HI USA,12/13/2015,,,,,20.3
+Marathon,F,89,8:09:23,29363,Mavis,Lindgren ,USA,4/2/1907,Portland Marathon,Portland OR USA,9/29/1996,,,,,14.9
+Marathon,F,90,6:47:31,24451,Betty Jean,McHugh ,CAN,11/7/1927,Honolulu Marathon,Honolulu HI USA,12/10/2017,,,,,19.2
+Marathon,F,92,9:53:48,35628,Gladys,Burrill ,CAN,11/23/1918,Honolulu Marathon,Honolulu HI USA,12/12/2010,,,,,11.1

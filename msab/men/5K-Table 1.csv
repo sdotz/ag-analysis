@@ -1,0 +1,94 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,VDOT
+5 km,M,3,39:03,2343,Aaron,Westrip,USA,5/20/13,,Duncan SC USA,5/13/17,,22.3
+5 km,M,4,29:15,1755,Aaron,Westrip,USA,5/20/13,,Marietta GA USA,10/7/17,,31.8
+5 km,M,5,24:08,1448,James,Reed,USA,11/12/08,,Duluth GA USA,10/18/14,,39.9
+5 km,M,6,21:46,1306,Salvatore,Dubon,USA,9/7/10,,Oxnard CA USA,12/11/16,,45.1
+5 km,M,7,19:02,1142,Daniel,Skandera,USA,11/2/07,,Chico CA USA,11/1/15,,52.8
+5 km,M,8,18:40,1120,Daniel,Skandera,USA,11/2/07,,San Jose CA USA,10/29/16,,54.0
+5 km,M,9,17:53,1073,Daniel,Skandera,USA,11/2/07,,San Mateo CA USA,10/22/17,,56.7
+5 km,M,10,17:48,1068,William,Pluma,USA,10/28/00,,Tustin CA USA,11/7/10,,57.1
+5 km,M,11,16:37,997,Aidan,Cox,USA,8/2/05,,Newington NH USA,5/29/17,,61.8
+5 km,M,12,16:23,983,Riley,Nedrow,USA,3/17/05,,Flower Mound TX USA,11/11/17,,62.8
+5 km,M,13,16:12,972,Aidan,Puffer,USA,5/19/04,,Providence RI USA,9/17/17,,63.7
+5 km,M,14,15:07,907,Yohei,Kondo,JPN,2/28/90,,Himeji JPN,2/11/05,,69.0
+5 km,M,15,15:10,910,Eiji,Nakao,JPN,4/13/80,,Himeji JPN,2/11/96,,68.7
+5 km,M,16,13:15,795,Abraham,Cherkos Feleke,ETH,9/23/89,Carlsbad 5000,Carlsbad CA USA,4/9/06,,80.3
+5 km,M,17,13:14,794,Hagos,Gebrehiwit,ETH,5/11/94,Carlsbad 5000,Carlsbad CA USA,4/1/12,,80.5
+5 km,M,18,13:00,780,Sammy,Kipketer,KEN,9/29/81,Carlsbad 5000,Carlsbad CA USA,3/26/00,,82.1
+5 km,M,19,13:00,780,Sammy,Kipketer,KEN,9/29/81,Carlsbad 5000,Carlsbad CA USA,4/1/01,,82.1
+5 km,M,20,12:49,769,Berihu ,Aregawi,ETH,2/28/01,Cursa dels Nassos in Barcelona 5K,Barcelona SPN,12/31/21,WR,83.5
+5 km,M,21,13:11,791,Dejene,Gebremeskel,ETH,11/24/89,Carlsbad 5000,Carlsbad CA USA,4/3/11,,80.8
+5 km,M,22,13:11,791,Dejene,Gebremeskel,ETH,11/24/89,Carlsbad 5000,Carlsbad CA USA,4/1/12,,80.8
+5 km,M,23,12:51,800,Joshua ,Cheptegei,UGA,9/12/96,Monaco Run 5km,Monaco,2/16/20,,79.8
+5 km,M,24,13:10,790,Dejene,Birhanu,ETH,12/12/80,Carlsbad 5000,Carlsbad CA USA,4/3/05,,80.9
+5 km,M,25,13:11,791,Eliud,Kipchoge,KEN,11/5/84,Carlsbad 5000,Carlsbad CA USA,4/11/10,,80.8
+5 km,M,26,13:14,794,Eliud,Kipchoge,KEN,11/5/84,Carlsbad 5000,Carlsbad CA USA,4/3/11,,80.5
+5 km,M,27,13:14,794,Eliud,Kipchoge,KEN,11/5/84,Carlsbad 5000,Carlsbad CA USA,4/1/12,,80.5
+5 km,M,28,13:16,796,Paul,Koech,KEN,6/25/69,Carlsbad 5000,Carlsbad CA USA,3/29/98,,80.2
+5 km,M,29,13:22,802,Benjamin,True,USA,12/29/85,,Boston MA USA,4/18/15,,79.5
+5 km,M,30,13:27,807,Khalid,Kairouani,MAR,2/27/66,,Carlsbad CA USA,3/31/96,,79.0
+5 km,M,31,13:20,800,Benjamin,True,USA,12/29/85,,Boston MA USA,4/15/17,,79.8
+5 km,M,32,13:26,806,James,Koskei Kimutai,KEN,11/23/68,,Gardena CA USA,6/3/01,,79.1
+5 km,M,33,13:30,810,Doug,Padilla,USA,10/4/56,Carlsbad 5000,Carlsbad CA USA,3/25/90,,78.6
+5 km,M,34,13:23,803,James,Koskei Kimutai,KEN,11/23/68,Carlsbad 5000,Carlsbad CA USA,4/13/03,,79.4
+5 km,M,35,13:29,809,John,Kibowen,KEN,4/21/69,,Balmoral SCO,5/8/04,,78.7
+5 km,M,36,13:44,824,Michael,McLeod,ENG,1/25/52,,Newcastle ENG,4/6/88,,77.1
+5 km,M,37,13:49,829,Keith,Anderson,ENG,8/10/57,,London ENG,4/23/95,,76.5
+5 km,M,38,13:37,817,Wilson,Waigwa,KEN,2/15/49,Carlsbad 5000,Carlsbad CA USA,7/26/87,,77.8
+5 km,M,39,13:32,812,Bernard,Lagat,USA,12/12/74,,Philadelphia PA USA,9/20/14,,78.4
+5 km,M,40,13:40,820,Bernard,Lagat,USA,12/12/74,Carlsbad 5000,Carlsbad CA USA,3/29/15,,77.5
+5 km,M,41,13:39,819,Bernard,Lagat,USA,12/12/74,Carlsbad 5000,Carlsbad CA USA,4/3/16,,77.6
+5 km,M,42,13:55,835,John,Campbell,NZL,2/6/49,,Ft Myers FL USA,2/16/91,,75.9
+5 km,M,43,14:03,843,Jackson,Kipngok Yegon,KEN,8/16/60,,Providence RI USA,9/7/03,,75.1
+5 km,M,44,14:34,874,Doug,Bell,USA,11/20/50,,Phoenix AZ USA,11/12/95,,72.0
+5 km,M,45,14:29,869,Kevin,Castille,USA,3/17/72,USATF Master's 5 km Championships,Syracuse NY USA,10/1/17,,72.5
+5 km,M,46,14:50,890,Peter,Magill,USA,6/19/61,Carlsbad 5000,Carlsbad CA USA,4/6/08,,70.5
+5 km,M,47,14:45,885,Dennis,Simonaitis,USA,6/25/62,Carlsbad 5000,Carlsbad CA USA,4/11/10,,71.0
+5 km,M,48,14:51,891,Martin,Rees,WAL,2/28/53,,Cardiff WAL,5/23/01,,70.4
+5 km,M,49,14:56,896,Martin,Rees,WAL,2/28/53,,Gloucester ENG,7/18/02,,70.0
+5 km,M,50,15:00,900,Martin,Rees,WAL,2/28/53,,Cardiff WAL,7/23/03,,69.6
+5 km,M,51,15:05,905,Peter,Magill,USA,6/19/61,Magic Shoe 5K,"Corona Del Mar, CA",5/19/12,,69.2
+5 km,M,52,15:30,930,Andrew,Green,ENG,12/14/62,,Barrowford ENG,4/18/15,,67.0
+5 km,M,53,15:10,910,Martin,Rees,WAL,2/28/53,,Gloucester ENG,7/20/06,,68.7
+5 km,M,54,15:15,915,Martin,Rees,WAL,2/28/53,,Gloucester ENG,7/19/07,,68.3
+5 km,M,55,15:31,931,Martin,Rees,WAL,2/28/53,,Gloucester ENG,7/17/08,,66.9
+5 km,M,56,15:57,957,Gunther,Mielke,GER,11/30/42,,Darmstadt GER,6/23/99,,64.8
+5 km,M,57,16:22,982,Brian,Pilcher,USA,8/23/56,USATF Master's 5 km Championships,Syracuse NY USA,10/6/13,,62.9
+5 km,M,58,16:43,1003,Bob,Atkinson,ENG,2/3/58,,Lancaster ENG,8/27/16,,61.4
+5 km,M,59,16:21,981,Jack,Nelson,USA,8/30/39,Run By The River 5K,"Clarksville, TN",9/12/98,,63.0
+5 km,M,60,16:08,968,Martin,Rees,WAL,2/28/53,,Sandhurst ENG,8/20/13,,64.0
+5 km,M,61,16:06,966,Martin,Rees,WAL,2/28/53,,Cardiff WAL,8/6/14,,64.1
+5 km,M,62,16:25,985,Martin,Rees,WAL,2/28/53,,Cardiff WAL,5/20/15,,62.7
+5 km,M,63,16:27,987,Martin,Rees,WAL,2/28/53,,Cardiff WAL,6/22/16,,62.5
+5 km,M,64,17:17,1037,Tom,Bernhard,USA,7/9/51,Freedom Fest 5K,Morgan Hill CA USA,7/4/16,,59.0
+5 km,M,65,17:24,1044,Ed,Whitlock,CAN,3/6/31,,Buffalo NY USA,8/30/96,,58.6
+5 km,M,66,17:24,1044,Ed,Whitlock,CAN,3/6/31,,Buffalo NY USA,8/29/97,,58.6
+5 km,M,67,17:00,1020,Jacob,Nur,USA,8/17/55,,,11/24/22,,60.2
+5 km,M,68,17:39,1059,Ed,Whitlock,CAN,3/6/31,,Buffalo NY USA,9/3/99,,57.6
+5 km,M,69,17:34,1054,Ed,Whitlock,CAN,3/6/31,,Toronto ON CAN,7/22/00,,57.9
+5 km,M,70,18:01,1081,Warren,Utes,USA,6/25/20,Park Ridge Charity Classic,"Park Ridge, IL",9/30/90,,56.3
+5 km,M,71,18:42,1122,Warren,Utes,USA,6/25/20,Berwyn 5000,"Berwyn, IL",5/16/92,,53.9
+5 km,M,72,18:32,1112,Ed,Whitlock,CAN,3/6/31,,Buffalo NY USA,8/29/03,,54.4
+5 km,M,73,18:22,1102,Ed,Whitlock,CAN,3/6/31,,Toronto ON CAN,7/16/04,,55.0
+5 km,M,74,19:06,1146,Ed,Whitlock,CAN,3/6/31,,Toronto ON CAN,7/15/05,,52.6
+5 km,M,75,18:45,1125,Ed,Whitlock,CAN,3/6/31,,Toronto ON CAN,7/14/06,,53.7
+5 km,M,76,19:40,1180,Warren,Utes,USA,6/25/20,Alden/Norsom 5K,"Naperville, IL",10/5/96,,50.8
+5 km,M,77,20:03,1203,Warren,Utes,USA,6/25/20,,Chicago IL USA,7/20/97,,49.7
+5 km,M,78,21:53,1203,Joseph,Gigante,USA,,,MA,4/9/95,,49.7
+5 km,M,79,22:19,1339,Charles,Rose,USA,3/6/33,CPCC Skyline 5K,"Charlotte, NC",4/30/11,,43.8
+5 km,M,80,22:14,1334,Warren,Utes,USA,6/25/20,Band On The Run 5K,"Orland Park, IL",6/25/00,,44.0
+5 km,M,81,21:59,1319,Warren,Utes,USA,6/25/20,Flossmoor Fest,"Flossmoor, IL",9/15/01,,44.6
+5 km,M,82,23:54,1434,Stephen,Charlton,ENG,10/4/26,,Battersea ENG,7/28/09,,40.4
+5 km,M,83,24:22,1462,Geoffrey,Etherington,USA,12/22/28,Standown House 5K,"West Palm Beach, FL",2/18/12,,39.5
+5 km,M,84,25:07,1507,Stephen,Charlton,ENG,10/4/26,,Horwich ENG,6/19/11,,38.1
+5 km,M,85,24:57,1497,Stephen,Charlton,ENG,10/4/26,,London ENG,8/21/12,,38.4
+5 km,M,86,28:21,1701,Jerry,Johncock,USA,2/2/28,Brian Diemer 5K,"Cutlerville, MI",6/14/14,,33.0
+5 km,M,87,29:37,1777,Henry,Sypniewski,USA,7/7/18,Nickel City 5K,"Buffalo, NY",9/2/05,,31.3
+5 km,M,88,26:37,1597,Hugh,Campbell,USA,8/25/24,,Haddonfield NJ USA,3/16/13,,35.6
+5 km,M,89,32:57,1977,Robert,McKeague,USA,2/17/25,Park Ridge Charity Classic 5K,"Park Ridge, IL",9/27/14,,27.5
+5 km,M,90,33:46,2026,Henry,Sypniewski,USA,7/7/18,,Syracuse NY USA,10/5/08,,26.7
+5 km,M,91,38:53,2333,Henry,Sypniewski,USA,7/7/18,,Syracuse NY USA,10/4/09,,22.5
+5 km,M,92,40:13,2413,Henry,Sypniewski,USA,7/7/18,Bob Ivory 5k,"Buffalo, NY",11/7/10,,21.5
+5 km,M,93,45:47,2747,Henry,Sypniewski,USA,7/7/18,Bob Ivory 5k,"Buffalo, NY",11/6/11,,18.3
+5 km,M,94,43:52,2632,Roy,Englert,USA,9/11/22,,Birmingham AL USA,6/12/17,,19.3
+5 km,M,95,40:52,2452,Roy,Englert,USA,9/11/22,USATF Master's 5 km Championships,Syracuse NY USA,10/1/17,,21.1

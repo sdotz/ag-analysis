@@ -1,0 +1,145 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,VDOT
+25 km,M,8.0,2:43:06,9786.0,Nicholas,Trigg ,USA,12/18/2006,,Oklahoma City OK USA,3/7/2015,,31.3
+25 km,M,16.0,1:20:44,4844.0,Fita,Bayissa ,ETH,12/15/1972,,Berlin GER,5/7/1989,,71.2
+25 km,M,17.0,1:23:25,5005.0,Raymond,Khuzwayo ,RSA,6/24/1968,,Durban RSA,2/23/1986,,68.6
+25 km,M,18.0,1:19:59,4799.0,Brad,Hudson ,USA,9/30/1966,Nike/OTC,Eugene OR USA,9/8/1985,,72.0
+25 km,M,19.0,1:13:01,4381.0,Benson,Cherono Kipchumba,KEN,6/30/1984,,Berlin GER,5/9/2004,,80.0
+25 km,M,20.0,1:14:15,4455.0,Allan,Kiprono Kipkorir,KEN,2/15/1990,,Berlin GER,5/9/2010,,78.5
+25 km,M,21.0,1:11:47,4307.0,Abraham,Cheroben ,BRN,10/11/1992,,Berlin GER,5/4/2014,,81.6
+25 km,M,22.0,1:12:31,4351.0,Abraham,Cheroben ,BRN,10/11/1992,,Berlin GER,5/10/2015,,80.7
+25 km,M,23.0,1:12:04,4324.0,Kevvin,Kiptum,KEN,12/2/1999,"Chicago Marathon, 25K split","Chicago, IL",10/8/2023,,81.3
+25 km,M,24.0,1:11:50,4310.0,Samuel,Kiplimo Kosgei,KEN,1/20/1986,,Berlin GER,5/9/2010,,81.6
+25 km,M,25.0,1:13:24,4404.0,Mathew,Kipchirchir Koech,KEN,11/29/1983,,Berlin GER,5/10/2009,,79.6
+25 km,M,26.0,1:11:29,4289.0,Wilfred,Kirwa Kigen,KEN,1/21/1986,,Berlin GER,5/6/2012,,82.0
+25 km,M,27.0,1:11:59,4319.0,Jacob,Chepleting Kendagor,KEN,9/19/1984,,Berlin GER,5/6/2012,,81.4
+25 km,M,28.0,1:11:13,4273.0,Daniel,Ebenyo,KEN,9/18/1995,Tata Steel Kolkata 25K,Kolka IND,12/17/2023,WA Official WB,82.4
+25 km,M,29.0,1:12:32,4352.0,Kenneth,Kiprop Kipkemoi,KEN,8/2/1984,,Berlin GER,5/4/2014,,80.7
+25 km,M,30.0,1:14:18,4458.0,Kenneth,Kiprop Kipkemoi,KEN,8/2/1984,,Berlin GER,5/10/2015,,78.4
+25 km,M,31.0,1:14:22,4462.0,Abel,Kirui ,KEN,6/4/1982,,Berlin GER,5/4/2014,,78.4
+25 km,M,32.0,1:13:48,4428.0,Paul,Kosgei Malakwen,KEN,4/22/1978,,Berlin GER,5/9/2010,,79.1
+25 km,M,33.0,1:15:10,4510.0,Martin,Vrabel ,SVK,9/21/1955,,Berlin GER,5/7/1989,,77.4
+25 km,M,34.0,1:15:01,4501.0,Simon,Karori ,KEN,8/28/1959,River Bank Run 25K,Grand Rapids MI USA,5/14/1994,,77.6
+25 km,M,35.0,1:15:43,4543.0,Gidamis,Shahanga ,TAN,9/4/1957,,Berlin GER,5/2/1993,,76.7
+25 km,M,36.0,1:15:45,4545.0,Jacques,Boxberger ,FRA,4/16/1949,,Divonneles les Bains FRA,9/29/1985,,76.7
+25 km,M,37.0,1:16:15,4575.0,Abdelhadi,El Hachimi,BEL,12/15/1974,,Berlin GER,5/6/2012,,76.1
+25 km,M,38.0,1:15:27,4527.0,Abdihakim,Abdirahman ,USA,1/1/1977,River Bank Run 25K,Grand Rapids MI USA,5/9/2015,,77.1
+25 km,M,39.0,1:19:03,4743.0,Giomar,Pereira daSilva,BRA,8/25/1972,,Aracaju BRA,3/17/2012,,73.0
+25 km,M,40.0,1:16:49,4609.0,Martin,Mondragon Avila,MEX,11/11/1953,River Bank Run 25K,Grand Rapids MI USA,5/14/1994,,75.5
+25 km,M,41.0,1:16:53,4613.0,Mbarak,Hussein ,USA,4/4/1965,River Bank Run 25K,Grand Rapids MI USA,5/13/2006,,75.4
+25 km,M,42.0,1:16:58,4618.0,Artemio,Navarro ,MEX,1/25/1950,River Bank Run 25K,Grand Rapids MI USA,5/9/1992,,75.3
+25 km,M,43.0,1:19:08,4748.0,Andrey,Kuznetzov ,RUS,11/27/1957,River Bank Run 25K,Grand Rapids MI USA,5/12/2001,,72.9
+25 km,M,44.0,1:20:20,4820.0,Andrey,Kuznetzov ,RUS,11/27/1957,River Bank Run 25K,Grand Rapids MI USA,5/11/2002,,71.7
+25 km,M,45.0,1:21:47,4907.0,Fernand,Kolbeck ,FRA,10/11/1944,,Haguenau FRA,3/25/1990,,70.2
+25 km,M,46.0,1:22:44,4964.0,Piet,vanAlphen ,NED,8/16/1930,,Brugge BEL,7/30/1977,,69.3
+25 km,M,47.0,1:22:24,4944.0,Dan,Conway ,USA,1/28/1939,City of Lakes 25k,Minneapolis MN USA,9/14/1986,,69.6
+25 km,M,48.0,1:24:43,5083.0,Piet,vanAlphen ,NED,8/16/1930,,Brugge BEL,7/1/1979,,67.4
+25 km,M,49.0,1:22:44,4964.0,Piet,vanAlphen ,NED,8/16/1930,,Lisse NED,6/21/1980,,69.3
+25 km,M,50.0,1:25:27,5127.0,Erik-Verner,Ostbye ,SWE,1/25/1921,,Karlovy Vary CZE,7/11/1971,,66.7
+25 km,M,51.0,1:24:12,5052.0,Norman,Green ,USA,6/27/1932,,Washington DC USA,5/27/1984,,67.9
+25 km,M,52.0,1:25:37,5137.0,Jim,O'Neill ,USA,4/1/1938,River Bank Run 25K,Grand Rapids MI USA,5/12/1990,,66.6
+25 km,M,53.0,1:26:56,5216.0,Jim,O'Neill ,USA,4/1/1938,River Bank Run 25K,Grand Rapids MI USA,5/11/1991,,65.4
+25 km,M,54.0,1:32:23,5543.0,Pete,Orban,USA,,Beacon on the Bay,"Oklahoma City, OK",2/27/2010,,61.0
+25 km,M,55.0,1:29:56,5396.0,Ray,Hatton ,USA,2/5/1932,Nike/OTC,Eugene OR USA,9/13/1987,,62.9
+25 km,M,56.0,1:28:48,5328.0,Erik-Verner,Ostbye ,SWE,1/25/1921,,Brugge BEL,7/30/1977,,63.8
+25 km,M,57.0,1:31:29,5489.0,Milos,Smrcka ,CZE,7/21/1954,,Zebrak CZE,8/14/2011,,61.7
+25 km,M,58.0,1:31:36,5496.0,Alex,Ratelle ,USA,9/12/1924,City of Lakes 25k,Minneapolis MN USA,9/11/1983,,61.6
+25 km,M,59.0,1:34:58,5698.0,Norman,Eastman ,USA,5/9/1931,River Bank Run 25K,Grand Rapids MI USA,5/12/1990,,59.1
+25 km,M,60.0,1:31:41,5501.0,Brian,Pilcher,USA,8/23/1956,Chicago Marathon (25K split),"Chicago, IL",10/9/2016,,61.5
+25 km,M,61.0,1:35:27,5727.0,Jim,O'Neil ,USA,5/14/1925,Nike/OTC,Eugene OR USA,9/7/1986,,58.7
+25 km,M,62.0,1:36:20,5780.0,Alex,Ratelle ,USA,9/12/1924,City of Lakes 25k,Minneapolis MN USA,9/14/1986,,58.1
+25 km,M,63.0,1:37:53,5873.0,Ed,Whitlock ,CAN,3/6/1931,,Toronto ON CAN,7/31/1994,,57.0
+25 km,M,64.0,1:41:07,6067.0,Don,Longenecker,USA,3/25/1916,,AZ,1/25/1981,,54.9
+25 km,M,65.0,1:42:58,6178.0,Jim,Forshee ,USA,3/31/1926,River Bank Run 25K,Grand Rapids MI USA,5/11/1991,,53.8
+25 km,M,66.0,1:41:39,6099.0,Alex,Ratelle ,USA,9/12/1924,City of Lakes 25k,Minneapolis MN USA,9/16/1990,,54.6
+25 km,M,67.0,1:44:07,6247.0,Warren,Utes ,USA,6/25/1920,,Joliet IL USA,9/20/1987,,53.1
+25 km,M,68.0,1:42:19,6139.0,Doug,Goodhue ,USA,2/21/1942,River Bank Run 25K,Grand Rapids MI USA,5/8/2010,,54.2
+25 km,M,69.0,1:45:59,6359.0,Jim,Forshee ,USA,3/31/1926,River Bank Run 25K,Grand Rapids MI USA,5/13/1995,,52.0
+25 km,M,70.0,1:39:59,5999.0,Clive,Davies ,USA,8/17/1915,Nike/OTC,Eugene OR USA,9/8/1985,,55.7
+25 km,M,71.0,1:44:11,6251.0,Warren,Utes ,USA,6/25/1920,River Bank Run 25K,Grand Rapids MI USA,5/9/1992,,53.1
+25 km,M,72.0,1:44:32,6272.0,Warren,Utes ,USA,6/25/1920,River Bank Run 25K,Grand Rapids MI USA,5/8/1993,,52.9
+25 km,M,73.0,1:57:31,7051.0,Lloyd,Young ,USA,7/18/1923,City of Lakes 25k,"Minneapolis, MN",9/8/1996,,46.2
+25 km,M,74.0,2:04:21,7461.0,Lloyd,Young ,USA,7/18/1923,City of Lakes 25k,"Minneapolis, MN",9/7/1997,,43.2
+25 km,M,75.0,1:56:18,6978.0,Ed,Benham ,USA,7/12/1907,TAC Masters,"Raleigh, NC",11/6/1982,,46.7
+25 km,M,76.0,2:01:28,7288.0,Ed,Benham ,USA,7/12/1907,,Washington DC USA,5/27/1984,,44.4
+25 km,M,77.0,1:52:57,6777.0,Warren,Utes ,USA,6/25/1920,Nat'l Heritage Corridor,"Channahon, IL",9/14/1997,,48.3
+25 km,M,78.0,2:12:04,7924.0,Lloyd,Young ,USA,7/18/1923,City of Lakes 25k,Minneapolis MN USA,9/9/2001,,40.3
+25 km,M,79.0,2:16:33,8193.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/12/2007,,38.7
+25 km,M,80.0,2:05:44,7544.0,Warren,Utes ,USA,6/25/1920,Nat'l Heritage Corridor,"Channahon, IL",9/24/2000,,42.7
+25 km,M,81.0,2:22:19,8539.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/9/2009,,36.9
+25 km,M,82.0,2:32:05,9125.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/8/2010,,34.1
+25 km,M,83.0,2:38:59,9539.0,Paul,Spangler ,USA,3/18/1899,,Ventura CA USA,9/19/1982,,32.3
+25 km,M,84.0,2:38:04,9484.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/12/2012,,32.5
+25 km,M,85.0,2:52:55,10375.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/11/2013,,29.1
+25 km,M,86.0,2:49:52,10192.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/10/2014,,29.8
+25 km,M,87.0,3:43:25,13405.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/9/2015,,21.1
+25 km,M,88.0,3:35:44,12944.0,Jerry,Johncock ,USA,2/2/1928,River Bank Run 25K,Grand Rapids MI USA,5/14/2016,,22.1
+,,,,,,,,,,88,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,, ,,,,,,,

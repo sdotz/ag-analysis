@@ -1,0 +1,86 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,VDOT
+H Mar,F,5,1:51:31,6691,Nasiya,Jobe ,USA,11/27/1978,,Hayward CA USA,10/20/1984,,39.7
+H Mar,F,6,2:40:22,9622,Rosie,Dunham ,USA,11/23/2006,,Columbia SC USA,11/9/2013,,25.7
+H Mar,F,7,1:41:00,6060,Makenzie,Kolvoord ,USA,11/21/2006,,Carderock MD USA,11/16/2014,,44.6
+H Mar,F,8,1:35:25,5725,Tabitha,Francks ,USA,11/24/1974,,New York NY USA,9/24/1983,,47.6
+H Mar,F,9,1:28:31,5311,Tabitha,Francks ,USA,11/24/1974,,Philadelphia PA USA,9/16/1984,,52.0
+H Mar,F,10,1:25:52,5152,Stephanie,Paparelli ,USA,11/20/1972,,The Woodlands TX USA,1/29/1983,,53.8
+H Mar,F,11,1:31:23,5483,Heather,Welsch ,USA,6/28/2002,,Houston TX USA,1/19/2014,,50.1
+H Mar,F,12,1:21:45,4905,Mira,Preradovic ,BIH,6/20/1987,,Belgrade SER,4/22/2000,,57.0
+H Mar,F,13,1:16:23,4583,Mira,Preradovic ,BIH,6/20/1987,,Belgrade SER,4/21/2001,,61.6
+H Mar,F,14,1:15:14,4514,Miyuki,Oka ,JPN,3/8/1994,,Kobe JPN,11/24/2008,,62.7
+H Mar,F,15,1:12:36,4356,Eyerusalem,Kuma Mutal,ETH,11/4/1981,,Kosice SVK,10/4/1997,,65.3
+H Mar,F,16,1:12:31,4351,Zhu-ang,Liu ,CHN,1/18/1995,,Yangzhou CHN,4/24/2011,,65.4
+H Mar,F,17,1:10:08,4208,Mame,Feyisa ,ETH,6/10/1996,,Copenhagen DEN,3/29/2014,,68.0
+H Mar,F,18,1:08:21,4101,Valentine,Kipketer Chepkorir,KEN,1/5/1993,,Lille FRA,9/3/2011,,70.0
+H Mar,F,19,1:07:57,4077,Abebu,Gelan Adugna,ETH,1/18/1990,RAK Half Marathon,Ras Al Khaimah UAE,2/20/2009,,70.5
+H Mar,F,20,1:04:14,3854,Girmawit,Gebrzihair,ETH,11/21/2001,RAK Half Marathon,Ras Al Khaimah UAE,2/19/2022,,75.3
+H Mar,F,21,1:06:49,4009,Esther,Wanjiru Maina,KEN,3/27/1977,,Tokyo JPN,1/15/1999,,71.9
+H Mar,F,22,1:03:51,3831,Yalemzerf,Yehualaw,ETH,8/3/1999,Medio Maraton Valencia Trinidad Alfonso EDP,Valencia ESP,10/24/2021,,75.8
+H Mar,F,23,1:02:52,3772,Letesenbet,Gidey,ETH,3/20/98,Medio Maraton Valencia Trinidad Alfonso EDP,Valencia ESP,10/24/2021,WR,77.2
+H Mar,F,24,1:06:11,3971,Eunice,Chebichii Chumba,BRN,1/16/1993,,Copenhagen DEN,9/17/2017,,72.7
+H Mar,F,25,1:05:51,3951,Brigid,Kosgei ,KEN,2/20/1994,,Prague CZE,4/2/2016,,73.1
+H Mar,F,26,1:04:02,3842,Ruth,Chepngetich,KEN,8/8/1994,N Kolay Istanbul Half Marathon,Istanbul TUK,4/4/2021,,75.5
+H Mar,F,27,1:05:09,3909,Florence,Chebet Kiplagat,KEN,2/27/1987,,Barcelona ESP,2/15/2015,,74.0
+H Mar,F,28,1:04:31,3871,Ababel,Yeshaneh,ETH,7/22/1991,RAK Half Marathon,Ras Al Khaimah UAE,2/21/2020,,74.9
+H Mar,F,29,1:05:18,3918,Genzebe,Dibaba,ETH,2/8/1991,Medio Maratón Valencia Trinidad Alfonso EDP,Valencia ESP,12/6/2020,,73.8
+H Mar,F,30,1:06:49,4009,Mary,Keitany Chepkosgei,KEN,1/18/1982,RAK Half Marathon,Ras Al Khaimah UAE,2/17/2012,,71.9
+H Mar,F,31,1:05:52,3952,Edith,Chelimo ,KEN,7/16/1986,,Cardiff WAL,10/1/2017,,73.1
+,F,32,1:04:48,3888,Helen,Oberi,KEN,12/13/1989,N Kolay Istanbul Half Marathon,Istanbul TUK,3/27/2022,,74.5
+H Mar,F,33,1:06:02,3962,Mary,Keitany Chepkosgei,KEN,1/18/1982,RAK Half Marathon,Ras Al Khaimah UAE,2/13/2015,,72.9
+H Mar,F,34,1:07:26,4046,Lydia,Cheromei Kogo,KEN,5/11/1977,,Prague CZE,3/31/2012,,71.1
+H Mar,F,35,1:05:13,3913,Mary,Keitany Chepkosgei,KEN,1/18/1982,RAK Half Marathon,Ras Al Khaimah UAE,2/10/2017,,73.9
+H Mar,F,36,1:08:21,4101,Edna,Kiplagat Ngeringwony,KEN,9/15/1979,,Glasgow SCO,10/4/2015,,70.0
+H Mar,F,37,1:08:55,4135,Valeria,Straneo,ITA,4/5/1976,,Copenhagen DEN,3/29/2014,,69.4
+H Mar,F,38,1:07:15,4035,Sara,Hall,USA,4/15/1983,"Houston Marathon, H Mar","Houston, TX",1/16/2022,,71.4
+H Mar,F,39,1:08:48,4128,Christelle,Daunay,FRA,12/5/1974,,Copenhagen DEN,3/29/2014,,69.5
+H Mar,F,40,1:09:56,4196,Irina,Permitina,RUS,3/2/1968,,Novosibirsk RUS,9/13/2008,,68.2
+H Mar,F,41,1:09:37,4177,Deena,Kastor,USA,2/14/1973,Rock 'n' Roll Philadelphia Half Marathon,Philadelphia PA USA,9/21/2014,,68.6
+H Mar,F,42,1:09:58,4198,Joanne,Pavey,ENG,9/20/1973,,Glasgow SCO,10/4/2015,,68.2
+H Mar,F,43,1:11:54,4314,Nicole,Leveque,FRA,1/27/1951,,Oslo NOR,9/24/1994,,66.1
+H Mar,F,44,1:09:46,4186,Edna,Kiplagat ,KEN,11/15/1979,NYC Half Marathon,"New York, NY",3/17/24,,68.4
+H Mar,F,45,1:12:04,4324,Nicole,Leveque,FRA,1/27/1951,,Paris FRA,3/17/1996,,65.9
+H Mar,F,46,1:11:18,4278,Evy,Palm,SWE,1/31/1942,,Ostnor SWE,7/16/1988,,66.7
+H Mar,F,47,1:15:42,4542,Nicole,Leveque,FRA,1/27/1951,,Grenoble FRA,9/13/1998,,62.2
+H Mar,F,48,1:15:06,4506,Evy,Palm,SWE,1/31/1942,,Narvik NOR,9/1/1990,,62.8
+H Mar,F,49,1:13:32,4412,Linda,Somers,USA,5/7/1961,Rock 'n' Roll San Jose Half Marathon,San Jose CA USA,10/3/2010,,64.4
+H Mar,F,50,1:15:18,4518,Linda,Somers,USA,5/7/1961,Dodge Rock & Roll Half Marathon,Los Angeles CA USA,10/30/2011,,62.6
+H Mar,F,51,1:16:07,4567,Tatyana,Pozdniakova,UKR,3/4/1955,MORE Half Marathon,New York NY USA,3/26/2006,,61.8
+H Mar,F,52,1:20:06,4806,Houria,Frechou,FRA,1/19/1960,,Blagnac FRA,3/11/2012,,58.3
+H Mar,F,53,1:20:13,4813,Sally,Gibbs,NZL,6/5/1963,,Christchurch NZL,6/5/2016,,58.2
+H Mar,F,54,1:19:48,4788,Silke,Schmidt,GER,8/7/1959,,Den Haag NED,3/9/2014,,58.6
+H Mar,F,55,1:19:38.4,4779,Silke,Schmidt,GER,8/7/1959,,Den Haag NED,3/8/2015,,58.7
+H Mar,F,56,1:20:06,4806,Silke,Schmidt,GER,8/7/1959,,Lyon FRA,8/16/2015,,58.3
+H Mar,F,57,1:24:54,5094,Christine,Kennedy,USA,12/29/1954,Monterey Bay Half Marathon,Monterey CA USA,11/18/2012,,54.5
+H Mar,F,58,1:24:19,5090,Jenny,Hitchings,USA,7/1/1963,Urban Cow H Mar,"Sacramento, CA",10/3/2021,F55-59 AR ,54.6
+H Mar,F,59,1:25:59.6,5160,Heidrun,Besler,GER,3/4/1956,,Kempton GER,4/19/2015,,53.7
+H Mar,F,60,1:23:39,5019,Jenny,Hitchings,USA,7/1/1963,"Chicago Marathon, H Mar split","Chicago, IL",10/8/2023,,55.5
+H Mar,F,61,1:22:33,5191,Maria,Del Carmen Ruiz Vazquez,MEX,,NYC Half Marathon,"New York, NY",3/17/2024,,53.4
+H Mar,F,62,1:26:53,5213,Stefica,Gajic,SUI,11/12/1948,,Thionville FRA,5/15/2011,,53.1
+H Mar,F,63,1:27:57,5277,Angela,Copson,ENG,4/20/1947,,Bath ENG,3/6/2011,,52.4
+H Mar,F,64,1:30:27,5427,Stefica,Gajic,SUI,11/12/1948,,Upice CZE,5/26/2013,,50.7
+H Mar,F,65,1:32:56,5576,Emmi,Luthi,SUI,3/1/1944,,Aarhus DEN,5/31/2009,,49.1
+H Mar,F,66,1:34:44,5684,Angela,Copson,ENG,4/20/1947,,Bath ENG,3/2/2014,,48.0
+H Mar,F,67,1:33:43,5623,Rae,Baymiller,USA,7/27/1943,Hilton Head Half Marathon,Hilton Head SC USA,2/12/2011,,48.6
+H Mar,F,68,1:31:38,5712,Christine,Kennedy,USA,12/29/1954,"WMA World Indoor Championships, H Mar",Torun POL,4/1/2023,,47.8
+H Mar,F,69,1:35:12,5712,Angela,Copson,ENG,4/20/1947,,Bath ENG,3/12/2017,,47.8
+H Mar,F,70,1:37:38,5858,Lavinia,Petrie,AUS,9/13/1943,,Bendigo AUS,1/12/2014,,46.4
+H Mar,F,71,1:37:01,5821,Jeannie,Rice,USA,4/14/1948,Goodyear H Mar,"Akron, OH",8/10/19,,46.7
+H Mar,F,72,1:45:42,6342,Rimma,Vasina,RUS,10/23/1940,,Upice CZE,5/26/2013,,42.3
+H Mar,F,73,1:41:00,6060,Lavinia,Petrie,AUS,9/13/1943,,Perth AUS,11/6/2016,,44.6
+H Mar,F,74,1:49:58,6598,Melitta,Czerwenka,GER,4/30/1930,,Saarlouis GER,5/30/2004,,40.4
+H Mar,F,75,1:43:09,6189,Jeannie,Rice ,USA,4/14/1948,"Chicago Marathon, H Mar split","Chicago, IL",10/8/2023,,43.5
+H Mar,F,76,1:46:08,6368,Libby,James,USA,7/12/1936,,Orlando FL USA,1/13/2013,,42.1
+H Mar,F,77,1:58:06,7086,Betty Jean,McHugh,CAN,11/7/1927,,Victoria BC CAN,10/9/2005,,37.2
+H Mar,F,78,1:56:48,7008,Betty Jean,McHugh,CAN,11/7/1927,,Vancouver BC CAN,2/19/2006,,37.6
+H Mar,F,79,2:05:53.0,7553,Betty Jean,McHugh,CAN,11/7/1927,,Vancouver BC CAN,2/11/2007,,34.5
+H Mar,F,80,2:04:19,7459,Betty Jean,McHugh,CAN,11/7/1927,,Vancouver BC CAN,5/4/2008,,35.0
+H Mar,F,81,2:05:20,7520,Betty Jean,McHugh,CAN,11/7/1927,,Victoria BC CAN,10/11/2009,,34.6
+H Mar,F,82,2:16:06,8166,Deidre,Larkin,GBR,9/24/1931,,Pretoria RSA,10/19/2013,,31.4
+H Mar,F,83,2:16:27,8187,Deidre,Larkin,GBR,9/24/1931,,Pretoria RSA,7/18/2015,,31.3
+H Mar,F,84,2:23:36,8616,Betty,McHugh,CAN,11/7/1927,,Victoria BC CAN,10/7/2012,,29.4
+H Mar,F,85,2:12:37,7957,Deidre,Larkin,RSA,9/24/1931,,Pretoria RSA,2/4/2017,,32.4
+H Mar,F,86,2:42:57,9777,Margaret,Davis,USA,8/13/1922,Carlsbad Half Marathon,"Carlsbad, CA",1/25/09,,25.2
+H Mar,F,87,2:43:30,9810,Betty Jean,McHugh,CAN,11/7/1927,,Vancouver BC CAN,2/15/2015,,25.1
+H Mar,F,88,2:52:36,10356,Margaret,Davis,USA,8/13/1922,Americas Finest City Half Marathon,"San Diego, CA",8/15/10,,23.4
+H Mar,F,93,4:49:25,17365,Gladys,Burrill,CAN,11/23/1918,,Honolulu HI USA,3/11/2012,,11.5

@@ -1,0 +1,99 @@
+Event,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,VDOT
+5 km,3,45:48,2748.0,Fanny,O'Neill,USA,4/11/11,,Huntsville AL USA,3/14/15,,,,,,18.3
+5 km,4,29:54,1794.0,Brooke,Johnson,USA,6/20/13,,Asbury Park NJ USA,8/12/17,,,,,,30.9
+5 km,5,22:18,1338.0,Ava,Johnson,USA,8/22/10,,Pine Beach NJ USA,6/26/16,,,,,,43.8
+5 km,6,20:58,1258.0,Ava,Johnson,USA,8/22/10,,Sea Girt NJ USA,8/5/17,,,,,,47.1
+5 km,7,18:28,1108.0,Megan,Crum,USA,8/27/07,,South El Monte CA USA,3/7/15,,,,,,54.7
+5 km,8,18:35,1115.0,Megan,Crum,USA,8/27/07,,La Palma CA USA,7/4/16,,,,,,54.3
+5 km,9,17:54,1074.0,Megan,Crum,USA,8/27/07,,Fountain Valley CA USA,8/28/16,,,,,,56.7
+5 km,10,17:56,1076.0,Megan,Crum,USA,8/27/07,,Huntington Beach CA USA,10/15/17,,,,,,56.6
+5 km,11,17:29,1049.0,Grace,Ping,USA,7/7/03,,Winona MN USA,6/20/15,,,,,,58.3
+5 km,12,17:17,1037.0,Annabella,Veltcheva,USA,4/24/04,,Clermont FL USA,3/18/17,,,,,,59.0
+5 km,13,16:36,996.0,Grace,Ping,USA,7/7/03,,San Jose CA USA,11/24/16,,,,,,61.9
+5 km,14,16:28,988.0,Yui,Fukuda,JPN,6/1/95,,Himeji JPN,2/11/10,,,,,,62.5
+5 km,15,16:14,974.0,Pamela,Chepchumba,KEN,2/28/78,,Bolzano ITA,12/31/93,,,,,,63.5
+5 km,16,15:19,919.0,Tirunesh,Dibaba,ETH,6/1/85,Carlsbad 5000,Carlsbad CA USA,4/7/02,,,,,,67.9
+5 km,17,15:00,900.0,Tirunesh,Dibaba,ETH,6/1/85,Carlsbad 5000,Carlsbad CA USA,4/13/03,,,,,,69.6
+5 km,18,14:40,880.0,Mendina,Eisa,ETH,1/3/05,Cursa dels Nassos in Barcelona 5K,Barcelona SPN,12/31/23,,,,,,71.4
+5 km,19,14:38,878.0,Medina,Eisa,ETH,1/3/05,adizero Road to Record,"Herzogenaurach, Ger",4/27/24,,,,,,71.6
+5 km,20,14:58,898.0,Lydia,Cheromei Kogo,KEN,5/11/77,,Bern SUI,6/8/97,,,,,,69.8
+5 km,21,14:19,879.0,Ejegayehu,Taye,,2/10/00,Cursa dels Nassos in Barcelona 5K,Barcelona SPN,12/31/21,,,,,,71.5
+5 km,22,14:13,853.0,Agnes,Ngetich,KEN,1/23/01,"10K Valencia Ibercaja
+Valencia (ESP)",Valencia (ESP),1/14/24,WR (5K split),,,,,74.1
+5 km,23,14:13,853.0,Beatrice ,Chebet,KEN,3/5/00,Cursa dels Nassos in Barcelona 5K,Barcelona SPN,12/31/23,WR,,,,,74.1
+5 km,24,14:48,888.0,Genzebe,Dibaba Kenini,ETH,2/8/91,Carlsbad 5000,Carlsbad CA USA,3/29/15,,,,,,70.7
+5 km,25,14:39,879.0,Dawit,Seyaum,ETH,7/27/96,"Urban Trail Lille, 5K",Lille FRA,11/6/21,,,,,,71.5
+5 km,26,14:29,869.0,Senbere ,Tefer,ETH,5/3/95,Adizero Road to Records,"Herzogenaurach, Ger",9/12/21,,,,,,72.5
+5 km,27,14:57,897.0,Paula,Radcliffe,ENG,12/17/73,,London ENG,9/2/01,,,,,,69.9
+5 km,28,15:10,910.0,Elana,Meyer,RSA,10/10/66,,Providence RI USA,10/16/94,,,,,,68.7
+5 km,29,14:43,883.0,Beatrice ,Chepkoech,KEN,7/6/91,Herculis Monaco Run 5K,Monaco,2/14/21,,,,,,71.2
+5 km,30,14:50,890.0,Molly,Huddle,USA,8/31/84,,Boston MA USA,4/18/15,,,,,,70.5
+5 km,31,14:52,892.0,Mamitu,Daska Molisa,ETH,10/16/83,,Boston MA USA,4/18/15,,,,,,70.3
+5 km,32,14:56,896.0,Molly,Huddle,USA,8/31/84,,Boston MA USA,4/15/17,,,,,,70.0
+5 km,33,15:15,915.0,Judi,St Hilaire,USA,9/5/59,,Freeport BAH,2/13/93,,,,,,68.3
+5 km,34,15:06,906.0,Sonia,O'Sullivan,IRL,11/28/69,,London ENG,9/5/04,,,,,,69.1
+5 km,35,15:24,924.0,Elana,Meyer,RSA,10/10/66,,Providence RI USA,9/15/02,,,,,,67.5
+5 km,36,15:30,930.0,Uta,Pippig,USA,9/7/65,,Providence RI USA,9/16/01,,,,,,67.0
+5 km,37,15:30,930.0,Colleen,De Reuck,USA,4/16/64,Carlsbad 5000,Carlsbad CA USA,4/7/02,,,,,,67.0
+5 km,38,15:24,924.0,Mary,Slaney,USA,8/4/58,,Palm Desert CA USA,12/15/96,,,,,,67.5
+5 km,39,15:40,940.0,Edith,Masai,KEN,4/4/67,,Neuss GER,5/20/06,,,,,,66.2
+5 km,40,15:48,948.0,Colleen,De Reuck,USA,4/16/64,USATF Women's 5 km Championships,Albany NY USA,6/5/04,,,,,,65.5
+5 km,41,15:53,953.0,Jennifer,Rhines,USA,7/1/74,Carlsbad 5000,Carlsbad CA USA,4/3/16,,,,,,65.1
+5 km,42,15:48,948.0,Deena,Kastor,USA,2/14/73,,San Jose CA USA,9/27/15,,,,,,65.5
+5 km,43,16:25,985.0,Firiya,Sultanova,RUS,4/29/61,,Fort Myers FL USA,2/19/05,,,,,,62.7
+5 km,44,16:01,961.0,Firiya,Sultanova,RUS,4/29/61,,Saint Augustine FL USA,1/28/06,,,,,,64.5
+5 km,45,16:20,980.0,Catriona,McKiernan,IRL,11/30/69,,Dublin IRL,9/1/15,,,,,,63.1
+5 km,46,16:34,994.0,Tatyana,Pozdniakova,UKR,3/4/55,,Manchester NH USA,8/9/01,,,,,,62.0
+5 km,47,16:17,977.0,Tatyana,Pozdniakova,UKR,3/4/55,,Manchester NH USA,8/8/02,,,,,,63.3
+5 km,48,16:14,974.0,Linda,Somers,USA,5/7/61,Silicon Valley Turkey Trot,San Jose CA USA,11/26/09,,,,,,63.5
+5 km,49,16:29,989.0,Tatyana,Pozdniakova,UKR,3/4/55,,Manchester NH USA,8/12/04,,,,,,62.4
+5 km,50,16:39,999.0,Tatyana,Pozdniakova,UKR,3/4/55,,Manchester NH USA,8/11/05,,,,,,61.7
+5 km,51,17:04,1024.0,Monica,Joyce,USA,2/7/57,Plymouth YMCA Fathers Day 5K,"Plymouth, MI",6/20/10,,,,,,59.9
+5 km,52,17:02,1022.0,Fiona,Matheson,SCO,4/25/61,,Edinburgh SCO,5/1/13,,,,,,60.1
+5 km,53,17:39,1059.0,Joan,Samuelson,USA,5/16/57,,Providence RI USA,9/19/10,,,,,,57.6
+5 km,54,17:48,1068.0,Silke,Schmidt,GER,8/7/59,,Leiden NED,5/18/14,,,,,,57.1
+5 km,55,17:57,1077.0,Julie,Buckley,ENG,7/8/56,,Doncaster ENG,7/13/11,,,,,,56.5
+5 km,56,17:41,1061.0,Fiona,Matheson,SCO,4/25/61,,Clydebank SCO,6/28/17,,,,,,57.5
+5 km,57,18:32,1112.0,Christine,Kennedy,USA,12/29/54,Santa Cruz Firecracker 5K,"Santa Cruz, CA",7/4/12,,,,,,54.4
+5 km,58,18:47,1127.0,Rose,Lambe,IRL,10/25/59,,Dublin IRL,12/2/17,,,,,,53.6
+5 km,59,18:58,1138.0,Daphne,Ellmore,ENG,5/22/50,,Horwich ENG,6/21/09,,,,,,53.0
+5 km,60,19:04,1144.0,Kathryn,Martin,USA,9/30/51,USATF Masters 5 km Championships,Syracuse NY USA,10/2/11,,,,,,52.7
+5 km,61,19:14,1154.0,Sabra,Harvey,USA,3/2/49,Heights Fun 5K,Houston TX USA,6/5/10,,,,,,52.1
+5 km,62,19:06,1146.0,Kathryn,Martin,USA,9/30/51,USATF Masters 5 km Championships,Syracuse NY USA,10/6/13,,,,,,52.6
+5 km,63,20:27,1227.0,Marie-Louise,Michelsohn,USA,10/8/41,Syracuse Festival of Races,Syracuse NY USA,10/2/05,,,,,,48.5
+5 km,64,19:23,1163.0,Angela,Copson,ENG,4/20/47,,Northampton ENG,5/13/11,,,,,,51.7
+5 km,65,19:57,1197.0,Kathryn,Martin,USA,9/30/51,USATF Masters 5 km Championships,Syracuse NY USA,10/2/16,,,,,,50.0
+5 km,66,20:04,1204.0,Janette,Stevenson,SCO,5/3/49,,Clydebank SCO,3/19/16,,,,,,49.6
+5 km,67,20:32,1232.0,Sabra,Harvey,USA,3/2/49,Bellaire Trolley Run 5K,"Houston, TX",4/9/16,,,,,,48.3
+5 km,68,19:51,1191.0,Sabra,Harvey,USA,3/2/49,,Houston TX USA,6/3/17,,,,,,50.2
+5 km,69,21:24,1284.0,Angela,Copson,ENG,4/20/47,,Horwich ENG,6/19/16,,,,,,46.0
+5 km,70,22:03,1323.0,Jan,Holmquist,USA,5/18/44,Evans Run 5K,Evans Run 5K,5/18/14,,,,,,44.4
+5 km,71,21:49,1309.0,Jeannie,Rice,USA,4/14/48,John Clay 5K,"Naples, FL",9/2/19,,,,,,45.0
+5 km,72,23:13,1393.0,Lynette,Walker,USA,,Simsbury River Run,"Simsbury, CT",4/29/12,,,,,,41.8
+5 km,73,22:27,1347.0,Jan,Holmquist,USA,5/18/44,USATF Masters 5 km Championships,Syracuse NY USA,10/1/17,,,,,,43.5
+5 km,74,23:44,1424.0,Libby,James,USA,7/12/36,Sharin O the Green 5K Run,"Ft Collins, CO",3/12/11,,,,,,40.7
+5 km,75,23:34,1414.0,Libby,James,USA,7/12/36,Freihofer's Run for Women,Albany NY USA,6/2/12,,,,,,41.1
+5 km,76,23:55,1435.0,Libby,James,USA,7/12/36,Freihofer's Run for Women,Albany NY USA,6/1/13,,,,,,40.4
+5 km,77,24:16,1456.0,Libby,James,USA,7/12/36,Freihofer's Run for Women,Albany NY USA,5/31/14,,,,,,39.7
+5 km,78,24:00,1440.0,Libby,James,USA,7/12/36,USATF Masters 5 km Championships,Syracuse NY USA,10/5/14,,,,,,40.2
+5 km,79,25:13,1513.0,Libby,James,USA,7/12/36,Firekracker 5K,"Ft. Collins, CO",7/4/16,,,,,,37.9
+5 km,80,25:11,1511.0,Libby,James,USA,7/12/36,USATF Masters 5 km Championships,Syracuse NY USA,10/2/16,,,,,,38.0
+5 km,81,26:49,1609.0,Libby,James,USA,7/12/36,Freihofer's Run for Women,Albany NY USA,6/2/18,,,,,,35.2
+5 km,82,29:40,1780.0,Libby,James,USA,7/12/36,Freihofer's Run for Women,Albany NY USA,6/1/19,,,,,,31.2
+5 km,83,30:10,1810.0,Lenore,Montgomery,CAN,5/28/30,,Vancouver BC CAN,6/14/13,,,,,,30.6
+5 km,84,31:38,1898.0,Anne,Clarke,USA,9/21/09,,IL,2/20/94,,,,,,28.9
+5 km,85,34:51,2091.0,Anne,Clarke,USA,9/21/09,Park Ridge Charity Classic,"Park Ridge, IL",9/24/94,,,,,,25.7
+5 km,86,34:23,2063.0,Lenore,Montgomery,CAN,5/28/30,Carlsbad 5000,Carlsbad CA USA,4/2/17,,,,,,26.1
+5 km,87,38:09,2289.0,Leona,Lugers,USA,11/26/06,,MI,5/21/94,,,,,,23.0
+5 km,88,41:26,2486.0,Anne,Clarke,USA,9/21/09,Berwyn 5000,"Berwyn, IL",5/16/98,,,,,,20.7
+5 km,89,41:05,2465.0,Kelsig,Francis,USA,,,CA,10/12/97,,,,,,21.0
+5 km,90,43:12,2592.0,Harriette,Thompson,USA,3/27/23,Yiason Greek Festival,"Charlotte, NC",8/24/13,,,,,,19.7
+5 km,91,42:22,2542.0,Harriette,Thompson,USA,3/27/23,CPCC Charlotte Skyline 5K,"Charlotte, NC",4/26/14,,,,,,20.2
+5 km,92,44:26,2666.0,Harriette,Thompson,USA,3/27/23,Run! Ballantyne 5K,"Charlotte, NC",5/2/15,,,,,,19.0
+,93,,,,,,,,,,,,,,,
+5 km,94,48:55,2935.0,Evelyn,Tripp,USA,1/19/16,Get to the Green 5K,"Columbia, SC",3/13/10,,,,,,16.8
+,95,,,,,,,,,,,,,,,
+,96,,,,,,,,,,,,,,,
+5 km,97,55:47,3347.0,Betty,Lindberg,USA,9/7/24,USATF Masters 5 km Championships,"Atlanta, GA",2/27/22,,,,,,14.1
+5 km,98,59:04 ,3347.0,Betty,Lindberg,USA,9/7/24,USATF Masters 5 km Championships,"Atlanta, GA",2/25/23,,,,,,14.1
+,99,,,,,,,,,,,,,,,

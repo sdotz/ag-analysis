@@ -1,0 +1,88 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,Comments,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16,Unnamed: 17,Unnamed: 18,VDOT
+H Mar,M,5,3:02:58,10978,Matthew,Feibush,USA,6/19/2007,,Irvine CA USA,5/4/2013,,,,,,,,21.8
+H Mar,M,6,2:06:51,7611,Charlie,Westrip,USA,8/15/2010,,Huntsville AL USA,11/12/2016,,,,,,,,34.1
+H Mar,M,7,1:43:36,6216,Jaden,Merrick ,USA,10/16/2007,,Waterloo IA USA,9/12/2015,,,,,,,,43.3
+H Mar,M,8,1:38:22,5902,Grattan,O'Neill ,USA,2/26/2007,,Elkmont AL USA,1/16/2016,,,,,,,,46.0
+H Mar,M,9,1:28:42,5322,Nathaniel,Lee ,USA,1/19/2008,,Norwalk CT USA,10/14/2017,,,,,,,,51.8
+H Mar,M,10,1:25:41,5141,Jerome-Dino,Daniels ,USA,3/4/1974,,Hayward CA USA,10/20/1984,,,,,,,,54.0
+H Mar,M,11,1:23:58,5038,Ayden,Buchanan ,USA,2/21/2006,,Valencia CA USA,11/5/2017,,,,,,,,55.2
+H Mar,M,12,1:19:26,4766,Wesley,Paul ,USA,1/25/1969,,Kansas City MO USA,6/7/1981,,,,,,,,58.9
+H Mar,M,13,1:18:53,4733,Jacob,Bragg ,AUS,5/15/2000,,Brisbane AUS,8/4/2013,,,,,,,,59.4
+H Mar,M,14,1:13:18,4398,Jeff,Taylor ,USA,10/1/1966,,Philadelphia PA USA,9/20/1981,,,,,,,,64.6
+H Mar,M,15,1:02:44,3764,Alene,Emere Reta,ETH,6/25/1982,,Kosice SVK,10/4/1997,,,,,,,,77.4
+H Mar,M,16,1:00:45,3645,Faustin,Baha Sulle,TAN,5/30/1982,,Vitry-sur-Seine FRA,4/11/1999,,,,,,,,80.3
+H Mar,M,17,59:57,3597,Eric,Ndiema ,KEN,12/28/1992,,Den Haag NED,3/14/2010,,,,,,,,81.5
+H Mar,M,18,59:16,3556,Samuel,Wanjiru Kamau,KEN,11/10/1986,,Rotterdam NED,9/11/2005,,,,,,,,82.6
+H Mar,M,19,58:48,3528,Jorum,Lumbasi Okombo,KEN,12/10/1997,,Copenhagen DEN,9/17/2017,,,,,,,,83.4
+H Mar,M,20,57:37,3457,Jacob ,Kiplimo,UGA,11/14/2000,Medio Maratón Valencia Trinidad Alfonso EDP,Valencia ESP,12/6/2020,,,,,,,,85.4
+H Mar,M,21,57:31,3451,Jacob ,Kiplimo,UGA,11/14/2000,EDP Lisbon Half Marathon,Lisbon POR,11/21/2021,Open WR,,,,,,,85.6
+H Mar,M,22,58:09,3489,Ronex,Kipruto,KEN,10/12/1999,Medio Maratón Valencia Trinidad Alfonso EDP,Valencia ESP,10/24/2021,,,,,,,,84.5
+H Mar,M,23,58:26,3506,Daniel,Mateiko,KEN,6/20/1905,Medio Maratón Valencia Trinidad Alfonso EDP,Valencia ESP,10/24/2021,,,,,,,,84.0
+H Mar,M,24,57:32,3452,Kibiwott,Kandie,KEN,6/20/1996,Medio Maratón Valencia Trinidad Alfonso EDP,Valencia ESP,12/6/2020,,,,,,,,85.6
+H Mar,M,25,58:54,3534,Steven,Kibet Kosgei,KEN,11/9/1986,,Den Haag NED,3/11/2012,,,,,,,,83.2
+H Mar,M,26,58:01,3481,Geoffery,Kamworor,KEN,11/28/1992,Copenhagen Half-Marathon ,Copenhagen DEN,9/15/2019,,,,,,,,84.7
+H Mar,M,27,59:07,3547,Paul,Kosgei Malakwen,KEN,4/22/1978,,Berlin GER,4/2/2006,,,,,,,,82.9
+H Mar,M,28,58:23,3503,Zersenay,Tadese ,ERI,2/8/1982,,Lisbon POR,3/21/2010,,,,,,,,84.1
+H Mar,M,29,58:18,3498,Abraham,Kiptum,KEN,9/15/1989,Medio Maratón Valencia Trinidad Alfonso EDP,Valencia ESP,10/28/2018,,,,,,,,84.2
+H Mar,M,30,59:01,3541,Kenneth,Kiprop Kipkemoi,KEN,8/2/1984,,Valencia ESP,10/19/2014,,,,,,,,83.1
+H Mar,M,31,58:58,3538,Geoffrey,Mutai Kiprono,KEN,10/7/1981,,Ras Al Khaimah UAE,2/15/2013,,,,,,,,83.1
+H Mar,M,32,59:28,3568,Alexander,Korio Oloitiptip,KEN,9/22/1982,,Copenhagen DEN,9/13/2015,,,,,,,,82.3
+H Mar,M,33,59:24,3564,Zersenay,Tadese ,ERI,2/8/1982,,New Delhi IND,11/29/2015,,,,,,,,82.4
+H Mar,M,34,59:15,3555,Haile,Gebreselasie ,ETH,4/18/1973,,Lisbon POR,3/16/2008,,,,,,,,82.7
+H Mar,M,35,59:31,3571,Gilbert,Masai ,KEN,5/20/1981,,Copenhagen DEN,9/18/2016,,,,,,,,82.2
+H Mar,M,36,59:59,3599,Jaouad,Gharib ,MAR,5/22/1972,,Lisbon POR,3/22/2009,,,,,,,,81.5
+H Mar,M,37,1:00:18,3618,Haile,Gebreselasie ,ETH,4/18/1973,,Vienna AUT,4/17/2011,,,,,,,,81.0
+H Mar,M,38,1:00:52,3652,Haile,Gebreselasie ,ETH,4/18/1973,,Vienna AUT,4/15/2012,,,,,,,,80.1
+H Mar,M,39,1:01:14,3674,Haile,Gebreselasie ,ETH,4/18/1973,,Vienna AUT,4/14/2013,,,,,,,,79.6
+H Mar,M,40,1:00:57 ,3657,Bernard,Sang,KEN,2/15/1981,N Kolay Istanbul Half Marathon,Istanbul TUK,4/4/2021,,,,,,,,80.0
+H Mar,M,41,1:02:28,3748,John,Campbell ,NZL,2/6/1949,,Philadelphia PA USA,9/16/1990,,,,,,,,77.7
+H Mar,M,42,1:03:02,3782,Bernard,Lagat,USA,12/12/1974,Great North Run Half Marathon,Newcastle GB,9/10/17,,,,,,,,76.9
+H Mar,M,43,1:02:00,3720,Bernard,Lagat,USA,12/12/1974,Houston Half Marathon,"Houston, TX",1/14/2018,,,,,,,,78.4
+H Mar,M,44,1:04:51,3891,Jack,Foster ,NZL,5/23/1932,,Coamo PUR,2/6/1977,,,,,,,,74.4
+H Mar,M,45,1:05:01,3901,Jackson,Kipngok Yegon,KEN,8/16/1960,,Guadalajara MEX,2/5/2006,,,,,,,,74.2
+H Mar,M,46,1:06:33,3993,Martin,Rees ,WAL,2/28/1953,,Bristol ENG,9/26/1999,,,,,,,,72.2
+H Mar,M,47,1:05:44,3944,Jack,Foster ,NZL,5/23/1932,,Las Vegas NV USA,12/7/1979,,,,,,,,73.3
+H Mar,M,48,1:06:29,3989,Martin,Rees ,WAL,2/28/1953,,Cheddar ENG,11/10/2001,,,,,,,,72.3
+H Mar,M,49,1:06:44,4004,Martin,Rees ,WAL,2/28/1953,,Bath ENG,3/17/2002,,,,,,,,72.0
+H Mar,M,50,1:06:23,3983,Titus,Mamabolo ,RSA,1/11/1941,,East London RSA,5/18/1991,,,,,,,,72.4
+H Mar,M,51,1:08:49,4129,Martin,Rees ,WAL,2/28/1953,,Gloucester ENG,7/25/2004,,,,,,,,69.5
+H Mar,M,52,1:09:30,4170,Norman,Green ,USA,6/27/1932,,Philadelphia PA USA,9/16/1984,,,,,,,,68.7
+H Mar,M,53,1:09:57,4197,Martin,Rees ,WAL,2/28/1953,,Bath ENG,3/19/2006,,,,,,,,68.2
+H Mar,M,54,1:10:11,4211,Martin,Rees ,WAL,2/28/1953,,Bath ENG,3/25/2007,,,,,,,,67.9
+H Mar,M,55,1:09:17,4157,Jim,O'Neill ,USA,4/1/1938,,"Dayton, OH",10/17/1993,,,,,,,,68.9
+H Mar,M,56,1:11:45,4305,Sergio,Fernandez Infestus,ESP,7/30/1955,,Granollers ESP,2/5/2012,,,,,,,,66.2
+H Mar,M,57,1:12:39,4359,Michael,Hager ,ENG,9/6/1950,,Aubiere FRA,3/22/2008,,,,,,,,65.3
+H Mar,M,58,1:14:18,4458,Norman,Green ,USA,6/27/1932,,Philadelphia PA USA,9/16/1990,,,,,,,,63.6
+H Mar,M,59,1:12:15,4335,Martin,Rees ,WAL,2/28/1953,,Cardiff WAL,10/14/2012,,,,,,,,65.7
+H Mar,M,60,1:11:09,4262,Tommy,Hughes,IRE,1/8/1960,Antrim Coast H Marathon,,9/12/2020,,,,,,,,67.0
+H Mar,M,61,1:12:27,4347,Martin,Rees ,WAL,2/28/1953,,Cardiff WAL,10/5/2014,,,,,,,,65.5
+H Mar,M,62,1:13:22,4402,Martin,Rees ,WAL,2/28/1953,,Bath ENG,3/1/2015,,,,,,,,64.5
+H Mar,M,63,1:13:49,4429,Martin,Rees ,WAL,2/28/1953,,Bath ENG,3/13/2016,,,,,,,,64.1
+H Mar,M,64,1:17:33,4653,Patrick,Roussel ,FRA,3/19/1947,,Thionville FRA,5/15/2011,,,,,,,,60.5
+H Mar,M,65,1:17:05,4625,Patrick,Roussel ,FRA,3/19/1947,,Nancy FRA,10/7/2012,,,,,,,,61.0
+H Mar,M,66,1:19:19,4759,Luciano,Acquarone ,ITA,10/4/1930,,Bologna ITA,4/20/1997,,,,,,,,59.0
+H Mar,M,67,1:16:25,4585,Wil,vanderLee ,NED,10/23/1929,,Rosmalen NED,4/6/1997,,,,,,,,61.6
+H Mar,M,68,1:20:33,4833,Ed,Whitlock ,CAN,3/6/1931,,Toronto ON CAN,9/26/1999,,,,,,,,57.9
+H Mar,M,69,1:20:14,4814,Ed,Whitlock ,CAN,3/6/1931,,Toronto ON CAN,9/24/2000,,,,,,,,58.2
+H Mar,M,70,1:22:23,4943,Ed,Whitlock ,CAN,3/6/1931,,Grand Island NY USA,4/21/2001,,,,,,,,56.5
+H Mar,M,71,1:25:31,5131,Robert,Newell ,ENG,3/9/1936,,Doncaster ENG,3/11/2007,,,,,,,,54.1
+H Mar,M,72,1:26:39,5199,Joop,Ruter ,NED,4/19/1933,,Maassluis NED,1/22/2006,,,,,,,,53.3
+H Mar,M,73,1:28:02,5282,Ed,Whitlock ,CAN,3/6/1931,,Aurora ON CAN,4/18/2004,,,,,,,,52.3
+H Mar,M,74,1:31:06,5466,Warren,Utes ,USA,6/25/1920,,Schaumburg IL USA,10/2/1994,,,,,,,,50.3
+H Mar,M,75,1:30:14,5414,Karl-Walter,Trumper ,GER,10/7/1939,,Essen GER,11/22/2014,,,,,,,,50.8
+H Mar,M,76,1:29:26,5366,Ed,Whitlock ,CAN,3/6/1931,,London ON CAN,5/13/2007,,,,,,,,51.4
+H Mar,M,77,1:36:40,5800,Warren,Utes ,USA,6/25/1920,,Indianapolis IN USA,5/1/1998,,,,,,,,46.9
+H Mar,M,78,1:37:38,5858,Ed,Whitlock ,CAN,3/6/1931,,Toronto ON CAN,9/27/2009,,,,,,,,46.4
+H Mar,M,79,1:34:27,5667,Ed,Whitlock ,CAN,3/6/1931,,Toronto ON CAN,9/26/2010,,,,,,,,48.2
+H Mar,M,80,1:39:28,5968,John,Keston ,USA,12/5/1924,,Saint Cloud MN USA,4/16/2005,,,,,,,,45.4
+H Mar,M,81,1:38:59,5939,Ed,Whitlock ,CAN,3/6/1931,,Milton ON CAN,9/16/2012,,,,,,,,45.7
+H Mar,M,82,1:59:21,7161,Johnny,A Kelley,USA,9/6/1907,,n/a MA USA,5/27/1990,,,,,,,,36.7
+H Mar,M,83,1:46:12,6372,Ed,Whitlock ,CAN,3/6/1931,,Waterloo ON CAN,4/27/2014,,,,,,,,42.1
+H Mar,M,84,1:47:33,6453,Ed,Benham ,USA,7/12/1907,,n/a FL USA,1/12/1992,,,,,,,,41.5
+H Mar,M,85,1:50:47,6647,Ed,Whitlock ,CAN,3/6/1931,,Waterloo ON CAN,4/24/2016,,,,,,,,40.0
+H Mar,M,86,2:09:16,7756,Charles,Bancarel ,FRA,8/12/1929,,Villeneuve de Marsan FRA,9/27/2015,,,,,,,,33.4
+H Mar,M,87,2:30:36,9036,Eddie,Naisby ,WAL,4/1/1928,,Chester ENG,5/17/2015,,,,,,,,27.8
+H Mar,M,88,2:36:28,9388,Knut,Angstrom ,SWE,11/20/1927,,Stockholm SWE,5/9/2016,,,,,,,,26.5
+H Mar,M,89,2:46:38,9998,Knut,Angstrom ,SWE,11/20/1927,,Stockholm SWE,9/9/2017,,,,,,,,24.5
+H Mar,M,90,2:55:56,10586,Mike,Fremont ,USA,2/23/1922,,Morrow OH USA,8/19/2012,net time,,,,,,,22.8
+H Mar,M,91,3:03:56,11036,Mike,Fremont ,USA,2/23/1922,,Knoxville TN USA,4/7/2013,net time,,,,,,,21.6

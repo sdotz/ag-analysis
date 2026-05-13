@@ -1,0 +1,277 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COURSE_CERT_SOURCE,COMMENTS,COMMENTS.1,VDOT
+8 km,M,5.0,48:35,2915.0,Judah,Hall ,USA,5/21/10,,Bishop GA USA,12/19/15,,,,31.3
+8 km,M,6.0,41:04,2464.0,Charlie,Westrip ,USA,8/15/10,,Bishop GA USA,12/17/16,,,,38.2
+8 km,M,7.0,34:09,2049.0,Gavin,Clewley ,USA,7/19/10,,Carrboro NC USA,11/23/17,,,,47.5
+8 km,M,8.0,33:38,2018.0,Grattan,O'Neill ,USA,2/26/07,,Montgomery AL USA,9/7/15,,,,48.3
+8 km,M,9.0,31:29,1889.0,Zachary,Blum ,USA,3/29/05,Brea Classic 8K,Brea CA USA,2/22/15,,,,52.2
+8 km,M,10.0,30:30,1830.0,Zachary,Blum ,USA,3/29/05,Brea Classic 8K,Brea CA USA,2/28/16,,,,54.2
+8 km,M,11.0,30:15,1815.0,Reese,Vannerson ,USA,1/4/05,,Bishop GA USA,12/17/16,,,,54.7
+8 km,M,12.0,28:58,1738.0,Caleb,Hymans ,USA,2/14/05,,Fairfax VA USA,4/29/17,,,,57.6
+8 km,M,13.0,26:04,1564.0,Dan,Hennigar ,CAN,1/24/71,,Newburyport MA USA,5/9/84,,,,65.2
+,,14.0,,,,,,,,,,,,,
+8 km,M,15.0,22:59,1379.0,``,Rono Kipkurgat,KEN,7/13/78,,Korschenbroich GER,4/24/94,,,,75.6
+8 km,M,16.0,22:06,1326.0,Shadrack,Kosgei ,KEN,11/24/84,,Kingsport TN USA,7/14/01,,,,79.2
+8 km,M,17.0,22:25,1345.0,Emmanuel,Chamer Mnangat,KEN,12/25/88,,Richmond VA USA,11/11/06,,,,77.9
+8 km,M,18.0,22:08,1328.0,Ismael,Kirui ,KEN,2/20/75,,Dublin IRL,5/2/93,,,,79.1
+8 km,M,19.0,22:04,1324.0,Alene,Emere Reta,ETH,6/25/82,,Kingsport TN USA,7/14/01,,,,79.3
+8 km,M,20.0,22:04,1324.0,Enock,Mitei Kipchirchir,KEN,11/26/80,,Kingsport TN USA,7/14/01,,,,79.3
+8 km,M,21.0,22:16,1336.0,Simon,Ndirangu Githuka,KEN,11/1/85,,Kingsport TN USA,7/14/07,,,,78.5
+8 km,M,22.0,22:04,1324.0,Alberto,Salazar ,USA,8/7/58,,Los Altos CA USA,1/4/81,,,,79.3
+8 km,M,23.0,22:04,1324.0,Daniel,Salel Lemashon,KEN,12/11/90,,Boston MA USA,6/22/14,,,,79.3
+8 km,M,24.0,22:12,1332.0,Sammy,Kipketer ,KEN,9/29/81,,Dallas TX USA,3/25/06,,,,78.8
+8 km,M,25.0,22:02,1322.0,Stephen,Sambu ,KEN,7/7/88,,Boston MA USA,6/22/14,,,WB,79.5
+8 km,M,26.0,22:18,1338.0,Abraham,Chebii Kosgei,KEN,12/23/79,,Dallas TX USA,3/25/06,,,,78.4
+8 km,M,27.0,22:03,1323.0,Peter,Githuka Mwangi,KEN,2/14/69,,Kingsport TN USA,7/20/96,,,,79.4
+8 km,M,28.0,22:15,1335.0,Simon,Sawe ,USA,3/23/69,,San Jose CA USA,6/14/97,,,,78.6
+8 km,M,29.0,22:14,1334.0,Nick,Rose ,ENG,12/30/51,,Los Altos CA USA,1/4/81,,,,78.6
+8 km,M,30.0,22:22,1342.0,Peter,Whitehead ,ENG,12/3/64,,San Jose CA USA,6/17/95,,,,78.1
+8 km,M,31.0,22:25,1345.0,John,Doherty ,IRL,7/22/61,,Attleboro MA USA,10/4/92,,,,77.9
+8 km,M,32.0,22:02,1322.0,Geoffrey,Mutai Kiprono,KEN,10/7/81,,Boston MA USA,6/22/14,,,,79.5
+8 km,M,33.0,22:32,1352.0,Dathan,Ritzenhein ,USA,12/30/82,,Boston MA USA,6/26/16,,,,77.4
+8 km,M,34.0,22:24,1344.0,Fernando,Mamede ,POR,11/1/51,,York ENG,5/4/86,,,,77.9
+8 km,M,35.0,22:37,1357.0,Gianni,Truschi ,ITA,7/30/56,,Cento ITA,2/15/92,,,,77.1
+8 km,M,36.0,22:23,1343.0,Haile,Gebreselasie ,ETH,4/18/73,,Trier GER,12/31/09,,,,78.0
+8 km,M,37.0,23:06,1386.0,Martin,Mondragon Avila,MEX,11/11/53,,San Juan PUR,3/10/91,,,,75.2
+8 km,M,38.0,22:56,1376.0,Joseph,Nzau ,KEN,4/14/50,,San Juan PUR,3/12/89,,,,75.8
+8 km,M,39.0,22:49,1369.0,Abdihakim,Abdirahman ,USA,1/1/77,,Boston MA USA,6/26/16,,,,76.3
+8 km,M,40.0,23:13,1393.0,Nick,Rose ,ENG,12/30/51,Shamrock 8K,Virginia Beach VA USA,3/21/92,,,,74.7
+8 km,M,41.0,22:39,1359.0,Giuseppe,Pambianchi ,ITA,1/27/51,,Cento ITA,2/15/92,,,,76.9
+8 km,M,42.0,23:42,1422.0,Andrey,Kuznetzov ,RUS,11/27/57,,Richmond VA USA,11/18/00,,,,72.9
+8 km,M,43.0,23:46,1426.0,John,Campbell ,NZL,2/6/49,Shamrock 8K,Virginia Beach VA USA,3/21/92,,,,72.7
+8 km,M,44.0,23:43,1423.0,Wilson,Waigwa ,KEN,2/15/49,,Maggie Valley NC USA,8/28/93,,,,72.9
+8 km,M,45.0,24:15,1455.0,Antonio,Villanueva ,MEX,7/25/40,,Maggie Valley NC USA,8/24/85,,,,71.0
+8 km,M,46.0,24:41,1481.0,Mbarak,Hussein ,USA,4/4/65,,Williamsburg VA USA,5/21/11,,,,69.5
+8 km,M,47.0,24:14,1454.0,Dennis,Simonaitis ,USA,6/25/62,Shamrock 8K,Virginia Beach VA USA,3/20/10,,,,71.0
+8 km,M,48.0,23:59,1439.0,Rod,Dixon ,NZL,7/13/50,,Wimbledon Village ENG,4/11/99,,,,71.9
+8 km,M,49.0,25:00,1500.0,Martin,Rees ,WAL,2/28/53,,Glynneath WAL,12/26/02,,,,68.5
+8 km,M,50.0,24:44,1484.0,Martin,Rees ,WAL,2/28/53,,Ruislip ENG,3/9/03,,,,69.4
+8 km,M,51.0,25:07,1507.0,Martin,Rees ,WAL,2/28/53,,Sandhurst ENG,2/28/04,,,,68.1
+8 km,M,52.0,25:23,1523.0,Jim,O'Neill ,USA,4/1/38,,Allen Park MI USA,8/3/90,,,,67.3
+8 km,M,53.0,25:18,1518.0,Martin,Rees ,WAL,2/28/53,,Cardiff WAL,5/1/06,,,,67.5
+8 km,M,54.0,25:43,1543.0,Martin,Rees ,WAL,2/28/53,,Gloucester ENG,9/15/07,,,,66.2
+8 km,M,55.0,26:11,1571.0,Martin,Rees ,WAL,2/28/53,,Glynneath WAL,12/26/08,,,,64.9
+8 km,M,56.0,26:40,1600.0,Brian,Pilcher ,USA,8/23/56,Marin Memorial Day 10K (8K split),"Kentfield, CA",5/27/13,Andy Carr,,,63.5
+8 km,M,57.0,26:42,1602.0,Jiri,Civrny ,CZE,1/19/53,,Seebach FRA,7/16/10,,,,63.4
+8 km,M,58.0,27:24,1644.0,Brian,Pilcher ,USA,8/23/56,USATF Masters 8 km Championships,Brea CA USA,2/22/15,,,,61.5
+8 km,M,59.0,26:31,1591.0,Martin,Rees ,WAL,2/28/53,,Sandhurst ENG,9/15/12,,,,63.9
+8 km,M,60.0,26:10,1570.0,Martin,Rees ,WAL,2/28/53,,Sandhurst ENG,9/14/13,,,,64.9
+8 km,M,61.0,27:00,1620.0,Martin,Rees ,WAL,2/28/53,,Cardiff WAL,5/5/14,,,,62.5
+8 km,M,62.0,27:05,1625.0,Martin,Rees ,WAL,2/28/53,,Cardiff WAL,5/4/15,,,,62.3
+8 km,M,63.0,27:59,1679.0,Ed,Whitlock ,CAN,3/6/31,,Toronto ON CAN,6/5/94,,,,60.0
+8 km,M,64.0,28:24,1704.0,Ed,Whitlock ,CAN,3/6/31,,Burlington ON CAN,1/21/96,,,,58.9
+8 km,M,65.0,28:36,1716.0,Ed,Whitlock ,CAN,3/6/31,,Toronto ON CAN,7/8/96,,,,58.5
+8 km,M,66.0,28:57,1737.0,Ed,Whitlock ,CAN,3/6/31,,Toronto ON CAN,6/18/97,,,,57.6
+8 km,M,67.0,29:45,1785.0,Clive,Davies,USA,8/17/15,Viking Classic 8K,"Portland, OR",5/22/83,RRIC & Andy Carr,,,55.8
+8 km,M,68.0,29:49,1789.0,Ed,Whitlock ,CAN,3/6/31,,Burlington ON CAN,1/23/00,,,,55.7
+8 km,M,69.0,30:34,1834.0,Ed,Whitlock ,CAN,3/6/31,,Toronto ON CAN,4/8/00,,,,54.1
+8 km,M,70.0,30:25,1825.0,Warren,Utes ,USA,6/25/20,Shamrock Shuffle 8K,"Chicago, IL",3/10/91,M70-74 AR,,,54.4
+8 km,M,71.0,31:06,1866.0,Warren,Utes ,USA,6/25/20,Shamrock Shuffle 8K,"Chicago, IL",3/12/92,RRIC & Andy Carr,,,53.0
+8 km,M,72.0,31:58,1918.0,Warren,Utes ,USA,6/25/20,Shamrock Shuffle 8K,"Chicago, IL",3/14/93,,,,51.3
+8 km,M,73.0,32:56,1976.0,David,Oram ,ENG,4/7/42,,Wellingborough ENG,7/26/15,,,,49.5
+8 km,M,74.0,32:00,1920.0,Warren,Utes ,USA,6/25/20,Fifty Plus 8K,"Stanford, CA",4/2/95,RRIC & Andy Carr,,,51.2
+8 km,M,75.0,31:52,1912.0,Warren,Utes ,USA,6/25/20,,Cedar Rapids IA USA,7/4/95,,,,51.5
+8 km,M,76.0,33:08,1988.0,Warren,Utes ,USA,6/25/20,Shamrock Shuffle,Chicago IL USA,3/23/97,,,,49.2
+8 km,M,77.0,33:27,2007.0,Warren,Utes ,USA,6/25/20,Pacificare Bastille Day,Newport Beach CA USA,7/12/97,,,,48.6
+8 km,M,78.0,34:21,2061.0,Ed,Benham,USA,7/12/07,National TAC Masters,"Liverpool, NY",9/29/85,RRIC & Andy Carr,,,47.1
+8 km,M,79.0,37:40,2260.0,Maurice,Tarrant ,CAN,1/4/30,,Saanichton BC CAN,1/11/09,,,,42.3
+8 km,M,80.0,35:41,2141.0,Stephen,Charlton ,ENG,10/4/26,,London ENG,4/17/07,,,,45.1
+8 km,M,81.0,36:25,2195.0,Ed,Benham,USA,7/12/07,Shamrock 8K,"Virginia Beach, VA",3/18/89,RRIC & Andy Carr,,,43.8
+8 km,M,82.0,36:43,2203.0,Ed,Benham,USA,7/12/07,ICI/USATF TAC National,"Naples, FL",1/13/90,RRIC & Andy Carr,,,43.6
+8 km,M,83.0,42:08,2528.0,John,Overton,USA,1/25/06,Learn Not To Burn,"Phoenix, AZ",10/8/89,RRIC & Andy Carr,,,37.1
+8 km,M,84.0,37:56,2276.0,Ed,Benham,USA,7/12/07,Shamrock Sportsfest,"Virginia Beach, VA",3/21/92,RRIC & Andy Carr,,,42.0
+8 km,M,85.0,41:14,2474.0,Stephen,Charlton ,ENG,10/4/26,,London ENG,7/31/12,,,,38.0
+8 km,M,86.0,50:49,3049.0,Lou,Lodovoco,USA,2/28/24,Butler Road Race,"Butler, PA",6/26/10,,,,29.7
+8 km,M,87.0,2:0:52,2932.0,Hugh,Campbell ,USA,8/25/24,Moorestown Rotary 8K,"Moorestown, NJ",6/2/12,Andy Carr,,,31.1
+8 km,M,88.0,47:40,2860.0,Hugh,Campbell ,USA,8/25/24,,Philadelphia PA USA,11/17/12,,changed to net time,,32.0
+8 km,M,89.0,1:03:36,3816.0,Lou,Lodovoco,USA,2/28/24,USATF Masters 8 km Championships,"Williamsburg, VA",6/1/13,Andy Carr,,,22.6
+8 km,M,90.0,59:36,3576.0,Paul,Spangler,USA,3/18/1899,Fifty Plus,"Palo Alto, CA",3/19/89,Andy Carr,,,24.5
+8 km,M,91.0,56:10,3576.0,Paul,Spangler,USA,3/18/1899,Fifty Plus,"Palo Alto, CA",3/25/90,M90-94 AR,,,24.5
+8 km,M,92.0,1:20:56,4856.0,Richard,Soller,USA,,USATF Masters 8 km Championships,"Virginia Beach, VA",3/16/19,VA09048RT,,,16.6
+8 km,M,93.0,1:20:44,4844.0,Paul,Spangler,USA,3/18/1899,Fifty Plus,"Palo Alto, CA",3/22/92,RRIC & Andy Carr,,,16.7
+8 km,M,94.0,1:24:49,5089.0,Paul,Spangler,USA,3/18/1899,Fifty Plus,"Palo Alto, CA",3/21/93,RRIC & Andy Carr,,,15.6
+,,95.0,,,,,,,,,,,,,
+,,96.0,,,,,,,,,,,,,
+,,97.0,,,,,,,,,,,,,
+8 km,M,98.0,2:00:42,7242.0,Abraham,Weintraub ,USA,2/3/10,,New York NY USA,6/15/08,,5 miles,,9.4
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,
+,,,,,, ,,,,,,,,,

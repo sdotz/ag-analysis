@@ -1,0 +1,87 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,VDOT
+10 km,F,6,48:02,2882,Ava,Johnson ,USA,8/22/10,,Washington DC USA,5/21/17,,41.9
+10 km,F,7,46:08,2768,Makenzie,Kolvoord ,USA,11/21/06,,Minster OH USA,10/5/14,,44.0
+10 km,F,8,45:41,2741,Reagan,Jones ,USA,6/29/06,,Ocean Springs MS USA,1/17/15,,44.5
+10 km,F,9,37:37,2257,Carrie,Garritson ,USA,11/11/76,,Phoenix AZ USA,3/1/86,,55.8
+10 km,F,10,36:03,2163,Carrie,Garritson ,USA,11/11/76,,Redondo Beach CA USA,1/25/87,,58.7
+10 km,F,11,36:29,2189,Delia,Sclabas ,SUI,11/8/00,,Burgdorf SUI,9/15/12,,57.8
+10 km,F,12,34:28,2068,Carrie,Garritson ,USA,11/11/76,,Paramount CA USA,1/28/89,,61.8
+10 km,F,13,35:44,2144,Delia,Sclabas ,SUI,11/8/00,,Beinwil am See SUI,10/11/14,,59.3
+10 km,F,14,33:16,1996,Ji-ang,Qinghua ,CHN,5/1/85,,Beijing CHN,10/10/99,,64.5
+10 km,F,15,33:19,1999,Irvette,vanZyl ,RSA,7/5/87,,Durban RSA,6/22/03,,64.3
+10 km,F,16,32:42,1962,Karoline-Bjerkeli,Grovdal ,NOR,6/14/90,,Oslo NOR,4/29/07,,65.8
+10 km,F,17,31:32,1892,Winnie,Chepkemoi ,KEN,10/9/93,,Utrecht NED,9/25/11,,68.6
+10 km,F,18,31:29,1889,Karoline-Bjerkeli,Grovdal ,NOR,6/14/90,,Oslo NOR,5/3/09,,68.8
+10 km,F,19,31:07,1867,Belaynesh,Olijira Jemama,ETH,6/26/90,,Marseille FRA,5/1/10,,69.7
+10 km,F,20,30:41,1841,Gladys,Cheshire Kiptagelai,KEN,12/10/94,,Berlin GER,10/11/15,,70.9
+10 km,F,21,30:55,1855,Peres,Chepchirchir ,KEN,9/27/93,,Prague CZE,9/5/15,,70.3
+10 km,F,22,28:46,1726,Agnes,Ngetich,KEN,1/23/01,Valencia Ibercaja 10K,"Valencia, ESP",1/14/24,WR,76.5
+10 km,F,23,28:57,1737,Emmaculate,Achholi,KEN,4/2/00,Valencia Ibercaja 10K,"Valencia, ESP",1/14/24,,75.9
+10 km,F,24,30:39,1839,Liz,McColgan ,SCO,5/24/64,,Orlando FL USA,3/11/89,,71.0
+10 km,F,25,30:01,1801,Agnes,Tirop,KEN,10/23/95,Adizero Road to Records,"Herzogenaurach, Ger",9/12/21,,72.8
+10 km,F,26,30:25,1825,Viola,Jepchumba ,KEN,10/23/90,,Prague CZE,9/9/17,,71.6
+10 km,F,27,30:47,1847,Paula,Radcliffe ,ENG,12/17/73,,New York NY USA,6/9/01,,70.6
+10 km,F,28,30:30,1830,Tirunesh,Dibaba ,ETH,6/1/85,,Tilburg NED,9/1/13,,71.4
+10 km,F,29,30:21,1821,Paula,Radcliffe ,ENG,12/17/73,,San Juan PUR,2/23/03,,71.8
+10 km,F,30,29:38,1778,Kalkidan,Gezahegne,BRN,5/8/91,The Giants Geneva 10K,"Geneva, SWI",10/3/21,,73.9
+10 km,F,31,30:50,1850,Lornah,Kiplagat ,NED,5/1/74,,San Juan PUR,2/26/06,,70.5
+10 km,F,32,30:56,1856,Gladys,Cherono ,KEN,5/12/83,,Ottawa ON CAN,5/23/15,,70.2
+10 km,F,33,30:59,1859,Ingrid,Kristiansen ,NOR,3/21/56,,Boston MA USA,4/9/89,,70.1
+10 km,F,34,30:52,1852,Shalane,Flanagan ,USA,7/8/81,,Boston MA USA,6/26/16,,70.4
+10 km,F,35,31:13,1873,Elana,Meyer ,RSA,10/10/66,,Budapest HUN,10/14/01,,69.5
+10 km,F,36,30:57,1857,Irina,Mikitenko ,GER,8/23/72,,Karlsruhe GER,9/13/08,,70.2
+10 km,F,37,31:45,1905,Helen,Clitheroe ,ENG,1/2/74,,Manchester ENG,5/15/11,,68.1
+10 km,F,38,31:37,1897,Edith,Masai ,KEN,4/4/67,,Tilburg NED,9/4/05,,68.4
+10 km,F,39,31:44,1904,Irina,Mikitenko ,GER,8/23/72,,Paderborn GER,4/7/12,,68.1
+10 km,F,40,32:23,1943,Christelle,Daunay ,FRA,12/5/74,,Arras FRA,8/30/15,,66.5
+10 km,F,41,32:23,1943,Christelle,Daunay ,FRA,12/5/74,,Manchester ENG,5/22/16,,66.5
+10 km,F,42,32:09,1929,Edna,Kiplagat ,KEN,11/15/1979,BAA 10K,"Boston, MA",6/26/22,,67.1
+10 km,F,43,32:41,1961,Tatyana,Pozdniakova ,UKR,3/4/55,Crescent City Classic,"New Orleans, LA",4/11/98,,65.8
+10 km,F,44,33:08,1988,Priscilla,Welch ,USA,11/22/44,,Baltimore MD USA,10/22/89,,64.8
+10 km,F,45,33:29,2009,Stephanie,Herbst-Lucke,USA,12/27/65,Peachtree Road Race,"Atlanta, GA",7/4/11,,64.0
+10 km,F,46,34:01,2041,Firaya,Sultanova-Zhadanova,USA,4/29/61,Peachtree Road Race,"Atlanta, GA",7/4/07,,62.8
+10 km,F,47,33:28,2008,Tatyana,Pozdniakova ,UKR,3/4/55,Azalea Trail Run,Mobile AL USA,3/23/02,,64.0
+10 km,F,48,34:01,2041,Evy,Palm ,SWE,1/31/42,,Goteborg SWE,5/26/90,,62.8
+10 km,F,49,33:39,2019,Linda,Somers ,USA,5/7/61,Heritage Oaks Bank 10K,Paso Robles CA USA,9/26/10,,63.6
+10 km,F,50,34:14,2054,Linda,Somers ,USA,5/7/61,Heritage Oaks Bank 10K,Paso Robles CA USA,9/25/11,,62.3
+10 km,F,51,34:44,2084,Tatyana,Pozdniakova ,UKR,3/4/55,Azalea Trail Run,Mobile AL USA,3/25/06,,61.3
+10 km,F,52,35:43,2143,Nicole,Leveque ,FRA,1/27/51,,Laval FRA,3/30/03,,59.3
+10 km,F,53,35:41,2141,Fiona,Matheson ,SCO,4/25/61,,Grangemouth SCO,4/12/15,,59.4
+10 km,F,54,36:03,2163,Silke,Schmidt ,GER,8/7/59,,The Hague NED,5/25/14,,58.7
+10 km,F,55,36:16,2176,Fiona,Matheson ,SCO,4/25/61,,Glasgow SCO,10/2/16,,58.3
+10 km,F,56,36:18,2178,Silke,Schmidt ,GER,8/7/59,,Utrecht NED,9/27/15,,58.2
+10 km,F,57,37:22,2242,Houria,Frechou ,FRA,1/19/60,,Balma FRA,5/1/17,,56.3
+10 km,F,58,38:09,2289,Daphne,Ellmore ,ENG,5/22/50,,Cleethorpes ENG,1/1/09,,54.9
+10 km,F,59,38:37,2317,Daphne,Ellmore ,ENG,5/22/50,,Woodhall Spa ENG,6/7/09,,54.1
+10 km,F,60,39:10,2350,Daphne,Ellmore ,ENG,5/22/50,,Woodhill Spa ENG,6/6/10,,53.2
+10 km,F,61,39:49,2389,Nicole,Leveque ,FRA,1/27/51,,Chateau Gontier FRA,12/30/12,,52.2
+10 km,F,62,38:56,2336,Lidia,Zentner ,GER,3/27/53,,Bad Liebenzell GER,9/6/15,,53.6
+10 km,F,63,40:59,2459,Kathryn,Martin ,USA,9/30/51,.US National 12K (10K split),Alexandria VA USA,11/16/14,,50.5
+10 km,F,64,38:57,2337,Angela,Copson ,ENG,4/20/47,,Silverstone ENG,5/4/11,,53.6
+10 km,F,65,41:57,2517,Kathryn,Martin ,USA,9/30/51,Aspire 10K,"Plainview, NY",4/1/17,,49.1
+10 km,F,66,42:18,2538,Kathryn,Martin ,USA,9/30/51,Grete's Great Gallop 10K,New York NY USA,10/1/17,,48.7
+10 km,F,67,42:21,2541,Angela,Copson ,ENG,4/20/47,,King's Lynn ENG,5/4/14,,48.6
+10 km,F,68,40:30,2430,Angela,Copson ,ENG,4/20/47,,Manchester ENG,5/10/15,,51.2
+10 km,F,69,43:05,2585,Angela,Copson ,ENG,4/20/47,,Worcester ENG,6/18/16,,47.6
+10 km,F,70,45:11,2711,Angela,Copson ,ENG,4/20/47,,London ENG,5/29/17,,45.0
+10 km,F,71,44:09,2649,Lavinia,Petrie ,AUS,9/13/43,,Melbourne AUS,10/12/14,,46.3
+10 km,F,72,47:07,2827,Rimma,Vasina ,RUS,10/23/40,,Upice CZE,5/24/13,,42.9
+10 km,F,73,48:07,2887,Louise,Gilchrist ,ENG,3/7/33,,Partington ENG,9/10/06,,41.9
+10 km,F,74,49:08,2948,Louise,Gilchrist ,ENG,3/7/33,,Bolton ENG,4/22/07,,40.8
+10 km,F,75,49:14,2954,Jeannie,Rice,USA,4/14/48,Chicago Marathon (10K split),"Chicago,IL",10/8/23,,40.7
+10 km,F,76,50:02,3002,Louise,Gilchrist ,ENG,3/7/33,,Rothwell ENG,5/4/09,,40.0
+10 km,F,77,51:23,3083,Melitta,Czerwenka ,GER,4/30/30,,Regensburg GER,5/17/07,,38.8
+10 km,F,78,53:38,3218,Libby,James,USA,7/12/36,Bolder Boulder,"Boulder, CO ",5/25/15,,36.8
+10 km,F,79,54:54,3294,Odette,Maisongrosse ,FRA,2/4/36,,Blagnac FRA,3/8/15,,35.9
+10 km,F,80,55:05,3305,Denise,Leclerc ,FRA,10/10/33,,Macon FRA,9/14/14,,35.7
+10 km,F,81,54:17,3257,Deidre,Larkin ,RSA,9/24/31,,Durban RSA,5/19/13,,36.3
+10 km,F,82,53:16,3196,Libby,James,USA,7/12/36,Fortitude 10K,"Fort Collins, CO",9/3/18,,37.1
+10 km,F,83,1:01:03,3663,Lenore,Montgomery ,CAN,5/28/30,,White Rock BC CAN,6/9/13,,31.6
+10 km,F,84,1:01:31,3691,Deidre,Larkin ,RSA,9/24/31,,Pretoria RSA,11/14/15,,31.3
+10 km,F,85,59:51,3591,Deidre,Larkin ,RSA,9/24/31,,Benoni RSA,1/29/17,,32.4
+10 km,F,86,1:14:13,4453,Lenore,Montgomery ,CAN,5/28/30,,Victoria BC CAN,4/30/17,,25.0
+10 km,F,87,1:15:30,4530,Hedy,Marque,USA,5/27/17,St. Patrick's Day 10k,"Washington, DC",3/12/05,,24.5
+10 km,F,88,1:18:29,4709,Ruth,Rothfarb,USA,6/18/01,Tufts Health Plan 10K for Women,"Boston, MA",10/7/89,,23.4
+10 km,F,89,1:24:52,5092,Harriette,Thompson,USA,3/27/23,Charlotte Racefest 10K,"Charlotte, NC",4/14/12,,21.2
+10 km,F,90,2:20:31,8431,Tush,Metcalf,USA,,Ukrops Monument Ave 10K,"Richmond, VA ",4/1/12,,10.7
+10 km,F,92,1:24:52,5092,Harriette,Thompson,USA,3/27/23,Charlotte Racefest 10K,"Charlotte, NC",4/11/15,,21.2

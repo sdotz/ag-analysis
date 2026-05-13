@@ -1,0 +1,75 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,VDOT
+25 km,F,9.0,2:19:53,8393.0,Alexandra,Trigg ,USA,6/11/2005,Beacon On The Bay 2K,Oklahoma City OK USA,3/7/2015,37.6
+25 km,F,12.0,1:36:59,5819.0,Shona,Jones ,USA,3/24/1968,,Lincoln NE USA,3/14/1981,57.7
+25 km,F,13.0,1:37:18,5838.0,Manuela,Zipse ,GER,5/11/1974,,Bellheim GER,8/1/1987,57.4
+25 km,F,15.0,1:41:32,6092.0,Manuela,Zipse ,GER,5/11/1974,,Bellheim GER,8/5/1989,54.7
+25 km,F,16.0,1:30:40,5440.0,Tausi,Juma Ngaa,TAN,6/1/1983,,Berlin GER,4/30/2000,62.3
+25 km,F,17.0,1:38:34,5914.0,Karlene,Herrell ,USA,7/6/1965,,Ames IA USA,7/10/1982,56.6
+25 km,F,18.0,1:35:54,5754.0,Birgit,Lennartz ,GER,11/22/1965,,Solothurn SUI,7/7/1984,58.4
+25 km,F,19.0,1:24:47,5087.0,Dire,Tune Arissi,ETH,6/19/1985,,Berlin GER,5/8/2005,67.3
+25 km,F,20.0,1:26:50,5210.0,Sylvia,Mosqueda ,USA,4/8/1966,,San Diego CA USA,12/28/1986,65.5
+25 km,F,21.0,1:24:53,5093.0,Susan,Chepkemei ,KEN,6/25/1975,,Berlin GER,5/4/1997,67.2
+25 km,F,22.0,1:25:11,5111.0,Magdalena,Chemjor Chepkorir,KEN,11/12/1978,,Berlin GER,5/6/2001,67.0
+25 km,F,23.0,1:24:29,5069.0,Susan,Chepkemei ,KEN,6/25/1975,,Berlin GER,5/2/1999,67.6
+25 km,F,24.0,1:23:15,4995.0,Esther,Chemutai Ndiema,KEN,6/4/1988,,Berlin GER,5/5/2013,68.8
+25 km,F,25.0,1:24:37,5077.0,Janet,Rono Chelegat,KEN,12/8/1988,,Berlin GER,5/4/2014,67.5
+25 km,F,26.0,1:23:06,4986.0,Agnes,Katunga Mutune,KEN,6/26/1986,,Berlin GER,5/5/2013,68.9
+25 km,F,27.0,1:24:38,5078.0,Alice,Timbilili Chemeli,KEN,2/1/1983,,Berlin GER,5/9/2010,67.5
+25 km,F,28.0,1:19:53,4793.0,Mary,Keitany Chepkosgei,KEN,1/18/1982,,Berlin GER,5/9/2010,72.1
+25 km,F,29.0,1:18:47,4727.0,Sutume,Kebede,ETH,12/11/1994,Tata Steel Kolkata 25K,Kolka IND,12/17/2023,73.3
+25 km,F,30.0,1:22:31,4951.0,Peninah,Arusei Cherop,KEN,2/23/1979,,Berlin GER,5/10/2009,69.5
+25 km,F,31.0,1:26:35,5195.0,Melissa,White ,USA,4/15/1982,River Bank Run 25K,Grand Rapids MI USA,5/11/2013,65.7
+25 km,F,32.0,1:22:28,4948.0,Grete,Waitz ,NOR,10/1/1953,,Paderborn GER,3/29/1986,69.5
+25 km,F,33.0,1:24:36,5076.0,Janet,Bawcom ,USA,8/22/1978,River Bank Run 25K,Grand Rapids MI USA,5/12/2012,67.5
+25 km,F,34.0,1:25:23,5123.0,Carla,Beurskens ,NED,2/15/1952,,Griesheim GER,11/19/1986,66.8
+25 km,F,35.0,1:26:01,5161.0,Madina,Biktagirova ,RUS,9/20/1964,,Berlin GER,4/30/2000,66.2
+25 km,F,36.0,1:25:52,5152.0,Dorothy,McMahon ,USA,11/6/1976,River Bank Run 25K,Grand Rapids MI USA,5/11/2013,66.4
+25 km,F,37.0,1:25:27,5127.0,Christelle,Daunay ,FRA,12/5/1974,,Berlin GER,5/6/2012,66.7
+25 km,F,38.0,1:28:32,5312.0,Zoya,Ivanova ,KAZ,3/14/1952,,Glasgow SCO,9/30/1990,64.1
+25 km,F,39.0,1:26:54,5214.0,Kim,Jones ,USA,5/2/1958,River Bank Run 25K,Grand Rapids MI USA,5/10/1997,65.4
+25 km,F,40.0,1:26:31,5191.0,Priscilla,Welch ,USA,11/22/1944,,Mitcham ENG,1/13/1985,65.8
+25 km,F,41.0,1:25:15,5115.0,Colleen,De Reuck,USA,4/16/1964,River Bank Run 25K,Grand Rapids MI USA,5/14/2005,66.9
+25 km,F,42.0,1:28:18,5298.0,Joyce,Smith ,ENG,10/26/1937,,Brugge BEL,6/29/1980,64.3
+25 km,F,43.0,1:27:01,5221.0,Firiya,Sultanova ,RUS,4/29/1961,River Bank Run 25K,Grand Rapids MI USA,5/8/2004,65.3
+25 km,F,44.0,1:29:50,5390.0,Firiya,Sultanova ,RUS,4/29/1961,River Bank Run 25K,Grand Rapids MI USA,5/14/2005,63.0
+25 km,F,45.0,1:34:00,5640.0,Ingrid,Prigge ,NED,11/4/1963,,Losser NED,4/5/2009,59.8
+25 km,F,46.0,1:34:05,5645.0,Firiya,Sultanova ,RUS,4/29/1961,River Bank Run 25K,Grand Rapids MI USA,5/12/2007,59.7
+25 km,F,47.0,1:31:06,5466.0,Colleen,De Reuck,USA,4/16/1964,River Bank Run 25K,Grand Rapids MI USA,5/14/2011,62.0
+25 km,F,48.0,1:37:29,5849.0,Jane,Welzel ,USA,4/24/1955,River Bank Run 25K,Grand Rapids MI USA,5/10/2003,57.3
+25 km,F,49.0,1:38:00,5880.0,Ingrid,Prigge ,NED,11/4/1963,,Losser NED,4/1/2013,57.0
+25 km,F,50.0,1:44:55,6295.0,Suzanne,Ray ,USA,5/4/1952,City of Lakes 25k,Minneapolis MN USA,9/8/2002,52.7
+25 km,F,51.0,1:36:38,5798.0,Colleen,De Reuck,USA,4/16/1964,,Los Angeles CA USA,2/13/2016,57.9
+25 km,F,52.0,1:41:39,6099.0,Rae,Baymiller ,USA,7/27/1943,,New York NY USA,12/17/1995,54.6
+25 km,F,53.0,1:36:45,5805.0,Joan,Samuelson,USA,5/16/1957,Chicago Marathon (25K Split),"Chicago, IL",10/10/2010,57.8
+25 km,F,54.0,1:45:14,6314.0,Margaret,Miller ,USA,12/12/1925,,Ventura CA USA,3/2/1980,52.5
+25 km,F,55.0,1:49:07,6547.0,Joyce,Gaskin ,USA,2/17/1937,,Houston TX USA,11/22/1992,50.3
+25 km,F,56.0,1:41:01,6061.0,Shirley,Matson ,USA,11/7/1940,,San Diego CA USA,11/16/1996,55.0
+25 km,F,57.0,1:50:54,6654.0,Victoria,Crisp ,USA,6/11/1952,River Bank Run 25K,Grand Rapids MI USA,5/8/2010,49.4
+25 km,F,58.0,1:46:37,6397.0,Margaret,Miller ,USA,12/12/1925,SPA/TAC,"Ventura, CA",9/23/1984,51.7
+25 km,F,59.0,2:01:33,7293.0,Gloria,Brown ,USA,12/20/1931,River Bank Run 25K,Grand Rapids MI USA,5/11/1991,44.4
+25 km,F,60.0,1:39:24,5964.0,Jenny,Hitchings,USA,7/1/1963,"Chicago Marathon, 25K split","Chicago, IL",10/8/2023,56.0
+25 km,F,61.0,1:50:50,6650.0,Edie,Stevenson ,USA,7/27/1949,River Bank Run 25K,Grand Rapids MI USA,5/14/2011,49.4
+25 km,F,62.0,1:58:24,7104.0,Gloria,Brown ,USA,12/20/1931,River Bank Run 25K,Grand Rapids MI USA,5/14/1994,45.8
+25 km,F,63.0,2:02:32,7352.0,Nancy,Prejean ,USA,9/7/1945,HMSA 25k,Houston TX USA,10/12/2008,44.0
+25 km,F,64.0,2:02:44,7364.0,Sharon,Dolan ,USA,2/11/1942,River Bank Run 25K,Grand Rapids MI USA,5/13/2006,43.9
+25 km,F,65.0,2:03:53,7433.0,Victoria,Crisp ,USA,6/11/1952,River Bank Run 25K,Grand Rapids MI USA,5/12/2018,43.4
+25 km,F,66.0,2:07:00,7620.0,Sharon,Dolan ,USA,2/11/1942,River Bank Run 25K,Grand Rapids MI USA,5/10/2008,42.2
+25 km,F,67.0,2:12:45,7965.0,Sharon,Dolan ,USA,2/11/1942,River Bank Run 25K,Grand Rapids MI USA,5/9/2009,40.0
+25 km,F,68.0,2:10:53,7853.0,Sharon,Dolan ,USA,2/11/1942,River Bank Run 25K,Grand Rapids MI USA,5/8/2010,40.7
+25 km,F,69.0,2:20:21,8421.0,Gerry,Davidson ,USA,3/12/1921,,San Diego CA USA,11/17/1990,37.5
+25 km,F,70.0,1:58:52,7132.0,Jeannie,Rice,USA,4/14/1948,Chicago Marathon (25K split),"Chicago, IL",10/7/2018,45.6
+25 km,F,71.0,2:31:55,9115.0,Gerry,Davidson ,USA,3/12/1921,,San Diego CA USA,11/14/1992,34.1
+25 km,F,72.0,2:26:13,8773.0,Carol,Bender,USA,9/1/1939,River Bank Run 25K,Grand Rapids MI USA,5/13/2012,35.7
+25 km,F,73.0,2:28:29,8909.0,Anne,Clarke ,USA,9/21/1909,,Deerfield IL USA,8/28/1983,35.0
+25 km,F,74.0,2:30:11,9011.0,Carol,Bender,USA,9/1/1939,River Bank Run 25K,Grand Rapids MI USA,5/10/2014,34.6
+25 km,F,75.0,2:02:12,7332.0,Jeannie,Rice ,USA,4/14/1948,"Chicago Marathon, 25K split","Chicago, IL",10/8/2023,44.1
+25 km,F,76.0,2:29:34,8974.0,Toshiko,D'Elia ,USA,1/2/1930,River Bank Run 25K,Grand Rapids MI USA,5/13/2006,34.7
+25 km,F,77.0,2:42:25,9745.0,Gerry,Davidson ,USA,3/12/1921,Mission Bay 25K,"San Diego, CA",11/14/1998,31.5
+25 km,F,79.0,2:49:48,10188.0,Leona,Lugers ,USA,11/26/1906,River Bank Run 25K,Grand Rapids MI USA,5/10/1986,29.8
+25 km,F,80.0,3:07:41,11261.0,Gerry,Davidson ,USA,3/12/1921,Mission Bay 25K,"San Diego, CA",11/10/01,26.3
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,12/11/94,,,12/17/23,
+,,,,,,,,1/18/82,,,4/23/17,
+,,,,,,,,12/8/93,,,4/1/17,

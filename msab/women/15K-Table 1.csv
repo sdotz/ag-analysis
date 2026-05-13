@@ -1,0 +1,83 @@
+Event,Gender,Age,Time,TIME_SEC,FNAME,LNAME,Country,DOB,RACE_NAME,RACE_LOC,RACE_DATE,COMMENTS,VDOT
+15 km,F,7,1:22:35,4955,Elizabeth-Ann,Westrip ,USA,1/28/09,Turkey Trot 15K ,Tallahasse FL USA,11/24/16,,36.9
+15 km,F,8,1:15:52,4552,Reagan,Jones ,USA,6/29/06,,Wool Market MS USA,12/27/14,,40.7
+15 km,F,9,1:17:44,4664,Reagan,Jones ,USA,6/29/06,,Wool Market MS USA,12/26/15,,39.6
+15 km,F,10,1:12:19,4339,Alexandra,Trigg ,USA,6/11/05,Gates River Run 15k ,Jacksonville FL USA,3/12/16,,43.1
+15 km,F,12,1:05:00,3900,Madison,Denny ,USA,10/18/03,,San Francisco CA USA,1/10/16,,48.7
+15 km,F,13,1:01:00,3660,Vickie,Cook ,USA,5/29/64,,Santa Barbara CA USA,7/4/77,,52.4
+15 km,F,14,55:31,3331,Karlene,Herrell ,USA,7/6/65,,Omaha NE USA,6/15/80,,58.5
+15 km,F,15,51:06,3066,Irvette,vanZyl ,RSA,7/5/87,,Nijmegen NED,11/17/02,,64.4
+15 km,F,16,51:39,3099,Tausi,Juma Ngaa,TAN,6/1/83,,Breda NED,5/7/00,,63.6
+15 km,F,17,49:14,2954,Winnie,Chepkemoi ,KEN,10/9/93,,Massamagrell ESP,5/14/11,,67.2
+15 km,F,18,49:46,2986,Muliye,Dekebo Haylemariyam,ETH,3/13/98,,Le Puy-en-Velay FRA,5/1/16,,66.4
+15 km,F,19,48:33,2913,Mekasha,Waganesh Amare,ETH,1/16/92,,Nijmegen NED,11/20/11,,68.3
+15 km,F,20,49:06,2946,Mestawat,Tufa Demissie,ETH,9/14/83,,Nijmegen NED,11/16/03,,67.5
+15 km,F,21,44:20,2660,Letesenbet,Gidey,ETH,3/20/98,,"Nijmegen, NED",11/17/19,,76.0
+15 km,F,22,48:14,2894,Peres,Chepchirchir ,KEN,9/27/93,,Cardiff WAL,3/26/16,,68.9
+15 km,F,23,47:22,2842,Mestawat,Tufa Demissie,ETH,9/14/83,,Nijmegen NED,11/19/06,,70.3
+15 km,F,23,44.20,26602,Letesenbet,Gidey,ETH,3/20/98,Medio Maraton Valencia Trinidad Alfonso EDP (15K split),Valencia ESP,10/24/2021,WA Official WB,2.1
+15 km,F,24,46:28,2788,Tirunesh,Dibaba ,ETH,6/1/85,,Nijmegen NED,11/15/09,,71.9
+15 km,F,25,46:57,2817,Mestawat,Tufa Demissie,ETH,9/14/83,,Nijmegen NED,11/16/08,,71.1
+15 km,F,26,47:48,2868,Bizunesh,Bekele Sertsu,ETH,1/29/83,,Nijmegen NED,11/15/09,,69.6
+15 km,F,27,47:02,2822,Lydia,Cheromei Kogo,KEN,5/11/77,,Nijmegen NED,11/21/04,,70.9
+15 km,F,28,47:32,2852,Emily,Muge Chebet,KEN,2/18/86,,Nijmegen NED,11/16/14,,70.1
+15 km,F,29,48:00,2880,Rose,Cheruiyot Kosgei,KEN,7/21/76,,Nijmegen NED,11/20/05,,69.3
+15 km,F,30,46:59,2819,Priscilla,Cheptoo ,KEN,6/24/84,,Nijmegen NED,11/16/14,,71.0
+15 km,F,31,47:17,2837,Ingrid,Kristiansen ,NOR,3/21/56,,Monte Carlo MON,11/21/87,,70.5
+15 km,F,32,47:00,2820,Shalane,Flanagan ,USA,7/8/81,Gates River Run 15k ,Jacksonville FL USA,3/15/14,,71.0
+15 km,F,33,47:37,2857,Lornah,Kiplagat ,NED,5/1/74,,Nijmegen NED,11/18/07,,69.9
+15 km,F,34,47:20,2840,Deena,Kastor ,USA,2/14/73,Gates River Run 15k ,Jacksonville FL USA,3/10/07,,70.4
+15 km,F,35,49:24,2964,Janet,Bawcom ,USA,8/22/78,Gates River Run 15k ,Jacksonville FL USA,3/15/14,,67.0
+15 km,F,36,49:31,2971,Jennifer,Rhines ,USA,7/1/74,Gates River Run 15k ,Jacksonville FL USA,3/12/11,,66.8
+15 km,F,37,48:54,2934,Edna,Kiplagat Ngeringwony,KEN,9/15/79,,s'Heerenberg NED,12/4/16,,67.8
+15 km,F,38,48:43,2923,Francie,Larrieu ,USA,11/23/52,Gates River Run 15k ,Jacksonville FL USA,3/9/91,,68.1
+15 km,F,39,49:02,2942,Edith,Masai ,KEN,4/4/67,,Nijmegen NED,11/19/06,,67.6
+15 km,F,40,49:35,2975,Priscilla,Welch ,USA,11/22/44,Gates River Run 15k ,Jacksonville FL USA,3/9/85,,66.7
+15 km,F,41,50:25,3025,Priscilla,Welch ,USA,11/22/44,Gasparilla Distance Classic 15K,Tampa FL USA,2/8/86,,65.4
+15 km,F,42,50:58,3058,Ramilya,Burangulova ,RUS,7/11/61,Gates River Run 15k ,Jacksonville FL USA,3/13/04,,64.6
+15 km,F,43,49:55,2995,Nicole,Leveque ,FRA,1/27/51,,La Courneuve FRA,5/29/94,,66.2
+15 km,F,44,50:49,3049,Nicole,Leveque ,FRA,1/27/51,,La Courneuve FRA,4/30/95,,64.8
+15 km,F,45,49:48,2988,Evy,Palm ,SWE,1/31/42,,Monte Carlo MON,11/21/87,,66.3
+15 km,F,46,52:34,3154,Priscilla,Welch ,USA,11/22/44,Gasparilla Distance Classic 15K,Tampa FL USA,2/9/91,,62.3
+15 km,F,47,51:46,3106,Tatyana,Pozdniakova ,UKR,3/4/55,Gates River Run 15k ,Jacksonville FL USA,3/9/02,,63.4
+15 km,F,48,51:25,3085,Evy,Palm ,SWE,1/31/42,,Dublin IRL,10/14/90,,63.9
+15 km,F,49,50:16,3016,Tatyana,Pozdniakova ,UKR,3/4/55,Gates River Run 15k ,Jacksonville FL USA,3/13/04,,65.6
+15 km,F,50,52:38,3158,Monica,Joyce ,USA,7/16/58,Gates River Run 15k ,Jacksonville FL USA,3/14/09,,62.2
+15 km,F,51,57:19,3439,Lucy,Brennan ,IRL,1/2/59,,Crozon FRA,5/13/10,,56.4
+15 km,F,52,55:49,3349,Shirley,Matson,USA,11/7/40,Cascade Run Off 15K,"Portland, OR",6/27/93,,58.1
+15 km,F,53,57:09,3429,Manna,Kwak ,NED,12/14/44,,s'Heerenberg NED,11/8/98,,56.5
+15 km,F,54,57:52,3472,Marion,Irvine,USA,10/19/29,Avon 15K,"San Francisco, CA",4/8/84,,55.7
+15 km,F,55,59:05,3545,Diane,Legare ,CAN,3/19/51,Stockade-athon 15K,Schenectady NY USA,11/12/06,,54.4
+15 km,F,56,59:35,3575,Cindy,Conant,USA,,Great Allegany Run 15K,"Cumberland, MD",10/7/17,,53.9
+15 km,F,57,1:01:17,3677,Bronwen,Cardy ,WAL,1/26/52,,Melbourne AUS,11/29/09,,52.2
+15 km,F,58,1:01:02,3662,Kathryn,Martin ,USA,9/30/51,,Buffalo NY USA,9/6/10,,52.4
+15 km,F,59,58:55,3535,Jenny,Hitchings,USA,7/1/1963,"London Marathon, 15K split ",London ENG,4/23/2023,,54.6
+15 km,F,60,59:17,3557,Jenny,Hitchings,USA,7/1/1963,Chicago Marathon (15K split),"Chicago,IL",10/8/23,,54.2
+15 km,F,61,1:04:01,3841,Margaret,Saunders ,RSA,9/16/53,,Port Elizabeth RSA,2/28/15,,49.6
+15 km,F,62,1:00:43,3643,Kathryn,Martin ,USA,9/30/51,USATF Masters 15 km Championships,"Tulsa, OK",10/26/13,,52.7
+15 km,F,63,1:04:05,3845,Stefica,Gajic ,SUI,11/12/48,,Kerzers SUI,3/17/12,,49.5
+15 km,F,64,1:05:09,3909,Sabra,Harvey ,USA,3/2/49,USATF Masters 15 km Championships,"Tulsa, OK",10/26/13,,48.6
+15 km,F,65,1:05:04,3904,Kathryn,Martin ,USA,9/30/51,Caumsett Park 50K (15K split),"Lloyd Neck, NY",3/5/17,,48.7
+15 km,F,66,1:07:12,4032,Sabra,Harvey ,USA,3/2/49,USATF Masters 15K Championships,Tulsa OK USA,10/31/15,,46.9
+15 km,F,67,1:06:43,4003,Rae,Baymiller ,USA,7/27/43,,New York NY USA,12/19/10,,47.3
+15 km,F,68,1:07:24,4044,Sabra,Harvey ,USA,3/2/49,USATF Masters 15 km Championships,"Tulsa, OK",10/28/17,,46.7
+15 km,F,69,1:10:09,4209,Jeannie,Rice,USA,,USATF Masters 15 km Championships,"Tulsa, OK",10/28/17,,44.6
+15 km,F,70,1:12:52,4372,Jo,Klein ,NED,5/1/34,,Nijmegen NED,11/21/04,,42.7
+15 km,F,71,1:17:10,4630,Norma,Thomas ,USA,5/31/42,,Santa Barbara CA USA,7/4/13,,39.9
+15 km,F,72,1:14:31,4471,Jo,Klein ,NED,5/1/34,,Nijmegen NED,11/19/06,,41.6
+15 km,F,73,1:14:39,4479,Sandra,Baker,USA,,"Gasparilla Distance Classic, 15K","Tampa, FL",2/25/17,,41.5
+15 km,F,74,1:16:35,4595,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/26/92,,40.3
+15 km,F,75,1:13:23,4403,Jeannie,Rice,USA,4/14/48,Chicago Marathon (15K split),"Chicago,IL",10/8/23,,42.3
+15 km,F,76,1:21:37,4897,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/24/94,,37.4
+15 km,F,77,1:19:44,4784,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/23/95,,38.4
+15 km,F,78,1:29:21,5361,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/21/96,,33.6
+15 km,F,79,1:25:05,5105,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/20/97,,35.6
+15 km,F,80,1:25:09,5109,Libby,James ,USA,7/12/36,USATF Masters 15K Championships,Tulsa OK USA,10/29/16,,35.6
+15 km,F,81,1:27:30,5250,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/18/99,,34.5
+15 km,F,82,1:41:55,6115,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/16/00,,28.7
+15 km,F,83,1:50:33,6633,Hedy,Marque,USA,5/27/17,George Washington Parkway Classic,"Alexandria, VA",4/22/01,,26.1
+15 km,F,84,1:44:26,6266,Fenya,Crown,USA,,,WA,6/14/97,,27.9
+15 km,F,87,2:29:01,8941,Haley,Olson ,USA,11/8/28,,Jacksonville FL USA,3/12/16,,17.9
+15 km,F,90,2:45:41,9941,Judith,Baizan ,USA,3/21/25,,Tampa FL USA,2/20/16,,15.5
+15 km,F,91,2:52:59,10379,Judith,Baizan ,USA,3/21/25,,Tampa FL USA,2/25/17,,14.6
+15 km,F,92,2:38:58,9538,Judith,Baizan ,USA,3/21/25,"Gasparilla Distance Classic, 15K","Tampa, FL",2/24/18,,16.4
