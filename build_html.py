@@ -58,14 +58,19 @@ def load_all_data(ag_calc):
             if not fname.endswith(".csv"):
                 continue
             dist_key = extract_distance_key(fname)
+            # Normalise case variants (men's file is "8k", women's is "8K")
+            if dist_key == "8k":
+                dist_key = "8K"
             dist_m = DISTANCE_METERS.get(dist_key)
             if dist_m is None:
                 continue
 
             df = pd.read_csv(os.path.join(directory, fname))
+            # Normalise column names to uppercase so FNAME/Fname/fname all resolve
+            df.columns = [c.strip().upper() if isinstance(c, str) else c for c in df.columns]
             for _, row in df.iterrows():
                 time_sec = row.get("TIME_SEC")
-                age_raw  = row.get("Age")
+                age_raw  = row.get("AGE")
                 if pd.isna(time_sec) or pd.isna(age_raw) or time_sec <= 0:
                     continue
                 age = int(age_raw)
@@ -84,9 +89,9 @@ def load_all_data(ag_calc):
 
                 hdcp_sec = float(time_sec) - ag_result.age_graded_mark_sec
 
-                # Athlete name
-                fname_str = str(row.get("First", row.get("Fname", row.get("fname", "")))).strip()
-                lname_str = str(row.get("Last",  row.get("Lname", row.get("lname", "")))).strip()
+                # Athlete name (columns normalised to uppercase above)
+                fname_str = str(row.get("FNAME", "")).strip()
+                lname_str = str(row.get("LNAME", "")).strip()
                 if fname_str == "nan": fname_str = ""
                 if lname_str == "nan": lname_str = ""
 
