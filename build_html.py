@@ -139,23 +139,25 @@ def build_age_factors(ag_calc):
 
 # ── Build VDOT-derived age factors ──────────────────────────────────────────
 
-def build_vdot_age_factors(df):
+def build_vdot_medians(df):
     """
-    Derives empirical age factors from the dataset's own VDOT distribution.
+    Derives smoothed median VDOT by (gender, age) from the dataset.
 
-    For each gender, computes median VDOT at each age (across all distances,
-    since VDOT is distance-agnostic), normalises to the peak, and smooths
-    with a centred rolling window to reduce noise from sparse age groups.
+    Returns two dicts:
+      vdot_medians  { gender: { age_str: median_vdot } }  — smoothed curve
+      vdot_peaks    { gender: peak_median_vdot }           — peak of that curve
 
-    Returns { gender: { age (str): factor } }
-    Factor = median_vdot(age) / peak_median_vdot.  Capped at 1.0.
+    We store raw VDOT values (not pre-normalised) so that JavaScript can
+    invert the VDOT formula per-distance into proper time-ratio space,
+    eliminating the nonlinearity artifact from using VDOT ratios directly.
     """
-    result = {}
+    medians_out = {}
+    peaks_out   = {}
+
     for gender, gdf in df.groupby("gender"):
         counts  = gdf.groupby("age")["vdot"].count()
         medians = gdf.groupby("age")["vdot"].median()
 
-        # Drop ages with fewer than 3 data points
         medians = medians[counts >= 3]
         if medians.empty:
             continue
@@ -164,19 +166,19 @@ def build_vdot_age_factors(df):
         series    = medians.reindex(age_range).interpolate("linear")
         smoothed  = series.rolling(window=9, center=True, min_periods=1).mean()
 
-        # Peak = max within typical prime-age window; fall back to overall max
         prime_mask = smoothed.index.isin(range(18, 45))
         peak = float(smoothed.loc[prime_mask].max()) if prime_mask.any() else float(smoothed.max())
         if peak <= 0:
             continue
 
-        result[gender] = {
-            str(int(age)): round(min(1.0, float(v / peak)), 4)
+        medians_out[gender] = {
+            str(int(age)): round(float(v), 3)
             for age, v in smoothed.items()
             if not pd.isna(v)
         }
+        peaks_out[gender] = round(peak, 3)
 
-    return result
+    return medians_out, peaks_out
 
 
 # ── Build summary stats (mirrors analyze_vdot_vs_ag logic) ──────────────────
@@ -304,22 +306,24 @@ def main():
     print("Building WMA age factor lookup tables …")
     age_factors = build_age_factors(ag_calc)
 
-    print("Building VDOT-derived age factors …")
-    vdot_age_factors = build_vdot_age_factors(df)
-    for g, facs in vdot_age_factors.items():
-        ages = sorted(int(a) for a in facs)
-        print(f"  {g}: ages {ages[0]}–{ages[-1]}, peak age "
-              f"{max(facs, key=lambda a: facs[a])}, "
-              f"factor at 70 = {facs.get('70','?')}")
+    print("Building VDOT-derived age medians …")
+    vdot_medians, vdot_peaks = build_vdot_medians(df)
+    for g in vdot_medians:
+        ages = sorted(int(a) for a in vdot_medians[g])
+        peak_age = max(vdot_medians[g], key=lambda a: vdot_medians[g][a])
+        print(f"  {g}: ages {ages[0]}–{ages[-1]}, "
+              f"peak age {peak_age} (VDOT {vdot_peaks[g]}), "
+              f"VDOT at 70 = {vdot_medians[g].get('70','?')}")
 
     raw = {
-        "summary":          build_summary(df),
-        "by_gender":        build_by_gender(df),
-        "by_distance":      build_by_distance(df),
-        "by_age_band":      build_by_age_band(df),
-        "age_factors":      age_factors,
-        "vdot_age_factors": vdot_age_factors,
-        "performances":     build_performances(df),
+        "summary":       build_summary(df),
+        "by_gender":     build_by_gender(df),
+        "by_distance":   build_by_distance(df),
+        "by_age_band":   build_by_age_band(df),
+        "age_factors":   age_factors,
+        "vdot_medians":  vdot_medians,
+        "vdot_peaks":    vdot_peaks,
+        "performances":  build_performances(df),
     }
 
     print(f"  summary: {raw['summary']}")
