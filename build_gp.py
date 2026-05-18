@@ -588,16 +588,20 @@ function render() {{
   }});
 
   // ── Scoring age profile ───────────────────────────────────────────────────
-  const profileClubs = activeClub
+  // Clubs sorted lowest→highest score so ci=0 is at bottom, ci=n-1 at top.
+  // This lets y=ci map directly to labels[ci] without any index arithmetic.
+  const profileClubsRaw = activeClub
     ? allClubs.filter(c=>c.club===activeClub)
     : allClubs.filter(c=>c.n_races>=2).slice(0,10);
+  const profileClubs = [...profileClubsRaw].reverse(); // lowest scorer first
   const profileLabels = profileClubs.map(c=>trunc(c.club,30));
   const profilePts = [];
   profileClubs.forEach((c,ci) => {{
+    const label = profileLabels[ci];
     const clubTeams = allTeams.filter(t=>t.club===c.club && t.valid);
     clubTeams.forEach(t => {{
       t.scorers.forEach(s => {{
-        profilePts.push({{x:s.age, y:ci, gender:s.gender, name:s.name, race:t.race, ap:s.ap_pct}});
+        profilePts.push({{x:s.age, y:label, club:c.club, gender:s.gender, name:s.name, race:t.race, ap:s.ap_pct}});
       }});
     }});
   }});
@@ -616,15 +620,12 @@ function render() {{
       plugins:{{
         legend:{{position:'bottom'}},
         tooltip:{{callbacks:{{
-          label:ctx=>{{const d=ctx.raw._d; return [`${{d.name}} (age ${{d.x}})`,`AP% ${{d.ap}} | ${{d.race}}`];}}
+          label:ctx=>{{const d=ctx.raw._d; return [`${{d.name}} (age ${{d.x}})`,`${{d.club}}`,`AP% ${{d.ap}} | ${{d.race}}`];}}
         }}}}
       }},
       scales:{{
         x:{{title:{{display:true,text:'Age'}},min:10,max:95}},
-        y:{{
-          type:'category', labels:profileLabels.slice().reverse(),
-          grid:{{display:false}},
-        }}
+        y:{{type:'category', labels:profileLabels, grid:{{display:false}}}}
       }}
     }}
   }});
