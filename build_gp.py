@@ -224,14 +224,14 @@ def build_html(data_json, n_races):
   header {{ background: var(--surface); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; }}
   header p {{ color: var(--muted); font-size: .85rem; margin-top: .25rem; }}
 
-  .filter-bar {{ background: var(--surface); border-bottom: 1px solid var(--border); padding: .6rem 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }}
+  .filter-bar {{ background: var(--surface); border-top: 1px solid var(--border); padding: .6rem 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; box-shadow: 0 -2px 8px rgba(0,0,0,.4); }}
   .filter-bar label {{ font-size: .8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }}
   .filter-bar select {{ background: var(--surface2); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: .35rem .6rem; font-size: .85rem; cursor: pointer; min-width: 200px; }}
   .filter-bar select:focus {{ outline: none; border-color: var(--blue); }}
   .filter-bar .active-filter {{ font-size: .75rem; color: var(--blue); cursor: pointer; padding: .2rem .5rem; border: 1px solid var(--blue); border-radius: 4px; }}
   .filter-bar .active-filter:hover {{ background: rgba(78,154,241,.15); }}
 
-  main {{ max-width: 1200px; margin: 0 auto; padding: 1.25rem; display: flex; flex-direction: column; gap: 1.25rem; }}
+  main {{ max-width: 1200px; margin: 0 auto; padding: 1.25rem; padding-bottom: 4rem; display: flex; flex-direction: column; gap: 1.25rem; }}
 
   .card {{ background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; }}
 
@@ -323,18 +323,6 @@ def build_html(data_json, n_races):
     </div>
   </details>
 </header>
-<div class="filter-bar">
-  <label for="club-filter">Club</label>
-  <select id="club-filter"><option value="">All clubs</option></select>
-  <span id="clear-filter" class="active-filter" style="display:none">Clear filter</span>
-  <span style="margin-left:auto"></span>
-  <label for="scoring-mode">Scoring model</label>
-  <select id="scoring-mode">
-    <option value="ap">Official AP%</option>
-    <option value="decile">Decade Percentile</option>
-    <option value="youth35">Youth Requirement (2 under-35)</option>
-  </select>
-</div>
 <main>
 
   <div class="stats-row" id="stat-cards"></div>
@@ -448,6 +436,19 @@ def build_html(data_json, n_races):
   </div>
 
 </main>
+
+<div class="filter-bar">
+  <label for="club-filter">Club</label>
+  <select id="club-filter"><option value="">All clubs</option></select>
+  <span id="clear-filter" class="active-filter" style="display:none">Clear filter</span>
+  <span style="margin-left:auto"></span>
+  <label for="scoring-mode">Scoring model</label>
+  <select id="scoring-mode">
+    <option value="ap">Official AP%</option>
+    <option value="decile">Decade Percentile</option>
+    <option value="youth35">Youth Requirement (2 under-35)</option>
+  </select>
+</div>
 
 <script>
 const DATA = {data_json};
@@ -960,7 +961,7 @@ function render() {{
     options:{{
       indexAxis:'y', responsive:true,
       plugins:{{
-        legend:{{position:'bottom',labels:{{color:'var(--muted)',font:{{size:11}}}}}},
+        legend:{{position:'bottom',labels:{{color:'#8892a4',font:{{size:11}}}}}},
         tooltip:{{callbacks:{{
           label:ctx=>{{
             const c=compClubs[ctx.dataIndex];
