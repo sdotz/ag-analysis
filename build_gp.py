@@ -635,9 +635,31 @@ function ageColor(a) {{
   return `rgba(${{Math.round(78+177*t)}},${{Math.round(154-103*t)}},${{Math.round(241-193*t)}},.75)`;
 }}
 
-// ── Chart instances (destroyed on re-render) ────────────────────────────────
+// ── Chart instances (updated in place for animated transitions) ─────────────
 let charts = {{}};
-function destroyCharts() {{ Object.values(charts).forEach(c=>c.destroy()); charts={{}}; }}
+let prevClub = null;
+function upsertChart(key, canvasId, config) {{
+  const existing = charts[key];
+  if (existing && prevClub === activeClub) {{
+    // Update data in place — Chart.js animates the transition
+    existing.data.labels = config.data.labels;
+    config.data.datasets.forEach((ds, i) => {{
+      if (existing.data.datasets[i]) {{
+        Object.assign(existing.data.datasets[i], ds);
+      }} else {{
+        existing.data.datasets.push(ds);
+      }}
+    }});
+    // Remove extra datasets
+    existing.data.datasets.length = config.data.datasets.length;
+    // Update options (axis labels, scales, etc.)
+    if (config.options) existing.options = config.options;
+    existing.update();
+  }} else {{
+    if (existing) existing.destroy();
+    charts[key] = new Chart(document.getElementById(canvasId), config);
+  }}
+}}
 
 // ── Main render ─────────────────────────────────────────────────────────────
 function render() {{
@@ -650,8 +672,6 @@ function render() {{
   const perfs = activeClub ? allPerfs.filter(p=>p.club===activeClub) : allPerfs;
   const teams = activeClub ? useTeamsAll.filter(t=>t.club===activeClub) : useTeamsAll;
   const clubs = activeClub ? useClubsAll.filter(c=>c.club===activeClub) : useClubsAll;
-
-  destroyCharts();
 
   // ── Stat cards ────────────────────────────────────────────────────────────
   const nResults = perfs.length;
@@ -724,7 +744,7 @@ function render() {{
   const mAges = perfs.filter(p=>p.gender==='M').map(p=>p.age);
   const fAges = perfs.filter(p=>p.gender==='F').map(p=>p.age);
 
-  charts.ageHist = new Chart(document.getElementById('age-hist'), {{
+  upsertChart('ageHist', 'age-hist', {{
     type:'bar',
     data:{{labels:ageLabels,datasets:[
       {{label:'Male',data:binCount(mAges,ageBins),backgroundColor:'rgba(78,154,241,.7)',borderRadius:3}},
@@ -761,7 +781,7 @@ function render() {{
   const allByBand = sumAPByBand(nonScorerEntries);
   const nonScoringByBand = allByBand.map((v,i)=>Math.round(Math.max(0,v-scoringByBand[i])*10)/10);
 
-  charts.apByAge = new Chart(document.getElementById('ap-by-age'), {{
+  upsertChart('apByAge', 'ap-by-age', {{
     type:'bar',
     data:{{labels:ageBandLabels,datasets:[
       {{label:'Scoring (top 5)',data:scoringByBand,backgroundColor:'rgba(78,154,241,.7)',borderRadius:3}},
@@ -777,7 +797,7 @@ function render() {{
         }}
       }}}}}},
       scales:{{
-        y:{{title:{{display:true,text:'Total AP%',}},stacked:true}},
+        y:{{title:{{display:true,text:'Total '+scoreLabel,}},stacked:true}},
         x:{{title:{{display:true,text:'Age band'}},grid:{{display:false}},stacked:true}}
       }}
     }}
@@ -787,7 +807,7 @@ function render() {{
   const mPts = perfs.filter(p=>p.gender==='M').map(p=>({{x:p.age,y:getScore(p,scoringMode),_p:p}}));
   const fPts = perfs.filter(p=>p.gender==='F').map(p=>({{x:p.age,y:getScore(p,scoringMode),_p:p}}));
 
-  charts.scatter = new Chart(document.getElementById('scatter'), {{
+  upsertChart('scatter', 'scatter', {{
     type:'scatter',
     data:{{datasets:[
       {{label:'Male',data:mPts,backgroundColor:'rgba(78,154,241,.45)',pointRadius:4,pointHoverRadius:7}},
@@ -813,7 +833,7 @@ function render() {{
   const csBorders = clubScores.map(c=>c.club===activeClub?'rgba(255,255,255,.9)':'transparent');
   const csBorderW = clubScores.map(c=>c.club===activeClub?2:0);
 
-  charts.clubBar = new Chart(document.getElementById('club-chart'), {{
+  upsertChart('clubBar', 'club-chart', {{
     type:'bar',
     data:{{labels:csLabels,datasets:[{{
       label:'Avg team score per race',
@@ -863,7 +883,7 @@ function render() {{
   const mProf = profilePts.filter(d=>d.gender==='M').map(d=>({{x:d.x,y:d.y,_d:d}}));
   const fProf = profilePts.filter(d=>d.gender==='F').map(d=>({{x:d.x,y:d.y,_d:d}}));
 
-  charts.ageProfile = new Chart(document.getElementById('age-profile'), {{
+  upsertChart('ageProfile', 'age-profile', {{
     type:'scatter',
     data:{{datasets:[
       {{label:'Male',data:mProf,backgroundColor:'rgba(78,154,241,.5)',pointRadius:5,pointHoverRadius:8}},
@@ -950,7 +970,7 @@ function render() {{
 
   const shiftLabels = compClubs.map(c=>trunc(c.club,35));
 
-  charts.rankShift = new Chart(document.getElementById('rank-shift'), {{
+  upsertChart('rankShift', 'rank-shift', {{
     type:'bar',
     data:{{labels:shiftLabels,datasets:[
       {{label:'Decade Pctile shift',data:compClubs.map(c=>c.decShift),
@@ -1004,6 +1024,8 @@ function render() {{
       <td style="color:${{ageCol}}">${{r.meanAge||'—'}}</td>
     </tr>`;
   }}).join('');
+
+  prevClub = activeClub;
 }}
 
 // Initial render
