@@ -12,17 +12,13 @@ import pandas as pd
 from age_grade import AgeGradeCalculator
 
 RACE_DISTANCES = {
-    # 2026 races
-    "ADR 5K": 5000,
-    "Revolutionary 5 Miler": 8046.72,
-    "Frostbite 5 Miler": 8046.72,
-    "Broad Street": 16093.4,
-    # 2025 races
     "Adrenaline 5k": 5000,
+    "Revolutionary 5 Miler": 8046.72,
+    "Frostbite 5 Mile": 8046.72,
+    "Broad Street": 16093.4,
     "Main Line 5k": 5000,
     "Main Street Mile": 1609.34,
     "Rothmans 8k": 8000,
-    "Frostbite 5 Mile": 8046.72,
     "Red Rose 5 Miler": 8046.72,
     "Scott Coffee": 8046.72,
     "Ben Franklin Bridge 10k": 10000,
@@ -30,6 +26,12 @@ RACE_DISTANCES = {
     "PDR": 21097.5,
     "Philly Half": 21097.5,
     "Philly Marathon": 42195,
+}
+
+# Normalize race names across years to a single canonical name
+RACE_ALIASES = {
+    "ADR 5K": "Adrenaline 5k",
+    "Frostbite 5 Miler": "Frostbite 5 Mile",
 }
 
 GP_SOURCES = [
@@ -47,7 +49,7 @@ def load_data(csv_path, year):
             "age": int(row["AGE"]),
             "gender": row["G"],
             "club": row["Club"],
-            "race": row["Race"],
+            "race": RACE_ALIASES.get(row["Race"], row["Race"]),
             "place": int(row["Place"]),
             "ap_pct": float(row["AP%"]),
             "time_sec": int(row["HH"]) * 3600 + int(row["MM"]) * 60 + int(row["SS"]),
@@ -56,68 +58,181 @@ def load_data(csv_path, year):
     return records
 
 
-def compute_team_scores(records):
-    """For each (club, race), find the best valid top-5 scorers and compute team score.
+# Composite race groups: races scored together as a single GP entry.
+COMPOSITE_GROUPS = [
+    {
+        "name": "Scott Coffee / Red Rose",
+        "races": ["Scott Coffee", "Red Rose 5 Miler"],
+        # 2 separate 5-person teams from the combined pool.
+        # Each counts as a separate race in best-8 standings.
+        "mode": "two_teams",
+    },
+    {
+        "name": "Rothmans / Philly Weekend",
+        "races": ["Rothmans 8k", "Philly Marathon", "Philly Half"],
+        # Up to 15 finishers (5 per event max). Greedy by AP%: sort all
+        # performances descending, assign each runner once to their event
+        # until that event's 5 slots are full. One composite column.
+        "mode": "composite_15",
+    },
+]
 
-    Scoring rule: team of 4-5 must include at least 1 female.
-    If the raw top-5 by AP% has no females, we find the best mix
-    that satisfies the constraint (drop the lowest male, add the
-    highest-scoring female).
+
+def _race_to_composite():
+    """Build mapping: race_name -> composite_name (or None if standalone)."""
+    mapping = {}
+    for group in COMPOSITE_GROUPS:
+        for race in group["races"]:
+            mapping[race] = group["name"]
+    return mapping
+
+
+def _select_composite_15(pool):
+    """ROTH/PHIL: greedy selection of up to 15 runners (5 per event max).
+
+    Algorithm:
+    1. Pool ALL performances across sub-events, sort by AP% descending.
+    2. Walk down the list. For each performance:
+       - If this person is already selected, skip.
+       - If this event already has 5, skip.
+       - Otherwise select this person for this event.
+    Returns list of selected performance records.
     """
-    grouped = {}
+    all_perfs = sorted(pool, key=lambda x: -x["ap_pct"])
+    selected = []
+    selected_names = set()
+    event_counts = {}
+    for m in all_perfs:
+        if m["name"] in selected_names:
+            continue
+        if event_counts.get(m["race"], 0) >= 5:
+            continue
+        selected.append(m)
+        selected_names.add(m["name"])
+        event_counts[m["race"]] = event_counts.get(m["race"], 0) + 1
+    return selected
+
+
+def _select_two_teams(pool):
+    """MOR/RRR: form 2 separate 5-person teams from the combined pool.
+
+    Deduplicates runners (best AP%), then picks Team 1, then Team 2 from remainder.
+    """
+    # Deduplicate: keep each runner's best performance
+    best_by_name = {}
+    for m in pool:
+        if m["name"] not in best_by_name or m["ap_pct"] > best_by_name[m["name"]]["ap_pct"]:
+            best_by_name[m["name"]] = m
+    deduped = sorted(best_by_name.values(), key=lambda x: -x["ap_pct"])
+
+    top5_1, n_female_1, valid_1 = _apply_gender_rule(deduped, deduped)
+    team1_names = set(m["name"] for m in top5_1)
+
+    remaining = [m for m in deduped if m["name"] not in team1_names]
+    top5_2, n_female_2, valid_2 = _apply_gender_rule(remaining, remaining)
+
+    return (top5_1, n_female_1, valid_1), (top5_2, n_female_2, valid_2)
+
+
+def _apply_gender_rule(by_ap, all_candidates):
+    """Apply gender rule: if top-5 has no females and 4-5 score, fix it."""
+    top5 = by_ap[:5]
+    n_female = sum(1 for m in top5 if m["gender"] == "F")
+    valid = len(top5) < 4 or n_female >= 1
+
+    if not valid:
+        females_outside = [m for m in all_candidates if m["gender"] == "F" and m not in top5]
+        if females_outside:
+            best_female = max(females_outside, key=lambda x: x["ap_pct"])
+            top5 = top5[:4] + [best_female]
+            top5.sort(key=lambda x: -x["ap_pct"])
+            n_female = 1
+            valid = True
+        else:
+            top5 = by_ap[:3]
+            n_female = 0
+            valid = len(top5) > 0
+
+    return top5, n_female, valid
+
+
+def _make_team_entry(club, race, year, scorers, n_female, valid):
+    """Build a team dict from selected scorers."""
+    return {
+        "club": club,
+        "race": race,
+        "year": year,
+        "score": round(sum(m["ap_pct"] for m in scorers), 1),
+        "n": len(scorers),
+        "mean_age": round(sum(m["age"] for m in scorers) / max(len(scorers), 1), 1),
+        "ages": sorted([m["age"] for m in scorers]),
+        "n_female": n_female,
+        "valid": valid,
+        "scorers": [
+            {"name": m["name"], "age": m["age"], "gender": m["gender"],
+             "ap_pct": round(m["ap_pct"], 1),
+             "src_race": m.get("race", "")}
+            for m in scorers
+        ],
+    }
+
+
+def compute_team_scores(records):
+    """For each (club, race/composite), find the best valid scorers.
+
+    Composite modes:
+    - "composite_15" (ROTH/PHIL): up to 15 runners (5 per event), one entry.
+    - "two_teams" (MOR/RRR): 2 separate 5-person teams, each a separate entry.
+    """
+    composite_map = _race_to_composite()
+    composite_mode_map = {g["name"]: g["mode"] for g in COMPOSITE_GROUPS}
+
+    standalone = {}
+    composites = {}
     for r in records:
-        key = (r["club"], r["race"], r["year"])
-        grouped.setdefault(key, []).append(r)
+        comp = composite_map.get(r["race"])
+        if comp:
+            key = (r["club"], comp, r["year"])
+            composites.setdefault(key, []).append(r)
+        else:
+            key = (r["club"], r["race"], r["year"])
+            standalone.setdefault(key, []).append(r)
 
     teams = []
-    for (club, race, year), members in grouped.items():
+
+    # Standalone races
+    for (club, race, year), members in standalone.items():
         if club == "Unattached":
             continue
         by_ap = sorted(members, key=lambda x: -x["ap_pct"])
+        top5, n_female, valid = _apply_gender_rule(by_ap, by_ap)
+        teams.append(_make_team_entry(club, race, year, top5, n_female, valid))
 
-        # Try to build a valid top-5
-        top5 = by_ap[:5]
-        n_female = sum(1 for m in top5 if m["gender"] == "F")
-        valid = len(top5) < 4 or n_female >= 1
+    # Composite races
+    for (club, comp_name, year), pool in composites.items():
+        if club == "Unattached":
+            continue
+        mode = composite_mode_map.get(comp_name, "two_teams")
 
-        if not valid:
-            # All top-5 are male — try to satisfy the gender rule two ways:
-            # 1. Swap in the best available female (from outside top-5)
-            females_outside = [m for m in by_ap[5:] if m["gender"] == "F"]
-            if females_outside:
-                best_female = females_outside[0]  # already sorted by AP%
-                new_top5 = top5[:4] + [best_female]
-                new_top5.sort(key=lambda x: -x["ap_pct"])
-                top5 = new_top5
-                n_female = 1
-                valid = True
-            else:
-                # 2. No females available at all — fall back to top-3 males
-                #    (1-3 scorers have no gender requirement)
-                top5 = by_ap[:3]
-                n_female = 0
-                valid = len(top5) > 0
+        if mode == "two_teams":
+            (t1, nf1, v1), (t2, nf2, v2) = _select_two_teams(pool)
+            if t1:
+                teams.append(_make_team_entry(club, comp_name + " (Team 1)", year, t1, nf1, v1))
+            if t2 and len(t2) >= 1:
+                teams.append(_make_team_entry(club, comp_name + " (Team 2)", year, t2, nf2, v2))
 
-        teams.append({
-            "club": club,
-            "race": race,
-            "year": year,
-            "score": round(sum(m["ap_pct"] for m in top5), 1),
-            "n": len(top5),
-            "mean_age": round(sum(m["age"] for m in top5) / len(top5), 1),
-            "ages": sorted([m["age"] for m in top5]),
-            "n_female": n_female,
-            "valid": valid,
-            "scorers": [
-                {
-                    "name": m["name"],
-                    "age": m["age"],
-                    "gender": m["gender"],
-                    "ap_pct": round(m["ap_pct"], 1),
-                }
-                for m in top5
-            ],
-        })
+        elif mode == "composite_15":
+            selected = _select_composite_15(pool)
+            # Split into teams of 5 (already sorted by AP% desc)
+            for ti in range(3):
+                chunk = selected[ti*5:(ti+1)*5]
+                if not chunk:
+                    break
+                n_female = sum(1 for m in chunk if m["gender"] == "F")
+                valid = len(chunk) >= 1
+                teams.append(_make_team_entry(
+                    club, f"{comp_name} (Team {ti+1})", year,
+                    chunk, n_female, valid))
 
     return teams
 
@@ -274,6 +389,11 @@ def build_html(data_json, n_races):
   .charts-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }}
   .chart-wrap canvas {{ max-height: 280px; }}
 
+  .team-tip {{ cursor: default; }}
+  #standings-tooltip {{ display: none; position: fixed; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: .5rem .65rem; font-size: .72rem; white-space: nowrap; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,.5); pointer-events: none; }}
+  #standings-tooltip table {{ font-size: .72rem; }}
+  #standings-tooltip td {{ padding: .15rem .4rem; border: none; }}
+
   table {{ width: 100%; border-collapse: collapse; font-size: .8rem; }}
   thead th {{ background: var(--surface2); color: var(--muted); padding: .5rem .65rem; text-align: left; position: sticky; top: 0; white-space: nowrap; cursor: pointer; user-select: none; }}
   thead th:hover {{ color: var(--text); }}
@@ -352,6 +472,7 @@ def build_html(data_json, n_races):
     </div>
   </details>
 </header>
+<div id="standings-tooltip"></div>
 <main>
 
   <div class="stats-row" id="stat-cards"></div>
@@ -489,6 +610,17 @@ const allTeamsRaw = DATA.teams;
 const allClubsRaw = DATA.club_stats;
 const dataYears = DATA.years;
 
+// Composite race mapping (race name -> composite name, or undefined if standalone)
+const COMPOSITE_MAP = {{}};
+const COMPOSITE_MODES = {{}};
+[
+  ['Scott Coffee / Red Rose', ['Scott Coffee', 'Red Rose 5 Miler'], 'two_teams'],
+  ['Rothmans / Philly Weekend', ['Rothmans 8k', 'Philly Marathon', 'Philly Half'], 'composite_15'],
+].forEach(([name, races, mode]) => {{
+  races.forEach(r => {{ COMPOSITE_MAP[r] = name; }});
+  COMPOSITE_MODES[name] = mode;
+}});
+
 // ── Compute decade percentile scores ────────────────────────────────────────
 // For each (race, gender, age_decade), rank runners by time and assign percentile
 function computeDecileScores(perfs) {{
@@ -525,78 +657,153 @@ function getScore(p, mode) {{
   return p.ap_pct;
 }}
 
+// ── Composite helpers ───────────────────────────────────────────────────────
+function selectComposite15(pool, scoreFn) {{
+  // ROTH/PHIL: greedy selection up to 15 (5 per event max).
+  // Sort ALL performances by score desc, assign each runner once.
+  const allPerfs = [...pool].sort((a,b) => scoreFn(b) - scoreFn(a));
+  const selected = [];
+  const selectedNames = new Set();
+  const evtCounts = {{}};
+  for (const m of allPerfs) {{
+    if (selectedNames.has(m.name)) continue;
+    if ((evtCounts[m.race]||0) >= 5) continue;
+    selected.push(m);
+    selectedNames.add(m.name);
+    evtCounts[m.race] = (evtCounts[m.race]||0) + 1;
+  }}
+  return selected;
+}}
+
+function selectTwoTeams(pool, scoreFn) {{
+  // MOR/RRR: 2 separate 5-person teams from combined pool (deduplicated)
+  const best = {{}};
+  pool.forEach(m => {{
+    if (!best[m.name] || scoreFn(m) > scoreFn(best[m.name])) best[m.name] = m;
+  }});
+  const deduped = Object.values(best).sort((a,b) => scoreFn(b) - scoreFn(a));
+  const r1 = applyGenderRule(deduped, deduped, scoreFn);
+  const team1Names = new Set(r1.top5.map(m=>m.name));
+  const remaining = deduped.filter(m => !team1Names.has(m.name));
+  const r2 = applyGenderRule(remaining, remaining, scoreFn);
+  return [r1, r2];
+}}
+
+// ── Apply gender rule to a candidate list ───────────────────────────────────
+function applyGenderRule(byScore, allCandidates, scoreFn) {{
+  let top5 = byScore.slice(0,5);
+  let nFemale = top5.filter(m=>m.gender==='F').length;
+  let valid = top5.length < 4 || nFemale >= 1;
+
+  if (!valid) {{
+    const femalesOutside = allCandidates.filter(m=>m.gender==='F' && !top5.includes(m));
+    if (femalesOutside.length > 0) {{
+      const bestF = femalesOutside.sort((a,b)=>scoreFn(b)-scoreFn(a))[0];
+      top5 = [...top5.slice(0,4), bestF].sort((a,b)=>scoreFn(b)-scoreFn(a));
+      nFemale = 1;
+      valid = true;
+    }} else {{
+      top5 = byScore.slice(0,3);
+      nFemale = 0;
+      valid = top5.length > 0;
+    }}
+  }}
+  return {{top5, nFemale, valid}};
+}}
+
 // ── Recompute teams under a given scoring mode ──────────────────────────────
 function recomputeTeams(perfs, mode) {{
   if (mode === 'ap') return allTeams;
 
-  const grouped = {{}};
+  const sortMode = mode === 'youth35' ? 'ap' : mode;
+  const scoreFn = m => getScore(m, sortMode);
+
+  // Group into standalone and composite
+  const standalone = {{}};
+  const composites = {{}};
   perfs.forEach(p => {{
     if (p.club === 'Unattached') return;
-    const key = p.club + '|' + p.race + '|' + p.year;
-    if (!grouped[key]) grouped[key] = [];
-    grouped[key].push(p);
+    const comp = COMPOSITE_MAP[p.race];
+    if (comp) {{
+      const key = p.club + '|' + comp + '|' + p.year;
+      if (!composites[key]) composites[key] = [];
+      composites[key].push(p);
+    }} else {{
+      const key = p.club + '|' + p.race + '|' + p.year;
+      if (!standalone[key]) standalone[key] = [];
+      standalone[key].push(p);
+    }}
   }});
 
   const teams = [];
-  for (const key in grouped) {{
-    const members = grouped[key];
-    const parts = key.split('|');
-    const club = parts[0], race = parts[1], year = parts[2];
 
-    // For youth35 mode, select team by AP% then apply penalty
-    const sortMode = mode === 'youth35' ? 'ap' : mode;
-    const byScore = [...members].sort((a,b) => getScore(b,sortMode) - getScore(a,sortMode));
-
-    let top5 = byScore.slice(0,5);
-    let nFemale = top5.filter(m=>m.gender==='F').length;
-    let valid = top5.length < 4 || nFemale >= 1;
-
-    if (!valid) {{
-      const femalesOutside = byScore.slice(5).filter(m=>m.gender==='F');
-      if (femalesOutside.length > 0) {{
-        top5 = [...top5.slice(0,4), femalesOutside[0]].sort((a,b)=>getScore(b,sortMode)-getScore(a,sortMode));
-        nFemale = 1;
-        valid = true;
-      }} else {{
-        top5 = byScore.slice(0,3);
-        nFemale = 0;
-        valid = top5.length > 0;
-      }}
-    }}
-
-    // Youth35: check under-35 count and apply penalty to youngest over-35
-    let scorerDetails;
+  function buildScorerDetails(scorers, mode) {{
     if (mode === 'youth35') {{
-      const under35 = top5.filter(m => m.age < 35);
-      const over35 = top5.filter(m => m.age >= 35).sort((a,b) => a.age - b.age); // youngest first
+      const under35 = scorers.filter(m => m.age < 35);
+      const over35 = scorers.filter(m => m.age >= 35).sort((a,b) => a.age - b.age);
       const deficit = Math.max(0, 2 - under35.length);
-      // Penalise the youngest `deficit` over-35 runners: use ap_pct_35
       const penalised = new Set(over35.slice(0, deficit).map(m => m.name + '|' + m.race));
-      scorerDetails = top5.map(m => {{
+      return scorers.map(m => {{
         const isPenalised = penalised.has(m.name + '|' + m.race);
         const score = isPenalised ? m.ap_pct_35 : m.ap_pct;
-        return {{name: m.name, age: m.age, gender: m.gender, ap_pct: Math.round(score*10)/10, penalised: isPenalised}};
+        return {{name: m.name, age: m.age, gender: m.gender, ap_pct: Math.round(score*10)/10, penalised: isPenalised, src_race: m.race||''}};
       }});
-    }} else {{
-      scorerDetails = top5.map(m => ({{
-        name: m.name, age: m.age, gender: m.gender,
-        ap_pct: Math.round(getScore(m,mode)*10)/10,
-      }}));
     }}
+    return scorers.map(m => ({{
+      name: m.name, age: m.age, gender: m.gender,
+      ap_pct: Math.round(getScore(m,mode)*10)/10,
+      src_race: m.race||'',
+    }}));
+  }}
 
-    const teamScore = Math.round(scorerDetails.reduce((s,m) => s + m.ap_pct, 0) * 10) / 10;
-
+  function pushTeam(club, race, year, scorers, nFemale, valid) {{
+    const details = buildScorerDetails(scorers, mode);
+    const teamScore = Math.round(details.reduce((s,m) => s + m.ap_pct, 0) * 10) / 10;
     teams.push({{
       club, race, year,
       score: teamScore,
-      n: top5.length,
-      mean_age: Math.round(top5.reduce((s,m) => s+m.age, 0) / top5.length * 10) / 10,
-      ages: top5.map(m=>m.age).sort((a,b)=>a-b),
+      n: scorers.length,
+      mean_age: scorers.length ? Math.round(scorers.reduce((s,m) => s+m.age, 0) / scorers.length * 10) / 10 : 0,
+      ages: scorers.map(m=>m.age).sort((a,b)=>a-b),
       n_female: nFemale,
       valid,
-      scorers: scorerDetails,
+      scorers: details,
     }});
   }}
+
+  // Standalone races
+  for (const key in standalone) {{
+    const parts = key.split('|');
+    const [club, race, year] = parts;
+    const members = standalone[key];
+    const byScore = [...members].sort((a,b) => scoreFn(b) - scoreFn(a));
+    const {{top5, nFemale, valid}} = applyGenderRule(byScore, members, scoreFn);
+    pushTeam(club, race, year, top5, nFemale, valid);
+  }}
+
+  // Composite races
+  for (const key in composites) {{
+    const parts = key.split('|');
+    const [club, compName, year] = parts;
+    const pool = composites[key];
+    const compMode = COMPOSITE_MODES[compName] || 'two_teams';
+
+    if (compMode === 'two_teams') {{
+      const [r1, r2] = selectTwoTeams(pool, scoreFn);
+      if (r1.top5.length > 0) pushTeam(club, compName + ' (Team 1)', year, r1.top5, r1.nFemale, r1.valid);
+      if (r2.top5.length > 0) pushTeam(club, compName + ' (Team 2)', year, r2.top5, r2.nFemale, r2.valid);
+    }} else if (compMode === 'composite_15') {{
+      const selected = selectComposite15(pool, scoreFn);
+      // Split into teams of 5
+      for (let ti = 0; ti < 3; ti++) {{
+        const chunk = selected.slice(ti*5, (ti+1)*5);
+        if (chunk.length === 0) break;
+        const nFemale = chunk.filter(m=>m.gender==='F').length;
+        pushTeam(club, compName + ' (Team ' + (ti+1) + ')', year, chunk, nFemale, chunk.length >= 1);
+      }}
+    }}
+  }}
+
   return teams;
 }}
 
@@ -785,39 +992,79 @@ function render() {{
   const allRaceNames = [...new Set(useTeamsAll.map(t=>t.race))];
   const standingsClubs = [...new Set(useTeamsAll.filter(t=>t.valid).map(t=>t.club))];
   const standings = standingsClubs.map(club => {{
-    const raceScores = {{}};
+    const raceTeams = {{}};
     allRaceNames.forEach(race => {{
       const t = useTeamsAll.find(t=>t.club===club && t.race===race && t.valid);
-      raceScores[race] = t ? t.score : null;
+      raceTeams[race] = t || null;
     }});
-    const validScores = Object.values(raceScores).filter(s=>s!==null).sort((a,b)=>b-a);
-    const best8 = validScores.slice(0,8);
-    const total = best8.reduce((s,v)=>s+v,0);
+    // Determine best-8: sort race entries by score descending, mark top 8
+    const raceEntries = allRaceNames
+      .filter(r => raceTeams[r] !== null)
+      .map(r => ({{race: r, score: raceTeams[r].score}}))
+      .sort((a,b) => b.score - a.score);
+    const best8Races = new Set(raceEntries.slice(0,8).map(e => e.race));
+    const total = raceEntries.slice(0,8).reduce((s,e) => s+e.score, 0);
     const meanScoringAge = (() => {{
       const clubTeams = useTeamsAll.filter(t=>t.club===club && t.valid);
       const ages = clubTeams.flatMap(t=>t.scorers.map(s=>s.age));
       return ages.length ? (ages.reduce((s,a)=>s+a,0)/ages.length).toFixed(1) : '—';
     }})();
-    return {{club, raceScores, total: Math.round(total*10)/10, nRaces: validScores.length, meanScoringAge}};
+    return {{club, raceTeams, best8Races, total: Math.round(total*10)/10, nRaces: raceEntries.length, meanScoringAge}};
   }}).sort((a,b)=>b.total-a.total);
 
   // Filter if club selected
   const displayStandings = activeClub ? standings.filter(s=>s.club===activeClub) : standings;
 
+  // Build HTML tooltip for a team entry
+  function teamTooltipHtml(team) {{
+    if (!team || !team.scorers || !team.scorers.length) return '';
+    const rows = team.scorers.map(s => {{
+      const race = s.src_race ? `<td style="color:var(--muted)">${{s.src_race}}</td>` : '';
+      const gBadge = s.gender==='F' ? 'badge-F' : 'badge-M';
+      return `<tr><td>${{s.name}}</td><td><span class="badge ${{gBadge}}">${{s.gender}}${{s.age}}</span></td><td style="text-align:right;font-weight:600">${{s.ap_pct.toFixed(1)}}%</td>${{race}}</tr>`;
+    }}).join('');
+    return `<table>${{rows}}</table>`;
+  }}
+
+  const tooltipEl = document.getElementById('standings-tooltip');
+  function attachTooltipListeners() {{
+    document.querySelectorAll('#standings-table .team-tip').forEach(td => {{
+      td.addEventListener('mouseenter', e => {{
+        const html = td.getAttribute('data-tip');
+        if (!html) return;
+        tooltipEl.innerHTML = html;
+        tooltipEl.style.display = 'block';
+        const rect = td.getBoundingClientRect();
+        tooltipEl.style.left = rect.left + rect.width/2 - tooltipEl.offsetWidth/2 + 'px';
+        tooltipEl.style.top = rect.top - tooltipEl.offsetHeight - 4 + 'px';
+      }});
+      td.addEventListener('mouseleave', () => {{
+        tooltipEl.style.display = 'none';
+      }});
+    }});
+  }}
+
+  function shortRaceName(r) {{
+    return r.replace('Rothmans / Philly Weekend','PMW').replace('Scott Coffee / Red Rose','MOR/RRR');
+  }}
+
   const sHead = document.getElementById('standings-thead');
   sHead.innerHTML = `<tr>
     <th>Rank</th><th>Club</th>
-    ${{allRaceNames.map(r=>`<th style="max-width:120px;overflow:hidden;text-overflow:ellipsis">${{r}}</th>`).join('')}}
-    <th>Total</th><th>Races</th><th>Mean Scoring Age</th>
+    ${{allRaceNames.map(r=>`<th style="max-width:120px;overflow:hidden;text-overflow:ellipsis" title="${{r}}">${{shortRaceName(r)}}</th>`).join('')}}
+    <th>Total (Best 8)</th><th>Races</th><th>Mean Scoring Age</th>
   </tr>`;
 
   const sTbody = document.getElementById('standings-tbody');
   sTbody.innerHTML = displayStandings.map((s,i) => {{
     const highlight = s.club===activeClub ? 'background:var(--surface2)' : '';
     const raceCells = allRaceNames.map(race => {{
-      const sc = s.raceScores[race];
-      if(sc===null) return `<td style="color:var(--muted)">\\u2014</td>`;
-      return `<td>${{sc.toFixed(1)}}</td>`;
+      const team = s.raceTeams[race];
+      if(!team) return `<td style="color:var(--muted)">\\u2014</td>`;
+      const inBest8 = s.best8Races.has(race);
+      const style = inBest8 ? 'color:var(--green);font-weight:600' : 'color:var(--muted)';
+      const tip = teamTooltipHtml(team).replace(/"/g,'&quot;');
+      return `<td style="${{style}}" class="team-tip" data-tip="${{tip}}">${{team.score.toFixed(1)}}</td>`;
     }}).join('');
     const ageColor = parseFloat(s.meanScoringAge)>50 ? 'var(--orange)' : 'var(--blue)';
     return `<tr style="${{highlight}}">
@@ -829,6 +1076,7 @@ function render() {{
       <td style="color:${{ageColor}}">${{s.meanScoringAge}}</td>
     </tr>`;
   }}).join('');
+  attachTooltipListeners();
 
   // ── Age histogram ─────────────────────────────────────────────────────────
   const mAges = perfs.filter(p=>p.gender==='M').map(p=>p.age);
