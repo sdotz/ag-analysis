@@ -12,14 +12,33 @@ import pandas as pd
 from age_grade import AgeGradeCalculator
 
 RACE_DISTANCES = {
+    # 2026 races
     "ADR 5K": 5000,
     "Revolutionary 5 Miler": 8046.72,
     "Frostbite 5 Miler": 8046.72,
     "Broad Street": 16093.4,
+    # 2025 races
+    "Adrenaline 5k": 5000,
+    "Main Line 5k": 5000,
+    "Main Street Mile": 1609.34,
+    "Rothmans 8k": 8000,
+    "Frostbite 5 Mile": 8046.72,
+    "Red Rose 5 Miler": 8046.72,
+    "Scott Coffee": 8046.72,
+    "Ben Franklin Bridge 10k": 10000,
+    "Delaware Distance Classic": 15000,
+    "PDR": 21097.5,
+    "Philly Half": 21097.5,
+    "Philly Marathon": 42195,
 }
 
+GP_SOURCES = [
+    {"year": "2025", "csv": "gp-scores/2025MAUSATF/All-Table 1.csv"},
+    {"year": "2026", "csv": "gp-scores/2026MAUSATF/All Races-Table 1.csv"},
+]
 
-def load_data(csv_path):
+
+def load_data(csv_path, year):
     df = pd.read_csv(csv_path)
     records = []
     for _, row in df.iterrows():
@@ -32,6 +51,7 @@ def load_data(csv_path):
             "place": int(row["Place"]),
             "ap_pct": float(row["AP%"]),
             "time_sec": int(row["HH"]) * 3600 + int(row["MM"]) * 60 + int(row["SS"]),
+            "year": year,
         })
     return records
 
@@ -46,11 +66,11 @@ def compute_team_scores(records):
     """
     grouped = {}
     for r in records:
-        key = (r["club"], r["race"])
+        key = (r["club"], r["race"], r["year"])
         grouped.setdefault(key, []).append(r)
 
     teams = []
-    for (club, race), members in grouped.items():
+    for (club, race, year), members in grouped.items():
         if club == "Unattached":
             continue
         by_ap = sorted(members, key=lambda x: -x["ap_pct"])
@@ -81,6 +101,7 @@ def compute_team_scores(records):
         teams.append({
             "club": club,
             "race": race,
+            "year": year,
             "score": round(sum(m["ap_pct"] for m in top5), 1),
             "n": len(top5),
             "mean_age": round(sum(m["age"] for m in top5) / len(top5), 1),
@@ -165,10 +186,16 @@ def add_youth35_scores(records, ag_calc):
 
 
 def main():
-    csv_path = "gp-scores/2026MAUSATF/All Races-Table 1.csv"
     print("Loading GP data …")
-    records = load_data(csv_path)
-    print(f"  {len(records)} results across {len(set(r['race'] for r in records))} races")
+    records = []
+    for src in GP_SOURCES:
+        if not os.path.isfile(src["csv"]):
+            print(f"  Warning: {src['csv']} not found, skipping")
+            continue
+        year_records = load_data(src["csv"], src["year"])
+        print(f"  {src['year']}: {len(year_records)} results across {len(set(r['race'] for r in year_records))} races")
+        records.extend(year_records)
+    print(f"  Total: {len(records)} results")
 
     print("Computing youth-35 adjusted scores …")
     ag_calc = AgeGradeCalculator()
@@ -184,10 +211,12 @@ def main():
     club_stats = build_club_summary(records, teams)
     print(f"  {len(club_stats)} clubs")
 
+    years = sorted(set(r["year"] for r in records))
     data = {
         "performances": records,
         "teams": teams,
         "club_stats": club_stats,
+        "years": years,
     }
 
     n_races = len(set(r["race"] for r in records))
@@ -277,7 +306,7 @@ def build_html(data_json, n_races):
 <body>
 <header>
   <h1>USATF Mid-Atlantic Grand Prix Explorer</h1>
-  <p>2026 Club Challenge — age-graded scoring analysis across {n_races} races</p>
+  <p>Club Challenge — age-graded scoring analysis across {n_races} races (2025–2026)</p>
   <details class="methodology">
     <summary>Scoring rules &amp; methodology</summary>
     <div style="display:flex;flex-direction:column;gap:.8rem;margin:.6rem 0 .4rem">
@@ -417,7 +446,7 @@ def build_html(data_json, n_races):
     <h2>Experimental Scoring Models <span style="font-weight:400;font-size:.8rem;color:var(--muted)">— how alternative models change the standings (see methodology above)</span></h2>
     <div>
       <h2>Rank Change <span style="font-weight:400;font-size:.8rem;color:var(--muted)">— official AP% rank vs alternative models</span></h2>
-      <div class="chart-wrap"><canvas id="rank-shift" style="max-height:500px"></canvas></div>
+      <div><canvas id="rank-shift" style="max-height:700px"></canvas></div>
     </div>
     <div style="overflow-x:auto;margin-top:1rem">
       <table id="model-comparison-table">
@@ -438,6 +467,8 @@ def build_html(data_json, n_races):
 </main>
 
 <div class="filter-bar">
+  <label for="year-filter">Year</label>
+  <select id="year-filter"><option value="">All</option></select>
   <label for="club-filter">Club</label>
   <select id="club-filter"><option value="">All clubs</option></select>
   <span id="clear-filter" class="active-filter" style="display:none">Clear filter</span>
@@ -453,18 +484,19 @@ def build_html(data_json, n_races):
 <script>
 const DATA = {data_json};
 
-const allPerfs = DATA.performances;
-const allTeams = DATA.teams;
-const allClubs = DATA.club_stats;
+const allPerfsRaw = DATA.performances;
+const allTeamsRaw = DATA.teams;
+const allClubsRaw = DATA.club_stats;
+const dataYears = DATA.years;
 
 // ── Compute decade percentile scores ────────────────────────────────────────
 // For each (race, gender, age_decade), rank runners by time and assign percentile
 function computeDecileScores(perfs) {{
-  // Group by (race, gender, decade)
+  // Group by (year, race, gender, decade)
   const groups = {{}};
   perfs.forEach((p,i) => {{
     const decade = Math.floor(p.age / 10) * 10;
-    const key = `${{p.race}}|${{p.gender}}|${{decade}}`;
+    const key = `${{p.year}}|${{p.race}}|${{p.gender}}|${{decade}}`;
     if (!groups[key]) groups[key] = [];
     groups[key].push({{idx: i, time_sec: p.time_sec, ap_pct: p.ap_pct}});
   }});
@@ -483,10 +515,10 @@ function computeDecileScores(perfs) {{
   return scores;
 }}
 
-const decileScores = computeDecileScores(allPerfs);
+const decileScores = computeDecileScores(allPerfsRaw);
 
 // Attach decile score to each performance record
-allPerfs.forEach((p,i) => {{ p.decile_pct = decileScores[i]; }});
+allPerfsRaw.forEach((p,i) => {{ p.decile_pct = decileScores[i]; }});
 
 function getScore(p, mode) {{
   if (mode === 'decile') return p.decile_pct;
@@ -500,7 +532,7 @@ function recomputeTeams(perfs, mode) {{
   const grouped = {{}};
   perfs.forEach(p => {{
     if (p.club === 'Unattached') return;
-    const key = p.club + '|' + p.race;
+    const key = p.club + '|' + p.race + '|' + p.year;
     if (!grouped[key]) grouped[key] = [];
     grouped[key].push(p);
   }});
@@ -508,7 +540,8 @@ function recomputeTeams(perfs, mode) {{
   const teams = [];
   for (const key in grouped) {{
     const members = grouped[key];
-    const [club, race] = key.split('|');
+    const parts = key.split('|');
+    const club = parts[0], race = parts[1], year = parts[2];
 
     // For youth35 mode, select team by AP% then apply penalty
     const sortMode = mode === 'youth35' ? 'ap' : mode;
@@ -554,7 +587,7 @@ function recomputeTeams(perfs, mode) {{
     const teamScore = Math.round(scorerDetails.reduce((s,m) => s + m.ap_pct, 0) * 10) / 10;
 
     teams.push({{
-      club, race,
+      club, race, year,
       score: teamScore,
       n: top5.length,
       mean_age: Math.round(top5.reduce((s,m) => s+m.age, 0) / top5.length * 10) / 10,
@@ -606,19 +639,75 @@ function recomputeClubStats(perfs, teams, mode) {{
   return stats;
 }}
 
+// ── Populate year filter dropdown ────────────────────────────────────────────
+const yearSel = document.getElementById('year-filter');
+dataYears.forEach(y => {{
+  const o = document.createElement('option');
+  o.value = y; o.textContent = y;
+  yearSel.appendChild(o);
+}});
+
+// ── Year-filtered base data (recomputed when year changes) ──────────────────
+let activeYear = '';
+let allPerfs = allPerfsRaw;
+let allTeams = allTeamsRaw;
+let allClubs = allClubsRaw;
+
+function updateYearData() {{
+  allPerfs = activeYear ? allPerfsRaw.filter(p=>p.year===activeYear) : allPerfsRaw;
+  allTeams = activeYear ? allTeamsRaw.filter(t=>t.year===activeYear) : allTeamsRaw;
+  // Recompute club stats for filtered data
+  const clubMap = {{}};
+  allPerfs.forEach(p => {{
+    if (p.club === 'Unattached') return;
+    if (!clubMap[p.club]) clubMap[p.club] = [];
+    clubMap[p.club].push(p);
+  }});
+  const validTeams = allTeams.filter(t=>t.valid);
+  allClubs = Object.entries(clubMap).map(([club, members]) => {{
+    const clubTeams = validTeams.filter(t=>t.club===club);
+    const bestScore = clubTeams.length ? Math.max(...clubTeams.map(t=>t.score)) : 0;
+    const totalScore = clubTeams.reduce((s,t)=>s+t.score, 0);
+    const allAges = members.map(m=>m.age);
+    const scoringAges = clubTeams.flatMap(t=>t.ages);
+    return {{
+      club,
+      n_members: new Set(members.map(m=>m.name)).size,
+      n_results: members.length,
+      n_races: clubTeams.length,
+      mean_age: Math.round(allAges.reduce((s,a)=>s+a,0)/allAges.length*10)/10,
+      mean_scoring_age: scoringAges.length ? Math.round(scoringAges.reduce((s,a)=>s+a,0)/scoringAges.length*10)/10 : null,
+      best_score: Math.round(bestScore*10)/10,
+      total_score: Math.round(totalScore*10)/10,
+      mean_ap: Math.round(members.reduce((s,m)=>s+m.ap_pct,0)/members.length*10)/10,
+      n_female: members.filter(m=>m.gender==='F').length,
+      n_male: members.filter(m=>m.gender==='M').length,
+    }};
+  }}).sort((a,b)=>b.total_score-a.total_score);
+  // Update club dropdown
+  const clubNames = [...new Set(allPerfs.map(p=>p.club))].sort();
+  clubSel.innerHTML = '<option value="">All clubs</option>';
+  clubNames.forEach(c => {{
+    const o = document.createElement('option');
+    o.value = c; o.textContent = c;
+    if (c === activeClub) o.selected = true;
+    clubSel.appendChild(o);
+  }});
+  // If the active club no longer exists in this year, clear it
+  if (activeClub && !clubNames.includes(activeClub)) {{
+    activeClub = '';
+    clubSel.value = '';
+  }}
+}}
+
 // ── Populate club filter dropdown ───────────────────────────────────────────
-const clubNames = [...new Set(allPerfs.map(p=>p.club))].sort();
 const clubSel = document.getElementById('club-filter');
 const clearBtn = document.getElementById('clear-filter');
 const scoringSel = document.getElementById('scoring-mode');
-clubNames.forEach(c => {{
-  const o = document.createElement('option');
-  o.value = c; o.textContent = c;
-  clubSel.appendChild(o);
-}});
-
 let activeClub = '';
 let scoringMode = 'ap';
+updateYearData();
+yearSel.addEventListener('change', () => {{ activeYear = yearSel.value; updateYearData(); render(); }});
 clubSel.addEventListener('change', () => {{ activeClub = clubSel.value; render(); }});
 clearBtn.addEventListener('click', () => {{ activeClub = ''; clubSel.value = ''; render(); }});
 scoringSel.addEventListener('change', () => {{ scoringMode = scoringSel.value; render(); }});
@@ -638,9 +727,10 @@ function ageColor(a) {{
 // ── Chart instances (updated in place for animated transitions) ─────────────
 let charts = {{}};
 let prevClub = null;
+let prevYear = null;
 function upsertChart(key, canvasId, config) {{
   const existing = charts[key];
-  if (existing && prevClub === activeClub) {{
+  if (existing && prevClub === activeClub && prevYear === activeYear) {{
     // Update data in place — Chart.js animates the transition
     existing.data.labels = config.data.labels;
     config.data.datasets.forEach((ds, i) => {{
@@ -970,6 +1060,10 @@ function render() {{
 
   const shiftLabels = compClubs.map(c=>trunc(c.club,35));
 
+  // Size canvas to fit all clubs
+  const rankCanvas = document.getElementById('rank-shift');
+  rankCanvas.style.height = Math.max(300, compClubs.length * 28) + 'px';
+
   upsertChart('rankShift', 'rank-shift', {{
     type:'bar',
     data:{{labels:shiftLabels,datasets:[
@@ -979,7 +1073,7 @@ function render() {{
         backgroundColor:'rgba(245,197,66,.6)',borderRadius:3}},
     ]}},
     options:{{
-      indexAxis:'y', responsive:true,
+      indexAxis:'y', responsive:true, maintainAspectRatio:false,
       plugins:{{
         legend:{{position:'bottom',labels:{{color:'#8892a4',font:{{size:11}}}}}},
         tooltip:{{callbacks:{{
@@ -1026,6 +1120,7 @@ function render() {{
   }}).join('');
 
   prevClub = activeClub;
+  prevYear = activeYear;
 }}
 
 // Initial render
