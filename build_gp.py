@@ -35,6 +35,7 @@ RACE_ALIASES = {
 }
 
 GP_SOURCES = [
+    {"year": "2024", "csv": "gp-scores/2024MAUSATF/All-Table 1.csv"},
     {"year": "2025", "csv": "gp-scores/2025MAUSATF/All-Table 1.csv"},
     {"year": "2026", "csv": "gp-scores/2026MAUSATF/All Races-Table 1.csv"},
 ]
@@ -51,7 +52,7 @@ def load_data(csv_path, year):
             "club": row["Club"],
             "race": RACE_ALIASES.get(row["Race"], row["Race"]),
             "place": int(row["Place"]),
-            "ap_pct": float(row["AP%"]),
+            "ap_pct": float(row.get("AP%", row.get("WMA%"))),
             "time_sec": int(row["HH"]) * 3600 + int(row["MM"]) * 60 + int(row["SS"]),
             "year": year,
         })
@@ -63,19 +64,15 @@ COMPOSITE_GROUPS = [
     {
         "name": "Scott Coffee / Red Rose",
         "races": ["Scott Coffee", "Red Rose 5 Miler"],
-        # 2 separate 5-person teams from the combined pool.
-        # Each counts as a separate race in best-8 standings.
-        "mode": "two_teams",
     },
     {
         "name": "Rothmans / Philly Weekend",
         "races": ["Rothmans 8k", "Philly Marathon", "Philly Half"],
-        # Up to 15 finishers (5 per event max). Greedy by AP%: sort all
-        # performances descending, assign each runner once to their event
-        # until that event's 5 slots are full. One composite column.
-        "mode": "composite_15",
     },
 ]
+# All composites use the same rule: greedy by AP%, max 5 per sub-event,
+# each runner scores once. Selected runners split into teams of 5.
+# Number of possible teams = number of sub-events.
 
 
 def _race_to_composite():
@@ -112,26 +109,6 @@ def _select_composite_15(pool):
         event_counts[m["race"]] = event_counts.get(m["race"], 0) + 1
     return selected
 
-
-def _select_two_teams(pool):
-    """MOR/RRR: form 2 separate 5-person teams from the combined pool.
-
-    Deduplicates runners (best AP%), then picks Team 1, then Team 2 from remainder.
-    """
-    # Deduplicate: keep each runner's best performance
-    best_by_name = {}
-    for m in pool:
-        if m["name"] not in best_by_name or m["ap_pct"] > best_by_name[m["name"]]["ap_pct"]:
-            best_by_name[m["name"]] = m
-    deduped = sorted(best_by_name.values(), key=lambda x: -x["ap_pct"])
-
-    top5_1, n_female_1, valid_1 = _apply_gender_rule(deduped, deduped)
-    team1_names = set(m["name"] for m in top5_1)
-
-    remaining = [m for m in deduped if m["name"] not in team1_names]
-    top5_2, n_female_2, valid_2 = _apply_gender_rule(remaining, remaining)
-
-    return (top5_1, n_female_1, valid_1), (top5_2, n_female_2, valid_2)
 
 
 def _apply_gender_rule(by_ap, all_candidates):
@@ -180,12 +157,12 @@ def _make_team_entry(club, race, year, scorers, n_female, valid):
 def compute_team_scores(records):
     """For each (club, race/composite), find the best valid scorers.
 
-    Composite modes:
-    - "composite_15" (ROTH/PHIL): up to 15 runners (5 per event), one entry.
-    - "two_teams" (MOR/RRR): 2 separate 5-person teams, each a separate entry.
+    Composites: greedy selection by AP%, max 5 per sub-event, each runner
+    scores once. Selected runners split into teams of 5, each team a
+    separate race entry in best-8 standings.
     """
     composite_map = _race_to_composite()
-    composite_mode_map = {g["name"]: g["mode"] for g in COMPOSITE_GROUPS}
+    composite_n_events = {g["name"]: len(g["races"]) for g in COMPOSITE_GROUPS}
 
     standalone = {}
     composites = {}
@@ -212,27 +189,18 @@ def compute_team_scores(records):
     for (club, comp_name, year), pool in composites.items():
         if club == "Unattached":
             continue
-        mode = composite_mode_map.get(comp_name, "two_teams")
-
-        if mode == "two_teams":
-            (t1, nf1, v1), (t2, nf2, v2) = _select_two_teams(pool)
-            if t1:
-                teams.append(_make_team_entry(club, comp_name + " (Team 1)", year, t1, nf1, v1))
-            if t2 and len(t2) >= 1:
-                teams.append(_make_team_entry(club, comp_name + " (Team 2)", year, t2, nf2, v2))
-
-        elif mode == "composite_15":
-            selected = _select_composite_15(pool)
-            # Split into teams of 5 (already sorted by AP% desc)
-            for ti in range(3):
-                chunk = selected[ti*5:(ti+1)*5]
-                if not chunk:
-                    break
-                n_female = sum(1 for m in chunk if m["gender"] == "F")
-                valid = len(chunk) >= 1
-                teams.append(_make_team_entry(
-                    club, f"{comp_name} (Team {ti+1})", year,
-                    chunk, n_female, valid))
+        selected = _select_composite_15(pool)
+        max_teams = composite_n_events.get(comp_name, 2)
+        # Split into teams of 5 (already sorted by AP% desc)
+        for ti in range(max_teams):
+            chunk = selected[ti*5:(ti+1)*5]
+            if not chunk:
+                break
+            n_female = sum(1 for m in chunk if m["gender"] == "F")
+            valid = len(chunk) >= 1
+            teams.append(_make_team_entry(
+                club, f"{comp_name} (Team {ti+1})", year,
+                chunk, n_female, valid))
 
     return teams
 
@@ -612,13 +580,13 @@ const dataYears = DATA.years;
 
 // Composite race mapping (race name -> composite name, or undefined if standalone)
 const COMPOSITE_MAP = {{}};
-const COMPOSITE_MODES = {{}};
+const COMPOSITE_MAX_TEAMS = {{}};
 [
-  ['Scott Coffee / Red Rose', ['Scott Coffee', 'Red Rose 5 Miler'], 'two_teams'],
-  ['Rothmans / Philly Weekend', ['Rothmans 8k', 'Philly Marathon', 'Philly Half'], 'composite_15'],
-].forEach(([name, races, mode]) => {{
+  ['Scott Coffee / Red Rose', ['Scott Coffee', 'Red Rose 5 Miler']],
+  ['Rothmans / Philly Weekend', ['Rothmans 8k', 'Philly Marathon', 'Philly Half']],
+].forEach(([name, races]) => {{
   races.forEach(r => {{ COMPOSITE_MAP[r] = name; }});
-  COMPOSITE_MODES[name] = mode;
+  COMPOSITE_MAX_TEAMS[name] = races.length;
 }});
 
 // ── Compute decade percentile scores ────────────────────────────────────────
@@ -675,19 +643,6 @@ function selectComposite15(pool, scoreFn) {{
   return selected;
 }}
 
-function selectTwoTeams(pool, scoreFn) {{
-  // MOR/RRR: 2 separate 5-person teams from combined pool (deduplicated)
-  const best = {{}};
-  pool.forEach(m => {{
-    if (!best[m.name] || scoreFn(m) > scoreFn(best[m.name])) best[m.name] = m;
-  }});
-  const deduped = Object.values(best).sort((a,b) => scoreFn(b) - scoreFn(a));
-  const r1 = applyGenderRule(deduped, deduped, scoreFn);
-  const team1Names = new Set(r1.top5.map(m=>m.name));
-  const remaining = deduped.filter(m => !team1Names.has(m.name));
-  const r2 = applyGenderRule(remaining, remaining, scoreFn);
-  return [r1, r2];
-}}
 
 // ── Apply gender rule to a candidate list ───────────────────────────────────
 function applyGenderRule(byScore, allCandidates, scoreFn) {{
@@ -786,21 +741,13 @@ function recomputeTeams(perfs, mode) {{
     const parts = key.split('|');
     const [club, compName, year] = parts;
     const pool = composites[key];
-    const compMode = COMPOSITE_MODES[compName] || 'two_teams';
-
-    if (compMode === 'two_teams') {{
-      const [r1, r2] = selectTwoTeams(pool, scoreFn);
-      if (r1.top5.length > 0) pushTeam(club, compName + ' (Team 1)', year, r1.top5, r1.nFemale, r1.valid);
-      if (r2.top5.length > 0) pushTeam(club, compName + ' (Team 2)', year, r2.top5, r2.nFemale, r2.valid);
-    }} else if (compMode === 'composite_15') {{
-      const selected = selectComposite15(pool, scoreFn);
-      // Split into teams of 5
-      for (let ti = 0; ti < 3; ti++) {{
-        const chunk = selected.slice(ti*5, (ti+1)*5);
-        if (chunk.length === 0) break;
-        const nFemale = chunk.filter(m=>m.gender==='F').length;
-        pushTeam(club, compName + ' (Team ' + (ti+1) + ')', year, chunk, nFemale, chunk.length >= 1);
-      }}
+    const maxTeams = COMPOSITE_MAX_TEAMS[compName] || 2;
+    const selected = selectComposite15(pool, scoreFn);
+    for (let ti = 0; ti < maxTeams; ti++) {{
+      const chunk = selected.slice(ti*5, (ti+1)*5);
+      if (chunk.length === 0) break;
+      const nFemale = chunk.filter(m=>m.gender==='F').length;
+      pushTeam(club, compName + ' (Team ' + (ti+1) + ')', year, chunk, nFemale, chunk.length >= 1);
     }}
   }}
 
