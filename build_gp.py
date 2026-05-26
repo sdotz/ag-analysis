@@ -35,6 +35,7 @@ RACE_ALIASES = {
 }
 
 GP_SOURCES = [
+    {"year": "2023", "csv": "gp-scores/2023MAUSATF/All-Table 1.csv"},
     {"year": "2024", "csv": "gp-scores/2024MAUSATF/All-Table 1.csv"},
     {"year": "2025", "csv": "gp-scores/2025MAUSATF/All-Table 1.csv"},
     {"year": "2026", "csv": "gp-scores/2026MAUSATF/All Races-Table 1.csv"},
@@ -394,7 +395,7 @@ def build_html(data_json, n_races):
 <body>
 <header>
   <h1>USATF Mid-Atlantic Grand Prix Explorer</h1>
-  <p>Club Challenge — age-graded scoring analysis across {n_races} races (2025–2026)</p>
+  <p>Club Challenge — age-graded scoring analysis across {n_races} races (2023–2026)</p>
   <details class="methodology">
     <summary>Scoring rules &amp; methodology</summary>
     <div style="display:flex;flex-direction:column;gap:.8rem;margin:.6rem 0 .4rem">
@@ -512,6 +513,16 @@ def build_html(data_json, n_races):
         </tr>
       </thead>
       <tbody id="club-tbody"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Unique Runners per Club per Year</h2>
+    <div style="overflow-x:auto">
+    <table id="roster-table">
+      <thead id="roster-thead"></thead>
+      <tbody id="roster-tbody"></tbody>
     </table>
     </div>
   </div>
@@ -1204,6 +1215,47 @@ function render() {{
       <td>${{c.n_male}} / ${{c.n_female}}</td>
     </tr>`
   ).join('');
+
+  // ── Unique runners per club per year ─────────────────────────────────────
+  {{
+    // Determine which years to show: if a year filter is active show only that year,
+    // otherwise show all years from the full dataset so the table always has year columns.
+    const rosterYears = activeYear ? [activeYear] : dataYears;
+
+    // Build map: club -> year -> Set of runner names (from year-filtered perfs)
+    const rosterMap = {{}};
+    allPerfs.filter(p => p.club !== 'Unattached').forEach(p => {{
+      if (!rosterMap[p.club]) rosterMap[p.club] = {{}};
+      if (!rosterMap[p.club][p.year]) rosterMap[p.club][p.year] = new Set();
+      rosterMap[p.club][p.year].add(p.name);
+    }});
+
+    // Collect clubs to show (respect club filter)
+    const rosterClubs = activeClub
+      ? (rosterMap[activeClub] ? [activeClub] : [])
+      : Object.keys(rosterMap).sort((a,b) => {{
+          // Sort by total unique runners descending
+          const totA = rosterYears.reduce((s,y) => s + (rosterMap[a][y] ? rosterMap[a][y].size : 0), 0);
+          const totB = rosterYears.reduce((s,y) => s + (rosterMap[b][y] ? rosterMap[b][y].size : 0), 0);
+          return totB - totA;
+        }});
+
+    document.getElementById('roster-thead').innerHTML =
+      `<tr><th>Club</th>${{rosterYears.map(y=>`<th>${{y}}</th>`).join('')}}${{rosterYears.length > 1 ? '<th>Total</th>' : ''}}</tr>`;
+
+    document.getElementById('roster-tbody').innerHTML = rosterClubs.map(club => {{
+      const byYear = rosterMap[club] || {{}};
+      const counts = rosterYears.map(y => byYear[y] ? byYear[y].size : 0);
+      const total = new Set(rosterYears.flatMap(y => byYear[y] ? [...byYear[y]] : [])).size;
+      const cells = counts.map((n,i) => {{
+        const style = n === 0 ? 'color:var(--muted)' : n === Math.max(...counts) ? 'font-weight:700;color:var(--green)' : '';
+        return `<td style="${{style}}">${{n || '\u2014'}}</td>`;
+      }}).join('');
+      return `<tr style="${{club===activeClub?'background:var(--surface2)':''}}">
+        <td>${{club}}</td>${{cells}}${{rosterYears.length > 1 ? `<td style="font-weight:600">${{total}}</td>` : ''}}
+      </tr>`;
+    }}).join('');
+  }}
 
   // ── All results table ─────────────────────────────────────────────────────
   document.getElementById('decile-col-header').style.display = scoringMode==='decile' ? '' : 'none';
