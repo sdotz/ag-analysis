@@ -17,6 +17,7 @@ _FILENAME_TO_METERS = {
     "AgeGrade.1mi":   1609.344,
     "AgeGrade.4mi":   6437.376,
     "AgeGrade.5mi":   8046.72,
+    "AgeGrade.7mi":  11265.408,
     "AgeGrade.5k":    5000.0,
     "AgeGrade.6k":    6000.0,
     "AgeGrade.8k":    8000.0,
@@ -61,7 +62,7 @@ class AgeGradeResult:
 class AgeGradeCalculator:
     def __init__(self, runscore_dir: Optional[str] = None):
         if runscore_dir is None:
-            runscore_dir = os.path.join(os.path.dirname(__file__), "age_grade_calc", "RunScore")
+            runscore_dir = os.path.join(os.path.dirname(__file__), "age_grade_calc", "RunScore-2025")
         self._tables: dict[float, dict] = {}
         self._load(runscore_dir)
 
