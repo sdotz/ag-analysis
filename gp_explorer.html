@@ -67,6 +67,24 @@
   details.methodology ul { margin: .5rem 0 .35rem 1rem; line-height: 1.7; }
   details.methodology li { margin: .2rem 0; }
 
+  .awards-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1.5rem; }
+  .awards-grid > div { min-width: 0; }
+  .award-sub { font-size: .85rem; font-weight: 600; color: var(--text); margin-bottom: .5rem; letter-spacing: .03em; }
+  .award-sub.m { color: var(--male); }
+  .award-sub.f { color: var(--female); }
+  .award-table { table-layout: fixed; width: 100%; font-size: .75rem; }
+  .award-table th, .award-table td { padding: .35rem .45rem; white-space: normal; overflow: hidden; text-overflow: ellipsis; }
+  .award-table .col-name { word-break: break-word; }
+  .award-table .col-club { word-break: break-word; font-size: .7rem; }
+  .award-table .col-num { width: 2.2rem; text-align: right; }
+  .award-table .col-pts { width: 3.8rem; text-align: right; }
+  .award-table .col-grp { width: 3.4rem; }
+  .award-table tbody tr.winner { background: rgba(78,203,133,.08); }
+  .award-table tbody tr.podium { background: rgba(245,197,66,.05); }
+  .award-table tbody tr.ineligible td { color: var(--muted); }
+  .award-table .pts { font-weight:700; color: var(--green); }
+  @media (max-width: 900px) { .awards-grid { grid-template-columns: minmax(0,1fr); } }
+
   .legend { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .75rem; color: var(--muted); margin-top: .5rem; }
   .legend-item { display: flex; align-items: center; gap: .3rem; }
   .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
@@ -90,6 +108,25 @@
           <li><strong>Team score</strong> = sum of the top 5 individual scores per race. If 4-5 runners score, at least 1 must be female. Teams of 1-3 have no gender requirement.</li>
           <li><strong>Season standing</strong> = best 8 race scores (lowest races dropped).</li>
           <li>If the top 5 by score are all male, the lowest-scoring male is replaced by the highest-scoring female. If no female is available, the team falls back to 3 scorers.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-weight:600;color:var(--green);margin-bottom:.25rem">Individual Age-Graded Award</div>
+        <ul>
+          <li>Each runner's season total = <strong>sum of their best 6 AP% scores</strong> across all GP races that year.</li>
+          <li>Top 10 men and top 10 women receive awards.</li>
+          <li>Runners with fewer than 6 races are shown but flagged — their total is the sum of all races run.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-weight:600;color:var(--orange);margin-bottom:.25rem">Age Group Award</div>
+        <ul>
+          <li>5-year age groups starting at age 15 (15-19, 20-24, 25-29, …).</li>
+          <li>Age group is determined by the runner's age at their <strong>first GP race of the year</strong> and remains fixed for the season.</li>
+          <li>In each race, the top 3 AP% performances <em>within each age group</em> earn <strong>5 / 3 / 1 points</strong>.</li>
+          <li>Season total = sum of all points earned. Runners must complete <strong>at least 3 GP races</strong> to be eligible for an age-group award.</li>
         </ul>
       </div>
 
@@ -137,6 +174,56 @@
       <thead id="standings-thead"></thead>
       <tbody id="standings-tbody"></tbody>
     </table>
+    </div>
+  </div>
+
+  <div class="card" id="individual-awards-card">
+    <h2>
+      Individual Awards <span style="font-weight:400;font-size:.8rem;color:var(--muted)">— sum of each runner's best 6 AP% scores. Top 10 men &amp; women.</span>
+      <span id="ind-year-note" style="float:right;font-weight:400;font-size:.78rem;color:var(--muted)"></span>
+    </h2>
+    <div class="awards-grid">
+      <div>
+        <h3 class="award-sub">Men</h3>
+        <div style="overflow-x:auto">
+        <table class="award-table"><thead><tr>
+          <th class="col-num">Rk</th><th class="col-name">Name</th><th class="col-club">Club</th><th class="col-num">Age</th><th class="col-pts">Best 6</th><th class="col-num">Rcs</th>
+        </tr></thead><tbody id="ind-m-tbody"></tbody></table>
+        </div>
+      </div>
+      <div>
+        <h3 class="award-sub">Women</h3>
+        <div style="overflow-x:auto">
+        <table class="award-table"><thead><tr>
+          <th class="col-num">Rk</th><th class="col-name">Name</th><th class="col-club">Club</th><th class="col-num">Age</th><th class="col-pts">Best 6</th><th class="col-num">Rcs</th>
+        </tr></thead><tbody id="ind-f-tbody"></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="agegroup-awards-card">
+    <h2>
+      Age Group Awards <span style="font-weight:400;font-size:.8rem;color:var(--muted)">— 5-yr groups from age 15. 5/3/1 pts to top-3 per group per race. Min 3 races to win.</span>
+      <span id="ag-year-note" style="float:right;font-weight:400;font-size:.78rem;color:var(--muted)"></span>
+    </h2>
+    <div class="awards-grid">
+      <div>
+        <h3 class="award-sub">Men</h3>
+        <div style="overflow-x:auto">
+        <table class="award-table"><thead><tr>
+          <th class="col-grp">Grp</th><th class="col-num">Rk</th><th class="col-name">Name</th><th class="col-club">Club</th><th class="col-num">Age</th><th class="col-pts">Pts</th><th class="col-num">Rcs</th>
+        </tr></thead><tbody id="ag-m-tbody"></tbody></table>
+        </div>
+      </div>
+      <div>
+        <h3 class="award-sub">Women</h3>
+        <div style="overflow-x:auto">
+        <table class="award-table"><thead><tr>
+          <th class="col-grp">Grp</th><th class="col-num">Rk</th><th class="col-name">Name</th><th class="col-club">Club</th><th class="col-num">Age</th><th class="col-pts">Pts</th><th class="col-num">Rcs</th>
+        </tr></thead><tbody id="ag-f-tbody"></tbody></table>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -600,6 +687,163 @@ function upsertChart(key, canvasId, config) {
   }
 }
 
+// ── Awards (individual best-6 + age-group 5/3/1) ────────────────────────────
+function ageGroupLabel(age) {
+  if (age == null) return '—';
+  if (age < 15) return 'U15';
+  if (age >= 100) return '100+';
+  const lo = Math.floor((age - 15) / 5) * 5 + 15;
+  return lo + '-' + (lo + 4);
+}
+
+function ageGroupSortKey(label) {
+  if (label === 'U15') return -1;
+  if (label === '—') return 999;
+  return parseInt(label.split('-')[0], 10);
+}
+
+function computeAwardsForYear(year) {
+  // Use the full unfiltered dataset (we never want club filter to affect who *won*).
+  const perfsYr = allPerfsRaw.filter(p => p.year === year);
+
+  // GP age: minimum age across the runner's performances that year (≈ age at first race)
+  const gpAge = {};
+  const racesPerRunner = {};
+  perfsYr.forEach(p => {
+    const k = p.name + '|' + p.gender;
+    if (!(k in gpAge) || p.age < gpAge[k]) gpAge[k] = p.age;
+    if (!racesPerRunner[k]) racesPerRunner[k] = new Set();
+    racesPerRunner[k].add(p.race);
+  });
+
+  // ── Individual: sum of best 6 AP% ──
+  const indMap = {};
+  perfsYr.forEach(p => {
+    const k = p.name + '|' + p.gender;
+    if (!indMap[k]) indMap[k] = {
+      name: p.name, gender: p.gender, club: p.club,
+      age: gpAge[k], ap_pcts: [], races: []
+    };
+    indMap[k].ap_pcts.push(p.ap_pct);
+    indMap[k].races.push(p.race);
+  });
+  const individuals = Object.values(indMap).map(r => {
+    const sorted = [...r.ap_pcts].sort((a,b) => b - a);
+    const best6 = sorted.slice(0, 6);
+    return {
+      ...r,
+      n_races: r.races.length,
+      total: Math.round(best6.reduce((s,v) => s + v, 0) * 10) / 10,
+    };
+  }).sort((a,b) => b.total - a.total);
+
+  // ── Age Group: 5/3/1 per (race, gender, age group) ──
+  const points = {}; // key -> { name, gender, club, gpAge, group, total, breakdown:[] }
+  const races = [...new Set(perfsYr.map(p => p.race))];
+  const ptsTable = [5, 3, 1];
+  races.forEach(race => {
+    ['M', 'F'].forEach(gender => {
+      const inRace = perfsYr.filter(p => p.race === race && p.gender === gender);
+      const byGroup = {};
+      inRace.forEach(p => {
+        const k = p.name + '|' + p.gender;
+        const grp = ageGroupLabel(gpAge[k]);
+        if (!byGroup[grp]) byGroup[grp] = [];
+        byGroup[grp].push(p);
+      });
+      Object.entries(byGroup).forEach(([grp, runners]) => {
+        runners.sort((a,b) => b.ap_pct - a.ap_pct);
+        runners.slice(0, 3).forEach((r, i) => {
+          const k = r.name + '|' + r.gender;
+          if (!points[k]) points[k] = {
+            name: r.name, gender: r.gender, club: r.club,
+            gpAge: gpAge[k], group: grp,
+            total: 0, breakdown: []
+          };
+          points[k].total += ptsTable[i];
+          points[k].breakdown.push({race, place: i+1, points: ptsTable[i], ap_pct: r.ap_pct});
+        });
+      });
+    });
+  });
+  const ageGroupRunners = Object.values(points).map(r => ({
+    ...r,
+    n_races: racesPerRunner[r.name + '|' + r.gender].size,
+    eligible: racesPerRunner[r.name + '|' + r.gender].size >= 3,
+  }));
+
+  return {individuals, ageGroupRunners};
+}
+
+function renderAwards() {
+  // Pick the year to display: respect filter; if "All", use the most recent year.
+  const displayYear = activeYear || dataYears[dataYears.length - 1];
+  const noteFmt = activeYear ? '' : ' (showing ' + displayYear + ' — pick a year to change)';
+  document.getElementById('ind-year-note').textContent = displayYear + noteFmt;
+  document.getElementById('ag-year-note').textContent  = displayYear + noteFmt;
+
+  const {individuals, ageGroupRunners} = computeAwardsForYear(displayYear);
+
+  // ── Individual: top 15 per gender (top 10 highlighted) ──
+  ['M','F'].forEach(gender => {
+    const list = individuals.filter(r => r.gender === gender).slice(0, 15);
+    const tbody = document.getElementById('ind-' + gender.toLowerCase() + '-tbody');
+    tbody.innerHTML = list.map((r, i) => {
+      const rank = i + 1;
+      const cls = rank <= 10 ? 'winner' : '';
+      const highlight = activeClub && r.club === activeClub ? 'style="outline:1px solid var(--blue)"' : '';
+      const racesCol = r.n_races < 6
+        ? '<span style="color:var(--pink)" title="Below 6-race threshold">' + r.n_races + '</span>'
+        : r.n_races;
+      return '<tr class="' + cls + '" ' + highlight + '>' +
+        '<td class="col-num">' + rank + '</td>' +
+        '<td class="col-name">' + r.name + '</td>' +
+        '<td class="col-club" style="color:var(--muted)">' + r.club + '</td>' +
+        '<td class="col-num">' + r.age + '</td>' +
+        '<td class="col-pts pts">' + r.total.toFixed(1) + '</td>' +
+        '<td class="col-num">' + racesCol + '</td>' +
+        '</tr>';
+    }).join('') || '<tr><td colspan="6" style="color:var(--muted);text-align:center">No data</td></tr>';
+  });
+
+  // ── Age Group: grouped by age group, sorted by points desc within ──
+  ['M','F'].forEach(gender => {
+    const list = ageGroupRunners.filter(r => r.gender === gender);
+    // Bucket by group
+    const buckets = {};
+    list.forEach(r => {
+      if (!buckets[r.group]) buckets[r.group] = [];
+      buckets[r.group].push(r);
+    });
+    const groupOrder = Object.keys(buckets).sort((a,b) => ageGroupSortKey(a) - ageGroupSortKey(b));
+    const tbody = document.getElementById('ag-' + gender.toLowerCase() + '-tbody');
+    const rows = [];
+    groupOrder.forEach(grp => {
+      const bucket = buckets[grp].sort((a,b) => b.total - a.total);
+      bucket.forEach((r, i) => {
+        const cls = !r.eligible ? 'ineligible' : i === 0 ? 'winner' : i < 3 ? 'podium' : '';
+        const highlight = activeClub && r.club === activeClub ? 'style="outline:1px solid var(--blue)"' : '';
+        const ptsCell = r.eligible
+          ? '<td class="col-pts pts">' + r.total + '</td>'
+          : '<td class="col-pts" style="color:var(--muted)" title="Ineligible: <3 races">' + r.total + '*</td>';
+        const racesCol = r.n_races < 3
+          ? '<span style="color:var(--pink)" title="Below 3-race minimum">' + r.n_races + '</span>'
+          : r.n_races;
+        rows.push('<tr class="' + cls + '" ' + highlight + '>' +
+          '<td class="col-grp" style="font-weight:600">' + (i === 0 ? grp : '') + '</td>' +
+          '<td class="col-num">' + (i + 1) + '</td>' +
+          '<td class="col-name">' + r.name + '</td>' +
+          '<td class="col-club" style="color:var(--muted)">' + r.club + '</td>' +
+          '<td class="col-num">' + r.gpAge + '</td>' +
+          ptsCell +
+          '<td class="col-num">' + racesCol + '</td>' +
+          '</tr>');
+      });
+    });
+    tbody.innerHTML = rows.join('') || '<tr><td colspan="7" style="color:var(--muted);text-align:center">No data</td></tr>';
+  });
+}
+
 // ── Main render ─────────────────────────────────────────────────────────────
 function render() {
   clearBtn.style.display = activeClub ? 'inline-block' : 'none';
@@ -719,6 +963,9 @@ function render() {
     </tr>`;
   }).join('');
   attachTooltipListeners();
+
+  // ── Individual + Age Group Awards ─────────────────────────────────────────
+  renderAwards();
 
   // ── Age histogram ─────────────────────────────────────────────────────────
   const mAges = perfs.filter(p=>p.gender==='M').map(p=>p.age);
